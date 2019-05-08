@@ -8,5 +8,7 @@
 4. run Meteor ``` meteor ```
 
 
+![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
+
 
 Enjoy
