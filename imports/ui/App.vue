@@ -19,6 +19,10 @@
           <div>
             <span class="grey--text">This is an example of vuetify's v-card</span>
             <br>
+            <v-icon>home</v-icon> Material Icons installed
+            <br>
+            <v-icon>fa fa-link</v-icon> Fontawesome installed
+            <br>
             <br>
             <span>Want to see meteor in action? Open me in another tab and click on "CLICK ME!!" on this tab</span>
             <br>
@@ -35,16 +39,31 @@
 </template>
 
 <script>
+
+import { Clicks } from "/imports/api/clicks"
 export default {
   name:"HelloWorldCard",
-  data:() => {
-    return {
-      times : 0
-    }
+  data() {
+    return {}
   },
   methods: {
     clicked: () => {
-      console.log("Clickme");
+      Clicks.update(
+        {
+          _id : "pxjB4tpgCHCmtrWZG"
+        },
+        {
+          $inc: {
+            times : 1
+          }
+        }
+      )
+    }
+  },
+  meteor: {
+    times(){
+      clicks = Clicks.find({}).fetch();
+      return !!clicks.length ? clicks[0].times: 0;
     }
   }
 }

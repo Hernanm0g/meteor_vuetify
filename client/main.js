@@ -16,6 +16,9 @@ Vue.use(VueMeta)
 // Main app
 import App from '/imports/ui/App.vue';
 
+// Import collection Clicks on client side
+import { Clicks } from "/imports/api/clicks"
+
 Meteor.startup(() => {
   new Vue({
     render: h => h(App),
