@@ -31,7 +31,7 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn flat color="orange" @click="clicked">Click Me!!</v-btn>
+          <v-btn flat color="orange" @click="clicked(click_id)">Click Me!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -44,13 +44,32 @@ import { Clicks } from "/imports/api/clicks"
 export default {
   name:"HelloWorldCard",
   data() {
-    return {}
+    return {
+      click_id:0
+    }
   },
   methods: {
-    clicked: () => {
+    clicked(id) {
+      self=this;
+      if(!id){
+        Clicks.insert(
+          {
+            times:1
+          },
+          (err, result) => {
+            self.addOne(id)
+            return
+          }
+        )
+      } else {
+        this.addOne(id);
+      }
+
+    },
+    addOne(id) {
       Clicks.update(
         {
-          _id : "pxjB4tpgCHCmtrWZG"
+          _id : id
         },
         {
           $inc: {
@@ -63,6 +82,7 @@ export default {
   meteor: {
     times(){
       clicks = Clicks.find({}).fetch();
+      this.click_id = !!clicks.length ? clicks[0]._id : 0;
       return !!clicks.length ? clicks[0].times: 0;
     }
   }
