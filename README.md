@@ -1,5 +1,5 @@
 # Meteor + Vue + Vuetify
-## Installation: 
+## Installation (Dev mode): 
 
 1. Install meteor (if is not installed yet).
 2. Clone repository
