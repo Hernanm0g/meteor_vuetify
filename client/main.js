@@ -2,6 +2,11 @@
 import { Meteor } from 'meteor/meteor';
 import Vue from 'vue';
 
+// Vuetify Lib
+import Vuetify from 'vuetify'
+Vue.use(Vuetify)
+
+import 'vuetify/dist/vuetify.min.css'
 import VueTracker from 'vue-meteor-tracker';
 Vue.use(VueTracker);
 
