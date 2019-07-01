@@ -10,6 +10,9 @@ const global = {
   },
   filters : {
     toISODate(d){
+      if (!d) {
+        return ""
+      }
       return moment(d).format("YYYY-MM-DD")
     },
     toDate(d){

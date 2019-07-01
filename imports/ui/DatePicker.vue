@@ -57,7 +57,7 @@ export default {
   props: {
     date: {
       type: String,
-      default: new Date().toISOString().substr(0, 10)
+      default: "2019-01-01"
     },
     rules: {
       type: Array,
