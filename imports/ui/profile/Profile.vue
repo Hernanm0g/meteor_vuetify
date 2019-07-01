@@ -206,16 +206,25 @@ export default {
     },
     // Get avatar url
     avatar(){
-      if (!Avatars.findOne()) {
-        return false;
+      if (!this.user) {
+        return "/img/logo.png";
       }
-      return Avatars.findOne().link()
+      self=this;
+      if (!!this.user.profile.avatar) {
+        let myavatar = Avatars.findOne({ _id:self.user.profile.avatar });
+        if (!!myavatar) {
+          return myavatar.link("thumbnail");
+        }
+      }
+      return this.user.profile.picture;
+
     },
-    $subscribe: {
-      "avatars.get.mine"(){
-        return [this.values.avatar]
-      }
-    }
+    // Use it when autopublish off
+    // $subscribe: {
+    //   "avatars.get.mine"(){
+    //     return [this.values.avatar]
+    //   }
+    // }
   },
   methods: {
     closePicker: function(){
