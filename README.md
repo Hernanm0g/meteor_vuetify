@@ -27,4 +27,7 @@
 ![mongol](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/mongol.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Page Router and State Management (VueRouter and Vuex)
 ![vuex&VueRouter](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/vuerouter.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
+## Profile Page with avatar.
+![profile](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/profile.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
+![avatar](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/avatar.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 Enjoy!!
