@@ -1,5 +1,5 @@
-# Meteor + Vue + Vuetify + Auth0 Authentication + Vuex + Vue Router ... 
-## Installation (Dev mode): 
+# Meteor + Vue + Vuetify + Auth0 Authentication + Vuex + Vue Router ...
+## Installation (Dev mode):
 
 1. Install meteor (if is not installed yet).
 2. Clone repository
@@ -11,7 +11,7 @@
 
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 
-# Idea 
+# Idea
 * Back-end: Meteor and its DDP + Optimistic UI is wonderful for a rapid deployment and server-side js programming.
 * Front-end: Vuejs and Vuetify are great for full-stack developers that want to learn and deliver software fast and continuosly. Even more, vuetify components give the ui an amazing look.
 * User Authentication: Auth0 is a reliable authorization platform that allows several types of authentication, including social media, without having to write a line of code, and with instant results. Auth0 interacts in this boilerplate with meteor-accounts so you might want to use Meteor.user() and Meteor.userId() in both, client and server side.
@@ -25,6 +25,6 @@
 ## Authentication with Auth0 lock 11.15.0. and Meteor-accounts
 ![login](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/login.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ![mongol](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/mongol.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
-## Page Router and State Management (Vuex and VueRouter)
-
+## Page Router and State Management (VueRouter and Vuex)
+![vuex&VueRouter](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/vuerouter.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 Enjoy!!
