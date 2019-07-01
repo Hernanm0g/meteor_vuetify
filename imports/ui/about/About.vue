@@ -29,7 +29,7 @@ export default {
   mounted(){
     this.$store.commit("updateCrumbs", {
       position: 0,
-      name: "Aboout",
+      name: "About",
       icon:"info",
       link: {
         name:"about"
