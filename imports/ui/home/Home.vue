@@ -15,7 +15,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">This is an example of vuetify's v-card</span>
             <br>
@@ -29,9 +29,9 @@
             <br>
             <span>Times clicked: {{ times }}</span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="orange" @click="clicked(click_id)">Click Me!!</v-btn>
+          <v-btn text color="orange" @click="clicked(click_id)">Click Me!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -50,7 +50,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">Auth0 Lock and meteor-accounts!!</span>
             <br>
@@ -66,10 +66,10 @@
             <br>
             <span>Authenticated: <strong>{{ authenticated }}</strong></span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="orange" v-if="!settedAuth0" :to="{name:'setauth0'}">Set AUTH0!!</v-btn>
-          <v-btn flat color="orange" @click="login" v-else-if="!authenticated">Log me in!!</v-btn>
+          <v-btn text color="orange" v-if="!settedAuth0" :to="{name:'setauth0'}">Set AUTH0!!</v-btn>
+          <v-btn text color="orange" @click="login" v-else-if="!authenticated">Log me in!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -88,7 +88,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">Vue Router and Vuex</span>
             <br>
@@ -99,9 +99,9 @@
             <br>
             <span>Want to see VueRouter and Vuex in action? Click on "Change route!!" on this card and watch the breadcrumbs above.</span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="orange" :to="{name:'about'}">Change route!!</v-btn>
+          <v-btn text color="orange" :to="{name:'about'}">Change route!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -120,7 +120,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">Users can edit their profile info.</span>
             <br>
@@ -132,9 +132,9 @@
             <span v-if="!authenticated">Want to see meteor.users.update() and meteor-files? Log in first.</span>
             <span v-else>Want to see meteor.users.update() and meteor-files in action? Click on "See Profile!!" on this card.</span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="orange" :to="{name:'profile'}" v-if="authenticated">See Profile!!</v-btn>
+          <v-btn text color="orange" :to="{name:'profile'}" v-if="authenticated">See Profile!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -153,7 +153,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">Listen to events in the DOM with EventBus.</span>
             <br>
@@ -164,9 +164,9 @@
             <br>
             <span>Want to see EventBus and Confirm Dialogs in action? click on "Show!!" on this card.</span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="orange" @click="showConfirm('Are you sure?', 'Really, really sure?')">Show!!</v-btn>
+          <v-btn text color="orange" @click="showConfirm('Are you sure?', 'Really, really sure?')">Show!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -185,7 +185,7 @@
             </v-layout>
           </v-container>
         </v-img>
-        <v-card-title>
+        <v-card-text>
           <div>
             <span class="grey--text">Vuetify Snackbars are great for users notifications!!</span>
             <br>
@@ -196,11 +196,11 @@
             <br>
             <span>Want to see SnackBars in action? Click on "Show" buttons on this card.</span>
           </div>
-        </v-card-title>
+        </v-card-text>
         <v-card-actions>
-          <v-btn flat color="success" @click="showSnack('success')">Show!!</v-btn>
+          <v-btn text color="success" @click="showSnack('success')">Show!!</v-btn>
           <v-spacer></v-spacer>
-          <v-btn flat color="error" @click="showSnack('error')">Show!!</v-btn>
+          <v-btn text color="error" @click="showSnack('error')">Show!!</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
