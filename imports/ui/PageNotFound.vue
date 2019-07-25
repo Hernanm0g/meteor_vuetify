@@ -10,7 +10,7 @@
             Seems you're lost. This page doesnt exist yet. Luckily, we can take you back to home page.
           </v-card-text>
           <v-card-actions>
-            <v-btn flat class="error white--text" to="/">Back</v-btn>
+            <v-btn text class="error white--text" to="/">Back</v-btn>
           </v-card-actions>
         </v-card>
       </v-flex>
