@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-toolbar class="mb-2">
+  <v-toolbar>
     <v-toolbar-title>
       <v-btn
         flat
