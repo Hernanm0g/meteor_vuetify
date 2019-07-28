@@ -132,6 +132,7 @@ import Confirm from '/imports/ui/Confirm.vue'
 import BreadCrumbs from '/imports/ui/BreadCrumbs.vue'
 import Avatars from '/imports/api/avatars'
 import { AUTH0 } from '/imports/auth0-variables'
+import Auth0Lock from 'auth0-lock'
 const auth0Lock = new Auth0Lock(
   AUTH0.CLIENT_ID,
   AUTH0.DOMAIN,

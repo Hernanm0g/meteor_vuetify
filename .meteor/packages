@@ -25,3 +25,4 @@ ostrio:files
 accounts-base
 underscore
 ostrio:meteor-root
+service-configuration

@@ -1,0 +1,134 @@
+'use strict';
+
+exports.__esModule = true;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _screen = require('../../core/screen');
+
+var _screen2 = _interopRequireDefault(_screen);
+
+var _email_pane = require('../../field/email/email_pane');
+
+var _email_pane2 = _interopRequireDefault(_email_pane);
+
+var _social_buttons_pane = require('../../field/social/social_buttons_pane');
+
+var _social_buttons_pane2 = _interopRequireDefault(_social_buttons_pane);
+
+var _pane_separator = require('../../core/pane_separator');
+
+var _pane_separator2 = _interopRequireDefault(_pane_separator);
+
+var _index = require('../../connection/passwordless/index');
+
+var _actions = require('../../connection/passwordless/actions');
+
+var _email_sent_confirmation = require('../../connection/passwordless/email_sent_confirmation');
+
+var _signed_in_confirmation = require('../../core/signed_in_confirmation');
+
+var _index2 = require('../../core/index');
+
+var l = _interopRequireWildcard(_index2);
+
+var _sign_up_terms = require('../../connection/database/sign_up_terms');
+
+var _sign_up_terms2 = _interopRequireDefault(_sign_up_terms);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Component = function Component(_ref) {
+  var i18n = _ref.i18n,
+      model = _ref.model;
+
+  var social = l.hasSomeConnections(model, 'social') ? _react2.default.createElement(_social_buttons_pane2.default, {
+    instructions: i18n.html('socialLoginInstructions'),
+    labelFn: i18n.str,
+    lock: model,
+    signUp: false,
+    disabled: !(0, _index.termsAccepted)(model)
+  }) : null;
+
+  var email = l.hasSomeConnections(model, 'passwordless', 'email') ? _react2.default.createElement(_email_pane2.default, { i18n: i18n, lock: model, placeholder: i18n.str('emailInputPlaceholder') }) : null;
+
+  // TODO: instructions can't be on EmailPane beacuse it breaks the CSS,
+  // all input fields needs to share a parent so the last one doesn't have
+  // a bottom margin.
+  //
+  // Maybe we can make new PasswordlessEmailPane component.
+  var emailInstructionsI18nKey = social ? 'passwordlessEmailAlternativeInstructions' : 'passwordlessEmailInstructions';
+
+  var headerText = i18n.html(emailInstructionsI18nKey) || null;
+  var header = email && headerText && _react2.default.createElement(
+    'p',
+    null,
+    headerText
+  );
+
+  var separator = social && email ? _react2.default.createElement(_pane_separator2.default, null) : null;
+
+  return _react2.default.createElement(
+    'div',
+    null,
+    social,
+    separator,
+    header,
+    email
+  );
+};
+
+var SocialOrEmailLoginScreen = function (_Screen) {
+  _inherits(SocialOrEmailLoginScreen, _Screen);
+
+  function SocialOrEmailLoginScreen() {
+    _classCallCheck(this, SocialOrEmailLoginScreen);
+
+    return _possibleConstructorReturn(this, _Screen.call(this, 'socialOrEmail'));
+  }
+
+  SocialOrEmailLoginScreen.prototype.submitHandler = function submitHandler(m) {
+    return l.hasSomeConnections(m, 'passwordless', 'email') ? _actions.requestPasswordlessEmail : null;
+  };
+
+  SocialOrEmailLoginScreen.prototype.renderAuxiliaryPane = function renderAuxiliaryPane(lock) {
+    return (0, _email_sent_confirmation.renderEmailSentConfirmation)(lock) || (0, _signed_in_confirmation.renderSignedInConfirmation)(lock);
+  };
+
+  SocialOrEmailLoginScreen.prototype.render = function render() {
+    return Component;
+  };
+
+  SocialOrEmailLoginScreen.prototype.isSubmitDisabled = function isSubmitDisabled(m) {
+    return !(0, _index.termsAccepted)(m);
+  };
+
+  SocialOrEmailLoginScreen.prototype.renderTerms = function renderTerms(m, terms) {
+    var checkHandler = (0, _index.mustAcceptTerms)(m) ? function () {
+      return (0, _actions.toggleTermsAcceptance)(l.id(m));
+    } : undefined;
+    return terms || (0, _index.mustAcceptTerms)(m) ? _react2.default.createElement(
+      _sign_up_terms2.default,
+      {
+        showCheckbox: (0, _index.mustAcceptTerms)(m),
+        checkHandler: checkHandler,
+        checked: (0, _index.termsAccepted)(m)
+      },
+      terms
+    ) : null;
+  };
+
+  return SocialOrEmailLoginScreen;
+}(_screen2.default);
+
+exports.default = SocialOrEmailLoginScreen;

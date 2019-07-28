@@ -8,14 +8,16 @@
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.3.4",
+    "@babel/runtime": "^7.5.5",
+    "auth0-lock": "^11.17.1",
     "babel-runtime": "^6.26.0",
+    "core-js": "^3.1.4",
     "meteor-node-stubs": "^0.4.1",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-meta": "^1.6.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
-    "vue-router": "^3.0.6",
+    "vue-router": "^3.0.7",
     "vuetify": "^1.5.16",
     "vuex": "^3.1.1"
   },
