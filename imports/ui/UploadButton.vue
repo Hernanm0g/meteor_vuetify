@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="btn btn-primary jbtn-file">
-    <v-btn icon dark color="secondary">
+    <v-btn icon dark>
       <v-icon>add_a_photo</v-icon>
     </v-btn>
     <input

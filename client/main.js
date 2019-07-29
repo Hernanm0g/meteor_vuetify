@@ -3,13 +3,12 @@ import { Meteor } from 'meteor/meteor';
 import Vue from 'vue';
 
 // Vuetify Lib
-import Vuetify from 'vuetify'
-Vue.use(Vuetify)
+import vuetify from '/imports/plugins/vuetify' // path to vuetify export
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-import 'vuetify/dist/vuetify.min.css'
+
 import VueTracker from 'vue-meteor-tracker';
 Vue.use(VueTracker);
 
@@ -61,6 +60,7 @@ Meteor.login = login;
 
 Meteor.startup(() => {
   new Vue({
+    vuetify,
     router,
     store,
     render: h => h(App),

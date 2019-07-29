@@ -4,20 +4,22 @@
     v-model="menu"
     :close-on-content-click="false"
     :nudge-right="40"
-    lazy
     transition="scale-transition"
     offset-y
     full-width
     min-width="290px">
-    <v-text-field
-      slot="activator"
-      :value="formattedDate"
-      :required="required"
-      :rules="rules"
-      :label="label"
-      prepend-icon="event"
-      readonly
-    ></v-text-field>
+    <template v-slot:activator="{on}">
+      <v-text-field
+        v-on="on"
+        :value="formattedDate"
+        :required="required"
+        :rules="rules"
+        :label="label"
+        prepend-icon="event"
+        readonly>
+      </v-text-field>
+    </template>
+
     <v-date-picker
       ref="picker"
       v-model="pickerDate"
@@ -25,8 +27,8 @@
       :min="min"
       color="primary"
       first-day-of-week="1"
-      @change="close"
-    ></v-date-picker>
+      @change="close">
+    </v-date-picker>
   </v-menu>
 </template>
 

@@ -1,8 +1,8 @@
 <template lang="html">
-  <v-toolbar>
+  <v-toolbar color="tertiary" tile>
     <v-toolbar-title>
       <v-btn
-        flat
+        text
         class="caption py-1 px-2 ma-0"
         :to="{name:'home'}"
         exact>
@@ -13,7 +13,7 @@
       <template v-for="(crumb, index) in crumbs">
         <v-icon>arrow_right</v-icon>
         <v-btn
-          flat
+          text
           class="caption py-1 px-2 ma-0"
           :to="crumb.link"
           exact>

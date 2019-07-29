@@ -1,111 +1,117 @@
 
 <template>
-  <v-app id="inspire" dark>
+  <v-app id="inspire">
     <v-navigation-drawer
       v-model="drawer"
       fixed
       app>
       <v-list dense>
-        <v-list-tile avatar class="my-1">
-          <v-list-tile-avatar>
+        <v-list-item>
+          <v-list-item-avatar>
             <img src="/img/logo.png">
-          </v-list-tile-avatar>
+          </v-list-item-avatar>
 
-          <v-list-tile-content>
-            <v-list-tile-title class="subheading">Meteor + Vuetify</v-list-tile-title>
-          </v-list-tile-content>
-          <v-list-tile-action>
-            <v-btn icon @click.stop="drawer=false">
+          <v-list-item-content>
+            <v-list-item-title class="subheading">Meteor + Vuetify</v-list-item-title>
+          </v-list-item-content>
+          <v-list-item-action>
+            <v-btn icon small @click.stop="drawer=false">
               <v-icon>chevron_left</v-icon>
             </v-btn>
-          </v-list-tile-action>
-        </v-list-tile>
+          </v-list-item-action>
+        </v-list-item>
         <v-divider></v-divider>
-        <v-list-tile avatar v-if="!!user" class="my-1" :to="{name:'profile'}" exact>
-          <v-list-tile-avatar>
+        <v-list-item v-if="!!user" :to="{name:'profile'}" exact>
+          <v-list-item-avatar>
             <img :src="avatar" lazy-src="/img/logo.png">
-          </v-list-tile-avatar>
+          </v-list-item-avatar>
 
-          <v-list-tile-content>
-            <v-list-tile-title>{{ !!user.profile.name ? user.profile.name : user.profile.email}}</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          <v-list-item-content>
+            <v-list-item-title>{{ !!user.profile.name ? user.profile.name : user.profile.email}}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
         <!-- <v-divider v-if="!!user"></v-divider> -->
-        <v-list-tile :to="{name:'home'}" exact>
-          <v-list-tile-action>
+        <v-list-item :to="{name:'home'}" exact>
+          <v-list-item-action>
             <v-icon>home</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>home</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name:'about'}" exact>
-          <v-list-tile-action>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name:'about'}" exact>
+          <v-list-item-action>
             <v-icon>info</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>About us</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile :to="{name:'setauth0'}" exact>
-          <v-list-tile-action>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>About us</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item :to="{name:'setauth0'}" exact>
+          <v-list-item-action>
             <v-icon>person</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Set Auth0</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Set Auth0</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app scroll-off-screen>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+    <v-app-bar app hide-on-scroll color="tertiary">
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer">
+        <v-icon>menu</v-icon>
+      </v-app-bar-nav-icon>
       <v-toolbar-title class="font-weight-bold">Meteor + Vuetify</v-toolbar-title>
       <v-spacer></v-spacer>
-        <v-menu offset-y v-if="!!authenticated && !!user">
-          <template slot="activator">
-            <v-avatar
-              size="36px"
-              ripple>
-              <img
-               :src="avatar"
-               lazy-src="/img/logo.png"
-               alt="">
-            </v-avatar>
+      <v-menu offset-y v-if="!!authenticated && !!user">
+        <template v-slot:activator="{ on }">
+          <v-avatar
+            v-on="on"
+            size="36px"
+            ripple
+            class="pointer">
+            <img
+             :src="avatar"
+             lazy-src="/img/logo.png"
+             alt="">
+          </v-avatar>
+        </template>
+        <v-list>
+          <template v-for="(item,i) in options">
+            <v-divider dark v-if="i!=0"></v-divider>
+            <v-list-item
+              :key="i"
+              v-if="item.action != 'logout'"
+              :to="{name:item.action}">
+              <v-list-item-action>
+                <v-icon v-if="item.icon">{{item.icon}}</v-icon>
+              </v-list-item-action>
+              <v-list-item-title>{{item.text}}</v-list-item-title>
+            </v-list-item>
+            <v-list-item
+              :key="i"
+              v-else
+              @click="logout">
+              <v-list-item-action>
+                <v-icon v-if="item.icon">{{item.icon}}</v-icon>
+              </v-list-item-action>
+              <v-list-item-title>{{item.text}}</v-list-item-title>
+            </v-list-item>
           </template>
-          <v-list>
-            <template v-for="(item,i) in options">
-              <v-divider dark v-if="i!=0"></v-divider>
-              <v-list-tile
-                :key="i"
-                v-if="item.action != 'logout'"
-                :to="{name:item.action}">
-                <v-list-tile-action>
-                  <v-icon v-if="item.icon">{{item.icon}}</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-title>{{item.text}}</v-list-tile-title>
-              </v-list-tile>
-              <v-list-tile
-                :key="i"
-                v-else
-                @click="logout">
-                <v-list-tile-action>
-                  <v-icon v-if="item.icon">{{item.icon}}</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-title>{{item.text}}</v-list-tile-title>
-              </v-list-tile>
-            </template>
-          </v-list>
-        </v-menu>
-        <v-tooltip bottom v-else>
-            <v-btn flat
-                   icon
-                   slot="activator"
-                   @click="showLock()">
-                <v-icon>fas fa-sign-in-alt</v-icon>
-            </v-btn>
-            <span>Log in</span>
-        </v-tooltip>
-    </v-toolbar>
+        </v-list>
+      </v-menu>
+      <v-tooltip bottom v-else>
+        <template v-slot:activator="{ on }">
+          <v-btn text
+                 icon
+                 v-on="on"
+                 @click="showLock()">
+              <v-icon>fas fa-sign-in-alt</v-icon>
+          </v-btn>
+        </template>
+          <span>Log in</span>
+      </v-tooltip>
+    </v-app-bar>
     <v-content>
       <v-container grid-list-md>
       <bread-crumbs></bread-crumbs>
@@ -132,7 +138,6 @@ import Confirm from '/imports/ui/Confirm.vue'
 import BreadCrumbs from '/imports/ui/BreadCrumbs.vue'
 import Avatars from '/imports/api/avatars'
 import { AUTH0 } from '/imports/auth0-variables'
-import Auth0Lock from 'auth0-lock'
 const auth0Lock = new Auth0Lock(
   AUTH0.CLIENT_ID,
   AUTH0.DOMAIN,
