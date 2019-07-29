@@ -9,8 +9,8 @@
           {{text}}
         </v-card-text>
         <v-card-actions>
-          <v-spacer></v-spacer>
           <v-btn  color="error" @click="close"><v-icon>close</v-icon>&nbsp;No</v-btn>
+          <v-spacer></v-spacer>
           <v-btn  color="success" @click="accepted"><v-icon>check</v-icon>&nbsp;Yes</v-btn>
         </v-card-actions>
       </v-card>
