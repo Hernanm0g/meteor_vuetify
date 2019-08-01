@@ -5,9 +5,10 @@
 2. Clone repository
   ``` git clone https://github.com/Hernanm0g/meteor_vuetify.git ```
 3. Navigate to directory ``` cd meteor_vuetify ```
-4. run Meteor ``` meteor ```
-5. Open in browser (localhost:3000)
-6. Follow instructions to set Auth0 credentials.
+4. Run ``` meteor npm install ```
+5. run Meteor ``` meteor ```
+6. Open in browser (localhost:3000)
+7. Follow instructions to set Auth0 credentials.
 
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 
