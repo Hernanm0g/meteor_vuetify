@@ -14,20 +14,28 @@
         :value="formattedDate"
         :required="required"
         :rules="rules"
-        :label="label"
-        prepend-icon="event"
+        :label="solo ? '' : label"
+        :prepend-icon="solo ? '' : 'event'"
+        :single-line="singleLine"
+        :full-width="fullWidth"
+        :clearable="clearable"
+        :hide-details="hideDetails"
+        :solo="solo"
+        :flat="flat"
+        @click:clear="clear"
         readonly>
       </v-text-field>
     </template>
-
     <v-date-picker
       ref="picker"
       v-model="pickerDate"
-      :max="max"
-      :min="min"
-      color="primary"
+      :max="max | toISODate"
+      :min="min | toISODate"
+      color="primary darken-1"
       first-day-of-week="1"
-      @change="close">
+      @change="close"
+      locale="es"
+      :readonly="readonly">
     </v-date-picker>
   </v-menu>
 </template>
@@ -35,6 +43,8 @@
 <script>
 import Rules from '/imports/methods/rules'
 import moment from 'moment'
+import 'moment/locale/es'  // without this line it didn't work
+moment.locale('es')
 export default {
   name:"DatePicker",
   data(){
@@ -42,24 +52,42 @@ export default {
       menu:false
     }
   },
+  watch: {
+    menu (val) {
+      if (this.birthdate) {
+        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+      }
+    }
+  },
   computed: {
     pickerDate: {
       get(){
-        return this.date;
+        if (!this.value) {
+          return null
+        }
+        return moment(this.value).format('YYYY-MM-DD');
       },
       set(d){
         this.updateValue(d);
       }
     },
     formattedDate() {
-      return this.date ? moment(this.date).format('DD MMM YYYY') : ''
+      return this.value ? moment(this.value).format('DD MMM YYYY') : null
     }
   },
   mixins: [Rules],
   props: {
-    date: {
+    value: {
       type: String,
-      default: "2019-01-01"
+      default: null
+    },
+    current: {
+      type: Boolean,
+      default: false
+    },
+    birthdate: {
+      type: Boolean,
+      default: false
     },
     rules: {
       type: Array,
@@ -73,13 +101,41 @@ export default {
       type: Boolean,
       default: false
     },
+    fullWidth: {
+      type: Boolean,
+      default: false
+    },
+    solo: {
+      type: Boolean,
+      default: false
+    },
+    flat: {
+      type: Boolean,
+      default: false
+    },
+    hideDetails: {
+      type: Boolean,
+      default: false
+    },
     max: {
       type: String,
-      default: new Date().toISOString().substr(0, 10)
+      default: null
     },
     min: {
       type: String,
-      default: "1900-01-01"
+      default: null
+    },
+    singleLine: {
+      type: Boolean,
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    clearable: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {
@@ -87,7 +143,14 @@ export default {
       this.menu = false;
     },
     updateValue(d){
-      this.$emit('input', moment(d).toDate());
+      if (!d) {
+        this.$emit("input", null);
+        return
+      }
+      this.$emit('input', moment(d).toISOString());
+    },
+    clear(){
+      this.$emit('input', null);
     }
   }
 }

@@ -36,19 +36,17 @@
               <!-- DatePicker -->
               <v-flex xs12 sm6 d-flex>
                 <date-picker
-                  max=""
-                  :rules="notEmpty"
+                  :max="null"
                   v-model="values.birthdate"
-                  :date="values.birthdate|toISODate"
-                  label="Birth Date">
+                  label="Birth Date"
+                  clearable
+                  birthdate>
                 </date-picker>
               </v-flex>
               <!-- Phone -->
               <v-flex xs12 sm6>
                 <v-text-field
                   v-model="values.phone"
-                  required
-                  :rules="notEmpty"
                   label="Phone"
                   hint="p.e: +57 3143335255"
                   prepend-icon="phone"
@@ -70,8 +68,6 @@
               <v-flex xs12 sm6>
                 <v-text-field
                   v-model="values.address"
-                  required
-                  :rules="notEmpty"
                   label="Address"
                   hint="p.e: Carrera 17A # 116-55"
                   prepend-icon="place"
@@ -82,8 +78,6 @@
               <v-flex xs12 sm6>
                 <v-text-field
                   v-model="values.city"
-                  required
-                  :rules="notEmpty"
                   label="City"
                   hint="p.e: Bogotá"
                   type="text"
@@ -94,8 +88,6 @@
               <v-flex xs12 sm6>
                 <v-text-field
                   v-model="values.state"
-                  required
-                  :rules="notEmpty"
                   label="State / Province / Dpt"
                   hint="p.e: Bogotá D.C."
                   type="text"
@@ -106,8 +98,6 @@
               <v-flex xs12 sm6>
                 <v-text-field
                   v-model="values.country"
-                  required
-                  :rules="notEmpty"
                   label="Country"
                   hint="p.e: Colombia"
                   type="text"
