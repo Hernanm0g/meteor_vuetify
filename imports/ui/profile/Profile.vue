@@ -184,37 +184,45 @@ export default {
       progress:false
     }
   },
-  watch: {
-    user(u){
-      this.values = u.profile;
-    }
-  },
   meteor: {
+    $subscribe: {
+      "avatars.get"(){
+        if (!this.authenticated) {
+          return []
+        }
+        return [this.values.avatar]
+      }
+    },
     // Get user logged
     user(){
       return Meteor.user();
     },
     // Get avatar url
+    // Get avatar url
     avatar(){
-      if (!this.user) {
-        return "/img/logo.png";
+      if (!this.user || !this.user.profile) {
+        return "/img/logo.png"
       }
-      self=this;
-      if (!!this.user.profile.avatar) {
-        let myavatar = Avatars.findOne({ _id:self.user.profile.avatar });
-        if (!!myavatar) {
-          return myavatar.link("thumbnail");
-        }
+      if (!this.user.profile.avatar) {
+        return this.user.profile.picture
       }
-      return this.user.profile.picture;
-
-    },
-    // Use it when autopublish off
-    // $subscribe: {
-    //   "avatars.get.mine"(){
-    //     return [this.values.avatar]
-    //   }
-    // }
+      let avatar = Avatars.findOne({
+        _id:this.values.avatar
+      });
+      if (!avatar) {
+        return ""
+      }
+      avatar = avatar.link("thumbnail");
+      if (!avatar) {
+        return ""
+      }
+      return avatar
+    }
+  },
+  watch: {
+    user(u){
+      this.values = u.profile;
+    }
   },
   methods: {
     closePicker: function(){

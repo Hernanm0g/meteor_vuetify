@@ -15,10 +15,20 @@ export const updateCrumbs = (state, crumbs) => {
   c[crumbs.position] = crumbs;
   Vue.set(state, "crumbs", c);
 }
-export const snack = (state, snack) => {
-  state.snackbar = true,
-  state.snacktext = snack.text,
-  state.snackbarColor = snack.color
+export const snack = (state, {text,color}) => {
+  state.snackbar = true
+  if (text == "error") {
+    state.snacktext = "Ha habido un error, vuelve a intentarlo."
+    state.snackbarColor = "error"
+    return
+  }
+  if (text == "confirm") {
+    state.snacktext = "Por favor, confirma los campos en rojo."
+    state.snackbarColor = "error"
+    return
+  }
+  state.snacktext = text,
+  state.snackbarColor = color
 }
 
 export const deactivateSnack = (state) => {
