@@ -4,6 +4,9 @@ import 'vuetify/dist/vuetify.min.css'
 
 Vue.use(Vuetify)
 
+// Language
+// Translation provided by Vuetify (javascript)
+import es from 'vuetify/es5/locale/es'
 export default new Vuetify(
   {
     theme: {
@@ -13,6 +16,10 @@ export default new Vuetify(
           tertiary: "#212121"
         }
       }
-    }
+    },
+    lang: {
+      locales: { es },
+      current: 'es'
+    },
   }
 )
