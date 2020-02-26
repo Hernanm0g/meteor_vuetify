@@ -7,19 +7,4 @@ Vue.use(Vuetify)
 // Language
 // Translation provided by Vuetify (javascript)
 import es from 'vuetify/es5/locale/es'
-export default new Vuetify(
-  {
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          tertiary: "#212121"
-        }
-      }
-    },
-    lang: {
-      locales: { es },
-      current: 'es'
-    },
-  }
-)
+export default new Vuetify()

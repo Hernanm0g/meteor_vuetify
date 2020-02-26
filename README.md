@@ -21,7 +21,7 @@
 * EventBus for event listening.
 
 # What you will find here.
-## METEOR@1.8.1 + vue@2.6.10 + vuetify@1.5.16
+## METEOR@1.9.2 + vue@2.6.11 + vuetify@2.2.15
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Authentication with Auth0 lock 11.15.0. and Meteor-accounts
 ![login](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/login.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
