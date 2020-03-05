@@ -6,5 +6,5 @@ Vue.use(Vuetify)
 
 // Language
 // Translation provided by Vuetify (javascript)
-import es from 'vuetify/es5/locale/es'
+// import es from 'vuetify/es5/locale/es'
 export default new Vuetify()
