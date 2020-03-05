@@ -1,23 +1,33 @@
 <template lang="html">
-  <v-toolbar color="tertiary" tile>
+  <v-toolbar
+    color="tertiary"
+    tile
+  >
     <v-toolbar-title>
       <v-btn
         text
         class="caption py-1 px-2 ma-0"
         :to="{name:'home'}"
-        exact>
+        exact
+      >
         <v-icon>home</v-icon>
         &nbsp;
         Home
       </v-btn>
       <template v-for="(crumb, index) in crumbs">
-        <v-icon>arrow_right</v-icon>
+        <v-icon
+          :key="index"
+        >
+          arrow_right
+        </v-icon>
         <v-btn
+          :key="index"
           text
           class="caption py-1 px-2 ma-0"
           :to="crumb.link"
-          exact>
-          <v-icon>{{crumb.icon}}</v-icon>
+          exact
+        >
+          <v-icon>{{ crumb.icon }}</v-icon>
           &nbsp;
           <span class="hidden-xs-only">{{ crumb.name }}</span>
         </v-btn>
