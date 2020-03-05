@@ -25,3 +25,4 @@ ostrio:files
 accounts-base@1.5.0
 underscore@1.0.10
 ostrio:meteor-root
+fourseven:scss

@@ -21,7 +21,7 @@
           arrow_right
         </v-icon>
         <v-btn
-          :key="index"
+          :key="index+'button'"
           text
           class="caption py-1 px-2 ma-0"
           :to="crumb.link"

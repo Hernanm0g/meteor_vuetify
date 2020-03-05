@@ -164,6 +164,8 @@
       <v-container grid-list-md>
         <bread-crumbs />
         <router-view @logmein="showLock()" />
+        <snack-bar />
+        <confirm-dialog />
       </v-container>
     </v-content>
     <v-footer
@@ -176,28 +178,15 @@
         target="_blank"
       > Cosmos Labs</a></span>
     </v-footer>
-    <v-snackbar
-      v-cloak
-      v-model="snackbar"
-      top
-      :timeout="3000"
-      :color="snackbarColor"
-    >
-      {{ snacktext }}
-    </v-snackbar>
-    <confirm
-      :active="confirmDialog"
-      :title="confirmTitle"
-      :text="confirmText"
-    />
   </v-app>
 </template>
 
 <script>
-import Confirm from '/imports/ui/Confirm.vue'
-import BreadCrumbs from '/imports/ui/BreadCrumbs.vue'
-import Avatars from '/imports/api/avatars'
-import { AUTH0 } from '/imports/auth0-variables'
+import ConfirmDialog from './ConfirmDialog.vue'
+import BreadCrumbs from './BreadCrumbs.vue'
+import SnackBar from './SnackBar.vue'
+import Avatars from '../api/avatars'
+import { AUTH0 } from '../auth0-variables'
 // eslint-disable-next-line
 const auth0Lock = new Auth0Lock(
   AUTH0.CLIENT_ID,
@@ -224,7 +213,8 @@ export default {
   },
   components: {
     BreadCrumbs,
-    Confirm
+    ConfirmDialog,
+    SnackBar,
   },
   data() {
     return {
@@ -261,15 +251,6 @@ export default {
     },
     snacktext(){
       return this.$store.state.snacktext;
-    },
-    confirmDialog(){
-      return this.$store.state.confirmDialog;
-    },
-    confirmText(){
-      return this.$store.state.confirmText;
-    },
-    confirmTitle(){
-      return this.$store.state.confirmTitle;
     }
   },
   watch: {
@@ -277,13 +258,13 @@ export default {
       if (!!n != !!o) {
         this.$store.commit("authenticated", !!n);
       }
-    }
+    },
     // Use it when autopublish is off
-    // "user.profile.avatar"(a){
-    //   if (!!a) {
-    //     this.$subscribe("avatars.get.mine", [a] );
-    //   }
-    // }
+    "user.profile.avatar"(a){
+      if (a) {
+        this.$subscribe("avatars.get.mine", [a] );
+      }
+    }
   },
   mounted(){
     this.$nextTick(function() {
@@ -296,21 +277,6 @@ export default {
         });
       });
     }.bind(this));
-  },
-  methods: {
-    showLock(){
-      this.$nextTick(function(){
-        this.lock.show();
-      });
-    },
-    login(profile){
-      Meteor.login(profile);
-    },
-    logout(){
-      Meteor.logout();
-      this.$store.commit("updateCrumbs", false);
-      this.$router.push("/");
-    }
   },
   meteor: {
     // Get user logged
@@ -332,7 +298,22 @@ export default {
       }
       return "/img/logo.png";
     }
-  }
+  },
+  methods: {
+    showLock(){
+      this.$nextTick(function(){
+        this.lock.show();
+      });
+    },
+    login(profile){
+      Meteor.login(profile);
+    },
+    logout(){
+      Meteor.logout();
+      this.$store.commit("updateCrumbs", false);
+      this.$router.push("/");
+    }
+  },
 }
 </script>
 

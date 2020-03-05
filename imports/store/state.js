@@ -1,12 +1,16 @@
 // Initial states
-state = {
+const state = {
   loading : false,
-  snackbar : false,
-  snacktext : "Hello!!",
-  snackbarColor : 'success',
-  confirmDialog: false,
-  confirmTitle:"",
-  confirmText:"",
+  snack : {
+    active:false,
+    text:"Hello!!",
+    color: "success"
+  },
+  confirm: {
+    dialog: false,
+    title:"",
+    text:"",
+  },
   crumbs : [],
   authenticated:false
 }

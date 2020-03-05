@@ -25,5 +25,6 @@ module.exports = {
         "html"
     ],
     "rules": {
+      "vue/no-v-html":0 // disabling warning of no v-html in vue
     }
 };
