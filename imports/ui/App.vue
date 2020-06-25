@@ -160,14 +160,14 @@
         <span>Log in</span>
       </v-tooltip>
     </v-app-bar>
-    <v-content>
+    <v-main>
       <v-container grid-list-md>
         <bread-crumbs />
         <router-view @logmein="showLock()" />
         <snack-bar />
         <confirm-dialog />
       </v-container>
-    </v-content>
+    </v-main>
     <v-footer
       app
       fixed
@@ -268,8 +268,8 @@ export default {
   },
   mounted(){
     this.$nextTick(function() {
-      self.lock.on('authenticated', function(authResult){
-        self.lock.getUserInfo(authResult.accessToken, function(error, profile) {
+      this.lock.on('authenticated', function(authResult){
+        this.lock.getUserInfo(authResult.accessToken, function(error, profile) {
           if (error) {
             return;
           }

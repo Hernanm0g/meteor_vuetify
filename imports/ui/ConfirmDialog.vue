@@ -40,8 +40,13 @@ import { EventBus } from '../methods/event-bus.js';
 export default {
   name:"Confirm",
   computed: {
-    confirm(){
-      return this.$store.state.confirm
+    confirm:{
+      get(){
+        return this.$store.state.confirm
+      },
+      set(){
+
+      }
     }
   },
   methods: {

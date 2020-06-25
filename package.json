@@ -3,21 +3,22 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
+    "serve": "NO_HMR=1 meteor",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
     "visualize": "meteor --production --extra-packages bundle-visualizer"
   },
   "dependencies": {
-    "@babel/runtime": "^7.8.4",
+    "@babel/runtime": "^7.10.3",
     "babel-runtime": "^6.26.0",
     "meteor-node-stubs": "^0.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.27.0",
     "vue": "^2.6.11",
     "vue-meta": "^1.6.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
-    "vue-router": "^3.1.6",
-    "vuetify": "^2.2.15",
-    "vuex": "^3.1.2"
+    "vue-router": "^3.3.4",
+    "vuetify": "^2.3.2",
+    "vuex": "^3.4.0"
   },
   "meteor": {
     "mainModule": {
@@ -29,7 +30,7 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-vue": "^6.2.1"
+    "eslint-plugin-html": "^6.0.2",
+    "eslint-plugin-vue": "^6.2.2"
   }
 }
