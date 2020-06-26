@@ -56,5 +56,6 @@ Enjoy!!
 4. Install webpack, babel, loaders and more devDependencies:  
    `meteor npm i -D webpack @babel/core @babel/preset-env html-webpack-plugin webpack-meteor-externals vue-loader@15.9.3 vue-template-compiler vue-style-loader vuetify-loader css-loader sass sass-loader deepmerge babel-loader file-loader webpack-dev-middleware webpack-hot-middleware webpack-hot-server-middleware`
 5. Create webpack.config.js as in this package.
-6. Create .meteorignore as in this package
-7. Start your app `NO_HMR=1 meteor`, wait until the bundle finishes and enjoy.
+6. Create .meteorignore as in this package.
+7. Add a .babelrc file as in this package.
+8. Start your app `NO_HMR=1 meteor`, wait until the bundle finishes and enjoy.
