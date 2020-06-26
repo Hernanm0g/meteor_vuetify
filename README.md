@@ -23,14 +23,14 @@ All you need to start your Real Time Web App
 * EventBus for event listening across components.
 
 # Webpack configuration
-![thanks ardatan](https://github.com/ardatan/meteor-webpack)
+[thanks ardatan!](https://github.com/ardatan/meteor-webpack)
 This boilerplate is already configured with webpack, but if you want to try it follow the steps below...
 
 # What you will find here.
 ## METEOR@1.10.2 + vue@2.6.11 + vuetify@2.3.2
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte.
-![A la carte](https://vuetifyjs.com/en/customization/a-la-carte/)
+[A la carte!](https://vuetifyjs.com/en/customization/a-la-carte/)
 ## Authentication with Auth0 lock 11.15.0. and Meteor-accounts
 ![login](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/login.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ![mongol](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/mongol.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
