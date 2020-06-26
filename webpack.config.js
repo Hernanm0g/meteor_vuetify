@@ -2,14 +2,22 @@ var path = require('path')
 var webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const meteorExternals = require('webpack-meteor-externals');
+const nodeExternals = require('webpack-node-externals');
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 const clientConfig = {
-  entry: './client/main.js',
+  entry: [
+    "core-js/modules/es.promise",
+    "core-js/modules/es.array.iterator",
+    "./client/main.js"
+  ],
   output: {
     publicPath: '/',
     filename: 'build.js'
+  },
+  optimization: {
+    minimize: false
   },
   module: {
     rules: [
@@ -25,8 +33,15 @@ const clientConfig = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader',
-        ],
+          {
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                indentedSyntax: true
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.vue$/,
@@ -88,9 +103,14 @@ const clientConfig = {
 }
 
 const serverConfig = {
-  entry: './server/main.js',
+  entry: [
+    "./server/main.js"
+  ],
   target: 'node',
-  externals: [meteorExternals()],
+  externals: [
+    meteorExternals(),
+    nodeExternals()
+  ],
   resolve: {
     modules: [
       path.resolve(__dirname, 'node_modules'),
@@ -104,6 +124,9 @@ const serverConfig = {
   devServer: {
     hot: true
   },
+  plugins: [
+    new webpack.DefinePlugin({ "global.GENTLY": false })
+  ]
 };
 
 module.exports = [clientConfig, serverConfig]

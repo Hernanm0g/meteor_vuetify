@@ -54,7 +54,7 @@ Enjoy!!
 3.  Add ardatan's packages:  
    `meteor add ardatan:webpack ardatan:webpack-dev-middleware`
 4. Install webpack, babel, loaders and more devDependencies:  
-   `meteor npm i -D webpack @babel/core @babel/preset-env html-webpack-plugin webpack-meteor-externals vue-loader@15.9.3 vue-template-compiler vue-style-loader vuetify-loader css-loader sass sass-loader deepmerge babel-loader file-loader webpack-dev-middleware webpack-hot-middleware webpack-hot-server-middleware`
+   `meteor npm i -D webpack @babel/core @babel/preset-env html-webpack-plugin webpack-meteor-externals vue-loader@15.9.3 vue-template-compiler vue-style-loader vuetify-loader css-loader sass sass-loader deepmerge babel-loader file-loader webpack-dev-middleware webpack-hot-middleware webpack-hot-server-middleware @babel/plugin-syntax-dynamic-import webpack-node-externals`
 5. Create webpack.config.js as in this package.
 6. Create .meteorignore as in this package.
 7. Add a .babelrc file as in this package.

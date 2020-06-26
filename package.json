@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "^7.10.3",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
@@ -54,6 +55,7 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
     "webpack-hot-server-middleware": "^0.6.1",
-    "webpack-meteor-externals": "0.0.5"
+    "webpack-meteor-externals": "0.0.5",
+    "webpack-node-externals": "^1.7.2"
   }
 }
