@@ -16,7 +16,6 @@ module.exports = {
     },
     "parserOptions": {
         "parser": "babel-eslint",
-        "allowImportExportEverywhere": true,
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
