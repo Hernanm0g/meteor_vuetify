@@ -24,7 +24,7 @@ All you need to start your Real Time Web App
 
 # Webpack configuration
 [thanks ardatan!](https://github.com/ardatan/meteor-webpack)
-This boilerplate is already configured with webpack, but if you want to try it follow the steps below...
+This boilerplate is already configured with webpack, but if you want to try it follow the steps [below!](#webpack-installation-steps)...
 
 # What you will find here.
 ## METEOR@1.10.2 + vue@2.6.11 + vuetify@2.3.2
