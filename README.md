@@ -26,7 +26,7 @@
 This boilerplate is already configured with webpack, but if you want to try it follow the steps below...
 
 # What you will find here.
-## METEOR@1.9.2 + vue@2.6.11 + vuetify@2.2.15
+## METEOR@1.10.2 + vue@2.6.11 + vuetify@2.3.2
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte.
 ![A la carte](https://vuetifyjs.com/en/customization/a-la-carte/)
