@@ -1,3 +1,15 @@
+blaze                removed from your project
+jquery               removed from your project
+meteortoys:toykit    removed from your project
+msavin:mongol        removed from your project
+observe-sequence     removed from your project
+reactive-dict        removed from your project
+session              removed from your project
+spacebars            removed from your project
+templating           removed from your project
+templating-compiler  removed from your project
+templating-runtime   removed from your project
+
 # Meteor + Vue + Vuetify + Auth0 Authentication + Vuex + Vue Router ...
 ## Installation (Dev mode):
 
