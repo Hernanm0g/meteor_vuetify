@@ -58,4 +58,4 @@ Enjoy!!
 5. Create webpack.config.js as in this package.
 6. Create .meteorignore as in this package.
 7. Add a .babelrc file as in this package.
-8. Start your app `NO_HMR=1 meteor`, wait until the bundle finishes and enjoy.
+8. Start your app `meteor`, wait until the bundle finishes and enjoy.
