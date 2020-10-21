@@ -14,9 +14,9 @@ All you need to start your Real Time Web App
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 
 # Idea
-* Back-end: Meteor and its DDP + Optimistic UI is wonderful for a rapid deployment and server-side js programming.
+* Back-end: Meteor and it's DDP + Optimistic UI is wonderful for a rapid deployment and server-side js programming.
 * Front-end: Vuejs and Vuetify are great for full-stack developers that want to learn and deliver software fast and continuosly. Even more, vuetify components give the ui an amazing look.
-* Vuetify's A La Carte its an essential features to reduce bundle size and give users a fast page load. But Meteor's legacy bundler will not help, as VueLoader needs Webpack@^4 to load the components as are requested. 
+* Vuetify's A La Carte is an essential features to reduce bundle size and give users a fast page load. But Meteor's legacy bundler will not help, as VueLoader needs Webpack@^4 to load the components as are requested. 
 * User Authentication: Auth0 is a reliable authorization platform that allows several types of authentication, including social media, without having to write a line of code, and with instant results. Auth0 interacts in this boilerplate with meteor-accounts so you might want to use Meteor.user() and Meteor.userId() in both, client and server side.
 * Vuex for state management.
 * VueRouter for route management.
