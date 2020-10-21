@@ -20,14 +20,18 @@
             color="error"
             @click="close"
           >
-            <v-icon>mdi-close</v-icon>&nbsp;No
+            <v-icon left>
+              mdi-close
+            </v-icon>No
           </v-btn>
           <v-spacer />
           <v-btn
             color="success"
             @click="accepted"
           >
-            <v-icon>mdi-check</v-icon>&nbsp;Si
+            <v-icon left>
+              mdi-check
+            </v-icon>Si
           </v-btn>
         </v-card-actions>
       </v-card>

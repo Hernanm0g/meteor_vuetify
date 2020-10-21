@@ -185,7 +185,7 @@
 import ConfirmDialog from './ConfirmDialog.vue'
 import BreadCrumbs from './BreadCrumbs.vue'
 import SnackBar from './SnackBar.vue'
-import Avatars from '../api/avatars'
+import Avatars from '../api/avatars/client'
 import { AUTH0 } from '../auth0-variables'
 // eslint-disable-next-line
 const auth0Lock = new Auth0Lock(
