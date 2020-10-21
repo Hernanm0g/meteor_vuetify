@@ -24,7 +24,7 @@ All you need to start your Real Time Web App
 
 # Webpack configuration
 [thanks ardatan!](https://github.com/ardatan/meteor-webpack)
-This boilerplate is already configured with webpack, if you want to understand how to configure webpack bundler in your meteor project, follow the steps [below!](#webpack-installation-steps)...
+This boilerplate is already configured with webpack, if you want to configure webpack bundler in your meteor project, follow the steps [below!](#webpack-installation-steps)...
 
 # What you will find here.
 ## METEOR@1.11.1 + vue@2.6.12 + vuetify@2.3.15
@@ -50,6 +50,7 @@ Enjoy!!
 
 
 # Webpack installation steps
+This project already has Webpack built-in, but if you want to know how we did it, here are some steps you can try:
 1. `meteor remove ecmascript es5-shim static-html`
 2. Remove this lines from package.json:
 ```
