@@ -6,25 +6,27 @@
     :nudge-right="40"
     transition="scale-transition"
     offset-y
-    full-width
-    min-width="290px">
+    min-width="290px"
+  >
     <template v-slot:activator="{on}">
       <v-text-field
-        v-on="on"
+        :class="smallText ? 'body-2':''"
         :value="formattedDate"
         :required="required"
         :rules="rules"
-        :label="solo ? '' : label"
-        :prepend-icon="solo ? '' : 'event'"
+        :label="label"
+        :prepend-icon="solo ? '' : 'mdi-calendar'"
         :single-line="singleLine"
-        :full-width="fullWidth"
         :clearable="clearable"
         :hide-details="hideDetails"
         :solo="solo"
         :flat="flat"
+        :dense="dense"
+        readonly
+        :disabled="disabled"
+        v-on="on"
         @click:clear="clear"
-        readonly>
-      </v-text-field>
+      />
     </template>
     <v-date-picker
       ref="picker"
@@ -33,57 +35,28 @@
       :min="min | toISODate"
       color="primary darken-1"
       first-day-of-week="1"
-      @change="close"
       locale="es"
-      :readonly="readonly">
-    </v-date-picker>
+      :disabled="readonly"
+      :type="type"
+      @change="close"
+    />
   </v-menu>
 </template>
 
 <script>
-import Rules from '/imports/methods/rules'
-import moment from 'moment'
-import 'moment/locale/es'  // without this line it didn't work
-moment.locale('es')
+import Rules from '../methods/rules'
+import datetimeMixin from '../methods/datetime'
 export default {
   name:"DatePicker",
-  data(){
-    return {
-      menu:false
-    }
-  },
-  watch: {
-    menu (val) {
-      if (this.birthdate) {
-        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
-      }
-    }
-  },
-  computed: {
-    pickerDate: {
-      get(){
-        if (!this.value) {
-          return null
-        }
-        return moment(this.value).format('YYYY-MM-DD');
-      },
-      set(d){
-        this.updateValue(d);
-      }
-    },
-    formattedDate() {
-      return this.value ? moment(this.value).format('DD MMM YYYY') : null
-    }
-  },
-  mixins: [Rules],
+  mixins: [datetimeMixin, Rules],
   props: {
     value: {
-      type: String,
-      default: null
+      default: undefined,
+      type: Date
     },
-    current: {
-      type: Boolean,
-      default: false
+    type: {
+      type: String,
+      default: "date"
     },
     birthdate: {
       type: Boolean,
@@ -95,13 +68,9 @@ export default {
     },
     label: {
       type: String,
-      default: "Date"
+      default: "Fecha"
     },
     required: {
-      type: Boolean,
-      default: false
-    },
-    fullWidth: {
       type: Boolean,
       default: false
     },
@@ -118,11 +87,11 @@ export default {
       default: false
     },
     max: {
-      type: String,
+      type: Date,
       default: null
     },
     min: {
-      type: String,
+      type: Date,
       default: null
     },
     singleLine: {
@@ -133,9 +102,59 @@ export default {
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     clearable: {
       type: Boolean,
       default: false
+    },
+    smallText: {
+      type: Boolean,
+      default: false
+    },
+    dense: {
+      type: Boolean,
+      default: false
+    },
+    format: {
+      type: String,
+      default: "dateFormat"
+    }
+  },
+  data(){
+    return {
+      menu:false
+    }
+  },
+  computed: {
+    pickerDate: {
+      get(){
+        if (!this.value) {
+          return null
+        }
+        return this.$options.filters.toISODate(this.value);
+      },
+      set(d){
+        this.updateValue(d);
+      }
+    },
+    formattedDate() {
+      if (this.format == "creditCardFormat") {
+        return this.value ? this.getCreditCardFormat(this.value) : null
+      }
+      return this.value ? this.getDateFormat(this.value) : null
+    }
+  },
+  watch: {
+    menu (val) {
+      if (this.birthdate) {
+        val && setTimeout(() => (this.$refs.picker.activePicker = 'YEAR'))
+      }
+    },
+    formattedDate(f){
+      this.$emit('set-formatted-date', f || undefined)
     }
   },
   methods: {
@@ -147,7 +166,7 @@ export default {
         this.$emit("input", null);
         return
       }
-      this.$emit('input', moment(d).toISOString());
+      this.$emit('input', this.toDate(d));
     },
     clear(){
       this.$emit('input', null);

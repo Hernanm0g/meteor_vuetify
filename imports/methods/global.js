@@ -1,5 +1,3 @@
-import { Meteor } from 'meteor/meteor';
-import Vue from 'vue';
 import { EventBus } from '/imports/methods/event-bus.js';
 import moment from 'moment'
 const global = {
@@ -24,10 +22,9 @@ const global = {
   },
   methods: {
     confirm: async function(title, text){
-      self=this;
       // deploy confirm action
       this.$store.commit("confirm", {title, text});
-      let promise = new Promise((resolve, reject) => {
+      let promise = new Promise((resolve) => {
         EventBus.$on('confirmed', (status)=>{
           resolve(status)
         });

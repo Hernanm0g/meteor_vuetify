@@ -12,7 +12,8 @@ const state = {
     text:"",
   },
   crumbs : [],
-  authenticated:false
+  authenticated:false,
+  auth0:undefined
 }
 
 export default state

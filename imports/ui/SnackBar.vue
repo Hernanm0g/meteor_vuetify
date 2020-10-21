@@ -2,6 +2,7 @@
   <v-snackbar
     v-cloak
     v-model="active"
+    top
     :timeout="3000"
     :color="color"
   >
