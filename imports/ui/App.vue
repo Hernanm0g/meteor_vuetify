@@ -152,7 +152,7 @@
             text
             icon
             v-on="on"
-            @click="showLock()"
+            @click="login()"
           >
             <v-icon>fas fa-sign-in-alt</v-icon>
           </v-btn>
@@ -186,23 +186,6 @@ import ConfirmDialog from './ConfirmDialog.vue'
 import BreadCrumbs from './BreadCrumbs.vue'
 import SnackBar from './SnackBar.vue'
 import Avatars from '../api/avatars/client'
-import { AUTH0 } from '../auth0-variables'
-// eslint-disable-next-line
-const auth0Lock = new Auth0Lock(
-  AUTH0.CLIENT_ID,
-  AUTH0.DOMAIN,
-  {
-    autoclose: true,
-    auth: {
-      responseType: 'token id_token',
-      redirectUrl: AUTH0.CALLBACK
-    },
-    theme: {
-      logo: "/img/logo.png",
-      primaryColor: '#31324F'
-    }
-  }
-);
 
 export default {
   name:"MeteorVuetify",
@@ -219,7 +202,6 @@ export default {
   data() {
     return {
       click_id:0,
-      lock: auth0Lock,
       drawer: null,
       options: [
         {
@@ -266,18 +248,6 @@ export default {
       }
     }
   },
-  mounted(){
-    this.$nextTick(function() {
-      this.lock.on('authenticated', function(authResult){
-        this.lock.getUserInfo(authResult.accessToken, function(error, profile) {
-          if (error) {
-            return;
-          }
-          this.login(profile);
-        });
-      });
-    }.bind(this));
-  },
   meteor: {
     // Get user logged
     user(){
@@ -300,18 +270,11 @@ export default {
     }
   },
   methods: {
-    showLock(){
-      this.$nextTick(function(){
-        this.lock.show();
-      });
-    },
-    login(profile){
-      Meteor.login(profile);
+    login(){
+      this.$store.dispatch("login")
     },
     logout(){
-      Meteor.logout();
-      this.$store.commit("updateCrumbs", false);
-      this.$router.push("/");
+      this.$store.dispatch("logout")
     }
   },
 }

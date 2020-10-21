@@ -50,3 +50,7 @@ export const confirm = (state, {title, text}) => {
 export const deactivateConfirm = (state) => {
   state.confirm.dialog=false;
 }
+
+export const setAuth0 = (state, auth0) => {
+  state.auth0 = auth0
+}

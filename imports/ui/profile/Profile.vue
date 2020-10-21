@@ -357,7 +357,7 @@ export default {
       this.values.name = this.values.given_name+" "+this.values.family_name;
       // Save values to profile
       Meteor.users.update( { _id: Meteor.userId() }, { $set: {profile: this.values}} );
-      self.$store.commit("snack", {
+      this.$store.commit("snack", {
         text:"Updated profile",
         color:"success"
       })

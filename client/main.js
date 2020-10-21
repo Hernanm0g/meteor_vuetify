@@ -1,4 +1,5 @@
 // Libs
+import "@babel/polyfill"
 import { Meteor } from 'meteor/meteor';
 import Vue from 'vue';
 
@@ -7,7 +8,6 @@ import vuetify from '/imports/plugins/vuetify' // path to vuetify export
 
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
-
 
 import VueTracker from 'vue-meteor-tracker';
 Vue.use(VueTracker);
@@ -28,7 +28,7 @@ import routes from "/imports/routes";
 const router = new VueRouter({
   mode: 'history',
   routes, // short for `routes: routes`
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior () {
     return { x: 0, y: 0 }
   }
 });
@@ -51,18 +51,19 @@ router.beforeResolve(function(to, from, next) {
 
 import store from '/imports/store';
 
-import login from '/imports/methods/login'
 
 import globalMixin from '/imports/methods/global'
 Vue.mixin(globalMixin);
-
-Meteor.login = login;
 
 Meteor.startup(() => {
   new Vue({
     vuetify,
     router,
     store,
+    created(){
+      // Initialize Auth0
+      this.$store.dispatch("initializeAuth0")
+    },
     render: h => h(App),
   }).$mount('app');
 });
