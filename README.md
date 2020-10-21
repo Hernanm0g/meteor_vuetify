@@ -67,3 +67,5 @@ This project already has Webpack built-in, but if you want to know how we did it
 6. Create .meteorignore as in this package.
 7. Add a .babelrc file as in this package.
 8. Start your app `meteor`, wait until the bundle finishes and enjoy.
+
+Note: If you have problems using @babel/polyfill try  `npm i core-js@2`
