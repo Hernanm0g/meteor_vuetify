@@ -24,7 +24,7 @@ All you need to start your Real Time Web App
 
 # Webpack configuration
 [thanks ardatan!](https://github.com/ardatan/meteor-webpack)
-This boilerplate is already configured with webpack, but if you want to try it follow the steps [below!](#webpack-installation-steps)...
+This boilerplate is already configured with webpack, if you want to understand how to configure webpack bundler in your meteor project, follow the steps [below!](#webpack-installation-steps)...
 
 # What you will find here.
 ## METEOR@1.10.2 + vue@2.6.11 + vuetify@2.3.2
@@ -40,6 +40,10 @@ This boilerplate is already configured with webpack, but if you want to try it f
 ![profile](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/profile.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ![avatar](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/avatar.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 Enjoy!!
+## Template API folder
+**Important!**: Take into account that webpack will not resolve correctly Meteor.isClient and Meteor.isServer methods, so its really, really important to keep client side code and server side code in different files. Thats why you'll find in `/imports/api` folder all the api collections distributed in three files: server.js (For server side code), client.js (for client side code) and shared.js (For shared code e.g. Meteor Methods). Use the template folder in `/imports/api/template/` to get the basic scaffolding for every collection. 
+* When importing in client use `import {Template} from '/imports/api/template/client'`
+* When importing in server use `import {Template} from '/imports/api/template/server'`
 
 
 # Webpack installation steps

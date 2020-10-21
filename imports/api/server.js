@@ -1,2 +1,2 @@
-import Avatars from '/imports/api/avatars'
-import {Clicks} from '/imports/api/clicks'
+import '/imports/api/avatars/server'
+import '/imports/api/clicks/server'
