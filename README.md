@@ -31,9 +31,12 @@ This boilerplate is already configured with webpack, if you want to understand h
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte.
 [A la carte!](https://vuetifyjs.com/en/customization/a-la-carte/)
-## Authentication with Auth0 lock 11.15.0. and Meteor-accounts
+## Authentication with Auth0 Universal Login and Meteor-accounts
 ![login](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/login.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ![mongol](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/mongol.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
+
+* You can easily access methods login and logout in any component via vuex action: `this.$store.dispatch('login')` or `this.$store.dispatch('logout')`
+* **Dont forget to set your auth0 credentias**
 ## Page Router and State Management (VueRouter and Vuex)
 ![vuex&VueRouter](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/vuerouter.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Profile Page with avatar.
