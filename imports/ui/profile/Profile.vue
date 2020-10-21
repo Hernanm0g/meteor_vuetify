@@ -1,16 +1,24 @@
 <template lang="html">
-  <v-layout row wrap>
-    <v-flex xs12>
+  <v-row>
+    <v-col cols="12">
       <v-card>
         <v-card-text>
           <v-form
             ref="form"
             v-model="valid"
             lazy-validation
-            @keyup.native.enter="save">
-            <v-layout row wrap>
+            @keyup.native.enter="save"
+          >
+            <v-layout
+              row
+              wrap
+            >
               <!-- given_name -->
-              <v-flex xs12 sm6 d-flex>
+              <v-col
+                cols="12"
+                sm="6"
+                class="d-flex"
+              >
                 <v-text-field
                   v-model="values.given_name"
                   :counter="50"
@@ -19,10 +27,14 @@
                   :rules="notEmpty"
                   hint="p.e: Natalia"
                   prepend-icon="face"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- family_name -->
-              <v-flex xs12 sm6 d-flex>
+              <v-col
+                cols="12"
+                sm="6"
+                class="d-flex"
+              >
                 <v-text-field
                   v-model="values.family_name"
                   :counter="50"
@@ -31,30 +43,40 @@
                   :rules="notEmpty"
                   hint="p.e: Díaz Santos"
                   prepend-icon="people"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- DatePicker -->
-              <v-flex xs12 sm6 d-flex>
+              <v-col
+                cols="12"
+                sm="6"
+                class="d-flex"
+              >
                 <date-picker
-                  :max="null"
                   v-model="values.birthdate"
+                  :max="null"
                   label="Birth Date"
                   clearable
-                  birthdate>
-                </date-picker>
-              </v-flex>
+                  birthdate
+                />
+              </v-col>
               <!-- Phone -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.phone"
                   label="Phone"
                   hint="p.e: +57 3143335255"
                   prepend-icon="phone"
                   type="tel"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- Email -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.email"
                   required
@@ -62,116 +84,167 @@
                   label="E-mail"
                   prepend-icon="email"
                   type="email"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- Address -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.address"
                   label="Address"
                   hint="p.e: Carrera 17A # 116-55"
                   prepend-icon="place"
                   type="text"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- City -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.city"
                   label="City"
                   hint="p.e: Bogotá"
                   type="text"
                   prepend-icon="location_city"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- state -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.state"
                   label="State / Province / Dpt"
                   hint="p.e: Bogotá D.C."
                   type="text"
                   prepend-icon="my_location"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!--  Country -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.country"
                   label="Country"
                   hint="p.e: Colombia"
                   type="text"
                   prepend-icon="language"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- Post code -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-text-field
                   v-model="values.postcode"
                   label="Post code"
                   hint="p.e: 110111"
                   type="text"
                   prepend-icon="local_post_office"
-                ></v-text-field>
-              </v-flex>
+                />
+              </v-col>
               <!-- Description -->
-              <v-flex xs12 sm6>
+              <v-col
+                cols="12"
+                sm="6"
+              >
                 <v-textarea
-                  label="Description"
                   v-model="values.description"
+                  label="Description"
                   rows="3"
                   hint="p.e: I like space ships"
-                  prepend-icon="short_text">
-                </v-textarea>
-                <v-radio-group v-model="values.gender" :mandatory="false" label="Gender">
-                  <v-radio label="Male" value="male"></v-radio>
-                  <v-radio label="Female" value="female"></v-radio>
-                  <v-radio label="Other" value="other"></v-radio>
+                  prepend-icon="short_text"
+                />
+                <v-radio-group
+                  v-model="values.gender"
+                  :mandatory="false"
+                  label="Gender"
+                >
+                  <v-radio
+                    label="Male"
+                    value="male"
+                  />
+                  <v-radio
+                    label="Female"
+                    value="female"
+                  />
+                  <v-radio
+                    label="Other"
+                    value="other"
+                  />
                 </v-radio-group>
-              </v-flex>
+              </v-col>
               <!-- Avatar -->
-              <v-flex xs8 sm4 offset-xs2 offset-sm1>
+              <v-col
+                cols="8"
+                sm="4"
+                offset="2"
+                offset-sm="1"
+              >
                 <v-card flat>
                   <v-card-title class="title">
-                   Avatar
+                    Avatar
                   </v-card-title>
                   <v-img
-                  :src="!!avatar ? avatar : !!values.picture ? values.picture : '/img/logo.png'"
-                  :aspect-ratio="1" @click="!!values.picture ? zoomPlease(values.picture):null">
-                  </v-img>
+                    :src="!!avatar ? avatar : !!values.picture ? values.picture : '/img/logo.png'"
+                    :aspect-ratio="1"
+                    @click="!!values.picture ? zoomPlease(values.picture):null"
+                  />
                   <div class="">
-                    {{progress.get}}
+                    {{ progress.get }}
                   </div>
-                  <v-progress-linear v-if="!!loadingImage" indeterminate>
-                  </v-progress-linear>
+                  <v-progress-linear
+                    v-if="!!loadingImage"
+                    indeterminate
+                  />
                   <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <upload-button @selected-callback="imageSelected"
-                    :multiple="false">
-                    </upload-button>
+                    <v-spacer />
+                    <upload-button
+                      :multiple="false"
+                      @selected-callback="imageSelected"
+                    />
                   </v-card-actions>
                 </v-card>
-              </v-flex>
+              </v-col>
             </v-layout>
           </v-form>
         </v-card-text>
         <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn :to="{name:'home'}">Back</v-btn>
-          <v-btn color="primary" @click="save">Save</v-btn>
+          <v-spacer />
+          <v-btn :to="{name:'home'}">
+            Back
+          </v-btn>
+          <v-btn
+            color="primary"
+            @click="save"
+          >
+            Save
+          </v-btn>
         </v-card-actions>
       </v-card>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
 import UploadButton from '/imports/ui/UploadButton.vue'
 import DatePicker from '/imports/ui/DatePicker.vue'
-import Avatars from '/imports/api/avatars'
+import Avatars from '/imports/api/avatars/client'
 
 export default {
-  name:"profile",
+  name:"Profile",
+  components: {
+    UploadButton,
+    DatePicker
+  },
   data: function(){
     return {
       values: {},
@@ -186,18 +259,17 @@ export default {
   },
   meteor: {
     $subscribe: {
-      "avatars.get"(){
+      "avatars.get.byIds"(){
         if (!this.authenticated) {
-          return []
+          return [{_ids:[]}]
         }
-        return [this.values.avatar]
+        return [{_ids:[this.values.avatar]}]
       }
     },
     // Get user logged
     user(){
       return Meteor.user();
     },
-    // Get avatar url
     // Get avatar url
     avatar(){
       if (!this.user || !this.user.profile) {
@@ -224,22 +296,31 @@ export default {
       this.values = u.profile;
     }
   },
+  mounted : function(){
+    this.$store.commit("updateCrumbs", {
+      position: 0,
+      name: "Profile",
+      icon:"person",
+      link: {
+        name:"profile"
+      }
+    })
+  },
   methods: {
     closePicker: function(){
       this.menu = false;
     },
     imageSelected: function(i){
-      self=this;
       if(!!i && i.length){
-        _.each(i, function(v,k){
+        _.each(i, (v)=>{
           if(v.size > 10*1024*1024){
-            self.$root.snackbar = true;
-            self.$root.snacktext = "Image must not exceed 10MB!!";
-            self.$root.snackbarColor = "error";
+            this.$root.snackbar = true;
+            this.$root.snacktext = "Image must not exceed 10MB!!";
+            this.$root.snackbarColor = "error";
             return false;
           }
         });
-        self.loadingImage=true;
+        this.loadingImage=true;
         // Save images on server
         // First lets save images on server (only new images)
 
@@ -251,14 +332,14 @@ export default {
             chunkSize: 'dynamic'
           }, false);
 
-          uploadInstance.on('end', function(error, fileObj) {
+          uploadInstance.on('end', (error, fileObj) => {
             if (error) {
               console.log('Error during upload: ' + error.reason);
             } else {
-              self.$set(self.values, "avatar" , fileObj._id)
+              self.$set(this.values, "avatar" , fileObj._id)
             }
-            self.loadingImage=false;
-            self.progress=false;
+            this.loadingImage=false;
+            this.progress=false;
           });
 
           uploadInstance.start();
@@ -281,20 +362,6 @@ export default {
         color:"success"
       })
     }
-  },
-  mounted : function(){
-    this.$store.commit("updateCrumbs", {
-      position: 0,
-      name: "Profile",
-      icon:"person",
-      link: {
-        name:"profile"
-      }
-    })
-  },
-  components: {
-    UploadButton,
-    DatePicker
   }
 }
 </script>
