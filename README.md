@@ -27,7 +27,7 @@ All you need to start your Real Time Web App
 This boilerplate is already configured with webpack, if you want to understand how to configure webpack bundler in your meteor project, follow the steps [below!](#webpack-installation-steps)...
 
 # What you will find here.
-## METEOR@1.10.2 + vue@2.6.11 + vuetify@2.3.2
+## METEOR@1.11.1 + vue@2.6.12 + vuetify@2.3.15
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte.
 [A la carte!](https://vuetifyjs.com/en/customization/a-la-carte/)
