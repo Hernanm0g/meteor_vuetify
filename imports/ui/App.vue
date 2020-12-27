@@ -163,7 +163,7 @@
     <v-main>
       <v-container grid-list-md>
         <bread-crumbs />
-        <router-view @logmein="showLock()" />
+        <router-view @logmein="login()" />
         <snack-bar />
         <confirm-dialog />
       </v-container>
