@@ -28,3 +28,4 @@ hwillson:stub-collections
 msavin:mongol
 jquery
 lmieulet:meteor-coverage
+accounts-base
