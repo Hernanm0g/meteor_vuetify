@@ -25,4 +25,6 @@ johanbrook:publication-collector  # Test a Meteor publication by collecting its 
 akryum:vue-sass
 zer0th:meteor-vuetify-loader
 hwillson:stub-collections
+msavin:mongol
+jquery
 lmieulet:meteor-coverage
