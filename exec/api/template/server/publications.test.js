@@ -4,7 +4,7 @@ import {Templates} from './index.js';
 import { PublicationCollector } from 'meteor/johanbrook:publication-collector';
 if(Meteor.isServer){
   Meteor.startup(() => {  
-    describe('Templates Server Publications API', function(){
+    describe('  - Templates Server Publications API', function(){
       afterEach(function () {
         Templates.remove({test:true})
       });

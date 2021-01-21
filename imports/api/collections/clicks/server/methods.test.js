@@ -1,12 +1,12 @@
 import assert from 'assert';
-import {Templates} from './index.js';
+import {Clicks} from './index.js';
 if(Meteor.isServer){
   Meteor.startup(() => {
     
-    describe('Templates Server Methods API', function () {
+    describe('  - Clicks Server Methods API', function () {
 
       afterEach(function () {
-        Templates.remove({test:true})
+        Clicks.remove({test:true})
       });
 
      
@@ -15,7 +15,7 @@ if(Meteor.isServer){
         const name = "templateMock"
         /*--------  Insert  --------*/
         let templateId = Meteor.call(
-          "templates.upsert", 
+          "clicks.upsert", 
           {
             name,
             active:false,
@@ -25,10 +25,10 @@ if(Meteor.isServer){
     
         assert(templateId, `Error inserting document, no document inserted`)
         assert(templateId.insertedId, `Error inserting document, insertedId obtained ${templateId.insertedId}`)
-        let added = Templates.find({ _id: templateId.insertedId });
+        let added = Clicks.find({ _id: templateId.insertedId });
         const collectionName = added._getCollectionName();
     
-        assert(collectionName=='templates', `Wrong collection, expected templates, ${collectionName} instead`);
+        assert(collectionName=='clicks', `Wrong collection, expected clicks, ${collectionName} instead`);
         const count = added.count()
         added = added.fetch()
         assert(count==1, `Inserting template Error, expecting 1 inserted Doc, received ${count}`);
@@ -38,7 +38,7 @@ if(Meteor.isServer){
         /*--------  Update  --------*/
     
         Meteor.call(
-          "templates.upsert",
+          "clicks.upsert",
           {
             _id: templateId.insertedId,
             name: `updated-${name}`,
@@ -46,9 +46,9 @@ if(Meteor.isServer){
           }
         )
     
-        let updated = Templates.find({ _id: templateId.insertedId });
+        let updated = Clicks.find({ _id: templateId.insertedId });
         const updatedCount = updated.count()
-        assert(updatedCount==1, `Updating templates Error, inserted ${updatedCount} docs instead of 1`);
+        assert(updatedCount==1, `Updating clicks Error, inserted ${updatedCount} docs instead of 1`);
         updated = updated.fetch()
         assert(updated[0].name==`updated-${name}`, `Updated document must have name updated-${name}. Received ${updated[0].name} instead`);
       });
@@ -60,7 +60,7 @@ if(Meteor.isServer){
   
         try {
           Meteor.call(
-            "templates.upsert", 
+            "clicks.upsert", 
             undefined
           )
         } catch (error) {
@@ -79,10 +79,10 @@ if(Meteor.isServer){
     
         /*--------  Insert  --------*/
     
-        const insertedId = Templates.insert(templateDoc)
+        const insertedId = Clicks.insert(templateDoc)
     
         Meteor.call(
-          "templates.update",
+          "clicks.update",
           {
             _id: insertedId,
             name: `updated-${name}`,
@@ -90,9 +90,9 @@ if(Meteor.isServer){
           }
         )
     
-        let updated = Templates.find({ _id: insertedId });
+        let updated = Clicks.find({ _id: insertedId });
         const updatedCount = updated.count()
-        assert(updatedCount==1, `Updating templates Error, inserted ${updatedCount} docs instead of 1`);
+        assert(updatedCount==1, `Updating clicks Error, inserted ${updatedCount} docs instead of 1`);
         updated = updated.fetch()
         assert(updated[0].name==`updated-${name}`, `Updated document must have name updated-${name}. Received ${updated[0].name} instead`);
         assert(updated[0].test==true, `Updated document must have prop test true . Received ${updated[0].test} instead`);
@@ -104,7 +104,7 @@ if(Meteor.isServer){
         /*--------  Update  --------*/
         try {
           Meteor.call(
-            "templates.update",
+            "clicks.update",
             undefined
           )
         } catch (error) {
@@ -119,7 +119,7 @@ if(Meteor.isServer){
         /*--------  Update  --------*/
         try {
           Meteor.call(
-            "templates.update",
+            "clicks.update",
             {
               name:"mocked"
             }
@@ -140,9 +140,9 @@ if(Meteor.isServer){
     
         /*--------  Insert  --------*/
     
-        const insertedId = Templates.insert(templateDoc)
+        const insertedId = Clicks.insert(templateDoc)
         let removed = await Meteor.call(
-          "templates.delete",
+          "clicks.delete",
           insertedId
         )
         assert(removed==1, `Doc not removed, expecting 1 doc removed, obtained ${removed}`)
@@ -155,7 +155,7 @@ if(Meteor.isServer){
   
         try {
           Meteor.call(
-            "templates.delete", 
+            "clicks.delete", 
             undefined
           )
         } catch (error) {

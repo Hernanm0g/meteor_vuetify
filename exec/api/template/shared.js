@@ -1,10 +1,17 @@
+/**
+ *
+ * Shared Methods for Optimistic UI.
+ * Usually Basic CRUD Actios
+ *
+ */
+
 export const Templates = new Mongo.Collection("templates");
 import assert from 'assert'
 import SimpleSchema from 'simpl-schema';
 import {
   upsertSchema,
   updateSchema
-} from './schemas/'
+} from './schemas'
 Meteor.methods({
   "templates.upsert"(item){
     try {

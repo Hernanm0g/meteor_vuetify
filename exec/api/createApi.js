@@ -23,7 +23,7 @@ const createApi = (apiName)=>{
   const command = `cp -r exec/api/template imports/api/collections/${collName};
     find imports/api/collections/${collName}/ -type f -exec sed -i 's/templates/${collName}/g' {} +;
     find imports/api/collections/${collName}/ -type f -exec sed -i 's/Templates/${capitalizedCollName}/g' {} +;
-    echo "import './${collName}/server'" >> imports/api/serer/collections/index.js
+    echo "import './${collName}/server'" >> imports/api/server/collections.js
   `
   exec(command, (error, stdout, stderr) => {
     if (error) {
