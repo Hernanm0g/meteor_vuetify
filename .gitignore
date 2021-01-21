@@ -1,3 +1,9 @@
+# meteor
+packages
+
+# coverage
+.coverage
+
 # Environment vars
 .env
 .env.local
