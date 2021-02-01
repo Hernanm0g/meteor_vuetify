@@ -40,5 +40,7 @@ const createApi = (apiName)=>{
 }
 
 const apiName = process.env.API_NAME
-createApi(apiName)
+if(apiName){
+  createApi(apiName)
+}
 

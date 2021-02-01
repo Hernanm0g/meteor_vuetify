@@ -2,7 +2,7 @@
   "name": "meteor_vuetify",
   "private": true,
   "scripts": {
-    "start": "meteor run",
+    "start": "NO_HMR=1 meteor run",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "test": "TEST_WATCH=1  meteor test --driver-package meteortesting:mocha",
     "test-coverage": "BABEL_ENV=COVERAGE TEST_BROWSER_DRIVER=puppeteer COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ TEST_WATCH=1  meteor test --driver-package meteortesting:mocha",
@@ -17,7 +17,7 @@
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.4.9",
-    "vuetify": "^2.4.2"
+    "vuetify": "^2.4.3"
   },
   "meteor": {
     "mainModule": {
@@ -27,6 +27,10 @@
   },
   "devDependencies": {
     "@mdi/font": "^5.9.55",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-vue": "^7.5.0",
     "jquery": "^3.5.1",
     "puppeteer": "^5.5.0"
   }

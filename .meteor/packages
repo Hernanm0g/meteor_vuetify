@@ -18,8 +18,7 @@ shell-server@0.5.0            # Server-side component of the `meteor shell` comm
 
 tracker@1.2.0                 # Dependency tracker to allow reactive callbacks
 static-html             # Define static page content in .html files
-zer0th:meteor-vuetify-loader
-akryum:vue-component    # Vue-CLI template to publish components
+akryum:vue-component
 
 meteortesting:mocha               # A package for writing and running your meteor app and package tests with mocha
 johanbrook:publication-collector  # Test a Meteor publication by collecting its output
@@ -29,3 +28,4 @@ msavin:mongol
 jquery
 lmieulet:meteor-coverage
 accounts-base
+zer0th:meteor-vuetify-loader
