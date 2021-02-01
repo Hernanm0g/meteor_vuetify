@@ -5,4 +5,4 @@
  *
  */
 
-// import '../api/server/collections'
+import '../../api/server/collections'

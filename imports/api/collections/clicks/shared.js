@@ -10,7 +10,8 @@ import assert from 'assert'
 import SimpleSchema from 'simpl-schema';
 import {
   upsertSchema,
-  updateSchema
+  updateSchema,
+  incSchema
 } from './schemas'
 Meteor.methods({
   "clicks.upsert"(item){
@@ -78,6 +79,28 @@ Meteor.methods({
     } catch (error) {
       throw new Meteor.Error('400', error);
     }
-    
+  },
+  "clicks.inc"(item){
+    try {
+      assert(!!item, "No Object received for update.")
+      assert(!!item._id, "No Object._id received for update.")
+      const _id = item._id
+
+      /*--------  Schema Validation  --------*/
+      new SimpleSchema(incSchema).validate(item);
+
+      delete(item._id)
+      const upd = Clicks.update(
+        {
+          _id
+        },
+        {
+          $inc: item
+        }
+      )
+      return upd
+    } catch (error) {
+      throw new Meteor.Error('400', error);
+    }
   }
 })

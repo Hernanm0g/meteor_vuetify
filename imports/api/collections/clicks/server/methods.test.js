@@ -19,6 +19,7 @@ if(Meteor.isServer){
           {
             name,
             active:false,
+            times:1,
             test:true
           }
         )
@@ -42,6 +43,7 @@ if(Meteor.isServer){
           {
             _id: templateId.insertedId,
             name: `updated-${name}`,
+            times:1,
             test:true
           }
         )
@@ -74,10 +76,11 @@ if(Meteor.isServer){
         const name = "templateMock"
         const templateDoc = {
           name,
+          times:1,
           test:true
         };
     
-        /*--------  Insert  --------*/
+        /*--------  Update  --------*/
     
         const insertedId = Clicks.insert(templateDoc)
     
@@ -86,6 +89,7 @@ if(Meteor.isServer){
           {
             _id: insertedId,
             name: `updated-${name}`,
+            times:1,
             test:true
           }
         )
@@ -164,7 +168,33 @@ if(Meteor.isServer){
         }
       });
   
-      it('get.by._ids Publication success', async function(){})
+      it('inc Success', async function(){
+
+        const name = "templateMock"
+        const templateDoc = {
+          name,
+          times:1,
+          test:true
+        };
+    
+        /*--------  Insert  --------*/
+    
+        const insertedId = Clicks.insert(templateDoc)
+    
+        Meteor.call(
+          "clicks.inc",
+          {
+            _id: insertedId,
+            times:1
+          }
+        )
+    
+        let updated = Clicks.find({ _id: insertedId });
+        
+        updated = updated.fetch()
+        assert(updated[0].times==2, `Updated document must have times 2. Received ${updated[0].times} instead`);
+        assert(updated[0].test==true, `Updated document must have prop test true . Received ${updated[0].test} instead`);
+      })
     });
   })
 }

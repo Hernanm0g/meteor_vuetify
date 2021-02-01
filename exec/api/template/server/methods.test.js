@@ -77,7 +77,7 @@ if(Meteor.isServer){
           test:true
         };
     
-        /*--------  Insert  --------*/
+        /*--------  Update  --------*/
     
         const insertedId = Templates.insert(templateDoc)
     
@@ -163,8 +163,6 @@ if(Meteor.isServer){
           assert(error.message=="AssertionError [ERR_ASSERTION]: No _id received for delete. [400]") 
         }
       });
-  
-      it('get.by._ids Publication success', async function(){})
     });
   })
 }

@@ -35,12 +35,16 @@ export default {
     type: Boolean,
     optional:true
   },
-
+  
   /*--------  Custom props  --------*/
   
   name: {
     type: String,
     optional:true
+  },
+  times: {
+    type: Number,
+    min:1
   },
   
 }

@@ -18,10 +18,10 @@
 // want to use the classic import style:
 // import SomePage from 'PagePath'
 
-const Home = ()=> import ('../../../../ui/pages/home/Home.vue') // Dynamic async import
-// import Home from '../../../../ui/pages/Home.vue' // Use this in order to enable minimongo
+// const Home = ()=> import ('../../../../ui/pages/home/Home.vue') // Dynamic async import
+import Home from '../../../../ui/pages/home/Home.vue' // Use this in order to enable minimongo
 const About = ()=> import ('../../../../ui/pages/about/About.vue') // Dynamic async import
-// import About from '../../../../ui/pages/About.vue' // Use this in order to enable minimongo
+// import About from '../../../../ui/pages/about/About.vue' // Use this in order to enable minimongo
 
 /*= End of Imports =*/
 /*=============================================<<<<<*/
@@ -32,7 +32,7 @@ const routes = [
     path:"/",
     name:"home",
     meta: {
-      layout:"BaseLayout"
+      layout:"AppBarLayout"
     },
     component:Home
   },

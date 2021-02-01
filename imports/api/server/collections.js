@@ -4,4 +4,4 @@
  *
  */
 
-import './clicks/server'
+import '../collections/clicks/server'
