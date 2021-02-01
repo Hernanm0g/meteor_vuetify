@@ -10,7 +10,7 @@
   </v-app-bar>
 </template>
 
-<script lang="vuetify">
+<script lang="js">
 export default {
   name:"AppBar"
 }

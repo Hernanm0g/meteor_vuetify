@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="vuetify">
+<script lang="js">
 export default {
   name:"About"
 }

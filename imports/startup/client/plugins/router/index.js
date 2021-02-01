@@ -17,8 +17,17 @@ const router = new Router({
   routes
 })
 
+/**
+ * Name checkAuth
+ * Description:
+ * Checks if there's a previous session in localStorage
+ * @returns {boolean} Whether there's a previous session
+ */
+const checkAuth = function(){
+  return !!localStorage.getItem("Meteor.loginToken") && !!localStorage.getItem("Meteor.userId")
+}
+
 router.beforeEach((to, from, next) => {
-  
 
   // Check if any route in the route tree is private
   const isPrivate = to.matched.some(record => !record.meta.public)
@@ -29,7 +38,7 @@ router.beforeEach((to, from, next) => {
   }
 
   // Do some logic to check if user is authenticated
-  const authenticated = true
+  const authenticated = router.app.authenticated && checkAuth()
 
   // You're not logged in. You shall not pass. flame of Udun...
   if(!authenticated){

@@ -19,6 +19,7 @@ import Vue from 'vue'
 
 import { 
   router,
+  store,
   vuetify, 
 } from './plugins'
 
@@ -40,7 +41,17 @@ import App from '../../ui/App.vue'
 Meteor.startup(() => {
   new Vue({
     router,
+    store,
     vuetify,
+    computed : {
+      authenticated(){
+        return this.$store.state.authenticated;
+      }
+    },
+    created(){
+      // Initialize Auth0
+      this.$store.dispatch("initializeAuth0")
+    },
     render: h => h(App),
   }).$mount('#app')
 })

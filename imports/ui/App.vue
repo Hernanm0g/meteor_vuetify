@@ -12,7 +12,7 @@
 </template>
 
 
-<script lang="vuetify">
+<script lang="js">
 const BaseLayout = ()=>import("./layouts/Base.vue")
 const AppBarLayout = ()=>import("./layouts/AppBar.vue")
 export default {

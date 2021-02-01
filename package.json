@@ -10,6 +10,7 @@
     "createApi": "node ./exec/api/createApi.js"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/runtime": "^7.11.2",
     "lodash": "^4.17.20",
     "meteor-node-stubs": "^1.0.1",
@@ -17,7 +18,8 @@
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.4.9",
-    "vuetify": "^2.4.3"
+    "vuetify": "^2.4.3",
+    "vuex": "^3.6.2"
   },
   "meteor": {
     "mainModule": {

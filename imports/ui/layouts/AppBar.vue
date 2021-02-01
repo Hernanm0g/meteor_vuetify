@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script lang="vuetify">
+<script lang="js">
 
 /*--------  Mixins  --------*/
 import fillHeightMixin from '../mixins/layout/fillHeight'

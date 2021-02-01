@@ -37,7 +37,7 @@
   </v-card>
 </template>
 
-<script lang="vuetify">
+<script lang="js">
   import {Clicks} from '../../../api/collections/clicks/client'
   export default {
     name:"Installed",
