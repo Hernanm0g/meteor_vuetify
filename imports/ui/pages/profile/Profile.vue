@@ -9,10 +9,7 @@
             lazy-validation
             @keyup.native.enter="save"
           >
-            <v-layout
-              row
-              wrap
-            >
+            <v-row>
               <!-- given_name -->
               <v-col
                 cols="12"
@@ -214,7 +211,7 @@
                   </v-card-actions>
                 </v-card>
               </v-col> -->
-            </v-layout>
+            </v-row>
           </v-form>
         </v-card-text>
         <v-card-actions>
