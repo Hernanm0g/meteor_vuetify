@@ -22,8 +22,8 @@
 import Home from '../../../../../ui/pages/home/Home.vue' // Use this in order to enable minimongo
 const About = ()=> import ('../../../../../ui/pages/about/About.vue') // Dynamic async import
 // import E404 from '../../../../../ui/pages/404/404.vue' // Use this in order to enable minimongo
-const E404 = ()=> import ('../../../../../ui/pages/auth0/SetAuth0.vue') // Dynamic async import
-// impoSetAuth0 from '../../../../../ui/pages/404/404.vue' // Use this in order to enable minimongo
+const E404 = ()=> import ('../../../../../ui/pages/404/404.vue') // Dynamic async import
+// impoSetAuth0 from '../../../../../ui/pages/auth0/SetAuth0.vue' // Use this in order to enable minimongo
 const SetAuth0 = ()=> import ('../../../../../ui/pages/auth0/SetAuth0.vue') // Dynamic async import
 
 /*= End of Imports =*/
@@ -58,7 +58,7 @@ const routes = [
   },
   {
     path:"*",
-    meta: {
+    meta: { 
       layout:"BaseLayout"
     },
     component:E404

@@ -1,13 +1,17 @@
 <template>
   <v-app>
     <!-- Dynamic Layouts are imported where -->
-    <component :is="layout">
-      <template
-        #default
-      >
-        <router-view />
-      </template>
-    </component>
+    <keep-alive>
+      <component :is="layout">
+        <template
+          #default
+        >
+          <keep-alive>
+            <router-view />
+          </keep-alive>
+        </template>
+      </component>
+    </keep-alive>
     <confirm-dialog />
     <snack-bar />
   </v-app>
@@ -15,7 +19,6 @@
 
 
 <script lang="js">
-
 
 /*--------  Dynamic Async Components  --------*/
 
@@ -29,6 +32,7 @@ const SideBarLayout = ()=>import("./layouts/SideBar.vue")
 import ConfirmDialog from './components/general/ConfirmDialog.vue'
 import SnackBar from './components/general/SnackBar.vue'
 
+
 export default {
   name:"App",
   components: {
@@ -38,12 +42,17 @@ export default {
     ConfirmDialog,
     SnackBar
   },
+  data() {
+    return {
+      defaultLayout: "SideBarLayout"
+    }
+  },
   computed: {
     layout() {
       if(!this.$route){
-        return "BaseLayout"
+        return this.defaultLayout
       }
-      return this.$route.meta.layout || "BaseLayout"
+      return this.$route.meta.layout || this.defaultLayout
     }
   }
 }

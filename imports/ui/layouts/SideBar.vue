@@ -29,7 +29,7 @@ import AppBar from '../components/layout/AppBar.vue'
 import SideBar from '../components/layout/SideBar.vue'
 
 export default {
-  name:"AppBarLayout",
+  name:"SideBarLayout",
   components: {
     AppBar,
     SideBar

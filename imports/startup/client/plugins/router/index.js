@@ -30,6 +30,7 @@ router.beforeEach((to, from, next) => {
   const isPrivate = to.matched.some(record => !record.meta.public)
 
   // The route is public. Welcome!
+
   if(!isPrivate) {
     return next()
   }
