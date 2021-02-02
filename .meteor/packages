@@ -29,3 +29,4 @@ jquery
 lmieulet:meteor-coverage
 accounts-base
 zer0th:meteor-vuetify-loader
+session

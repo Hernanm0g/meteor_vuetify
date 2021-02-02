@@ -8,18 +8,35 @@
         <router-view />
       </template>
     </component>
+    <confirm-dialog />
+    <snack-bar />
   </v-app>
 </template>
 
 
 <script lang="js">
+
+
+/*--------  Dynamic Async Components  --------*/
+
 const BaseLayout = ()=>import("./layouts/Base.vue")
 const AppBarLayout = ()=>import("./layouts/AppBar.vue")
+const SideBarLayout = ()=>import("./layouts/SideBar.vue")
+
+
+/*--------  Sync Components  --------*/
+
+import ConfirmDialog from './components/general/ConfirmDialog.vue'
+import SnackBar from './components/general/SnackBar.vue'
+
 export default {
   name:"App",
   components: {
     BaseLayout,
-    AppBarLayout
+    AppBarLayout,
+    SideBarLayout,
+    ConfirmDialog,
+    SnackBar
   },
   computed: {
     layout() {

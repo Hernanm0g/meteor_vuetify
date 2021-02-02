@@ -9,9 +9,11 @@
 =  Imports  =
 ===============================================>>>>>*/
 
-import MeteorLogin from '../../../../utils/login'
+import MeteorLogin from '../../utils/login'
 Meteor.login = MeteorLogin;
 import createAuth0Client from '@auth0/auth0-spa-js';
+import router from '../router'
+
 /*= End of Imports =*/
 /*=============================================<<<<<*/
 
@@ -25,7 +27,10 @@ import createAuth0Client from '@auth0/auth0-spa-js';
  * @param  {object} {commit}
  */
 export const initializeAuth0= async ({commit})=> {
-  const {AUTH0} = await import ('../../../../auth0-variables')
+  const {AUTH0} = Meteor.settings.public
+  if(!AUTH0){
+    return
+  }
   const auth0 = await createAuth0Client({
     domain: AUTH0.DOMAIN,
     client_id:AUTH0.CLIENT_ID,
@@ -33,6 +38,11 @@ export const initializeAuth0= async ({commit})=> {
     audience: AUTH0.AUDIENCE
   })
   commit("setAuth0", auth0)
+  
+  const userId = Meteor.userId();
+  if(userId){
+    commit("authenticated", true)
+  }
 }
 
 export const login = async({state, commit}, signup=false) => {
@@ -56,11 +66,27 @@ export const login = async({state, commit}, signup=false) => {
     // commit("loading", false)
   }
   const user = await state.auth0.getUser();
-  // console.log("user", user);
   if (user){
-    Meteor.login(user);
+    Meteor.login(
+      user,
+      error =>{
+        if(error){
+          console.error("Error login with auth0", error);
+          commit("snack", {text:"error"})
+          commit("authenticated", false)
+          return
+        }
+        commit("authenticated", true)
+        // If there's a redirect in the route's query
+        if(router?.currentRoute?.query?.redirect){
+          console.log("HEY");
+          router.push(router.currentRoute.query.redirect)
+        }
+
+      }
+    );
   } else {
-    // commit("snack", {text:'error'})
+    commit("snack", {text:'error'})
   }
   
   return user
@@ -71,10 +97,13 @@ export const logout = async({state, commit}) => {
     commit("snack", {text:"error"})
     return
   }
-  const {AUTH0} = await import ('../auth0-variables.js')
+  const {AUTH0} = Meteor.settings.public
   Meteor.logout();
   commit("loading", true)
   try {
+    if(!AUTH0){
+      return
+    }
     await state.auth0.logout({
       returnTo: AUTH0.CALLBACK,
       client_id: AUTH0.CLIENT_ID

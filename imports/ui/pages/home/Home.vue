@@ -14,17 +14,44 @@
     >
       <accounts />
     </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      md="4"
+    >
+      <plugins />
+    </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      md="4"
+    >
+      <confirm />
+    </v-col>
+    <v-col
+      cols="12"
+      sm="6"
+      md="4"
+    >
+      <snack />
+    </v-col>
   </v-row>
 </template>
 
 <script lang="js">
   import Installed from '../../components/home/Installed.vue'
   import Accounts from '../../components/home/Accounts.vue'
+  import Plugins from '../../components/home/Plugins.vue'
+  import Confirm from '../../components/home/Confirm.vue'
+  import Snack from '../../components/home/Snack.vue'
   export default {
     name:"Home",
     components: {
       Installed,
-      Accounts
+      Accounts,
+      Plugins,
+      Confirm,
+      Snack
     }
   }
 </script>

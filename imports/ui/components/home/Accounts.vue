@@ -15,9 +15,9 @@
         <span class="grey--text">Auth0 Universal Login and meteor-accounts!!</span>
         <br>
         <v-icon>mdi-login</v-icon> <a
-          href="https://auth0.com/docs/libraries/lock/v11"
+          href="https://auth0.com/docs/universal-login"
           target="_blank"
-        >Auth0 Lock</a> via CDN.
+        >Auth0 Universal Login</a> vie NPM.
         <br>
         <v-icon>mdi-account</v-icon> <a
           href="https://guide.meteor.com/accounts.html"
@@ -30,7 +30,7 @@
         <span v-else>Want to see auth0 and meteor-accounts in action? deploy mongol "ctrl+m". Now you can use Meteor.user() and Meteor.userId() on Client and server side. <strong>Check out the Profile page.</strong></span>
         <br>
         <br>
-        <span>Authenticated: <strong>{{ authenticated }}</strong></span>
+        <span>Authenticated: <strong>{{ authenticated ? "true" : "false" }}</strong></span>
       </div>
     </v-card-text>
     <v-card-actions>
@@ -50,17 +50,28 @@
       >
         Log me in!!
       </v-btn>
+      <v-btn
+        v-else
+        text
+        color="orange"
+        :to="{name:'profile'}"
+      >
+        Go to profile
+      </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script lang="js">
-  import { AUTH0 } from '../../../auth0-variables.js'
+  const { AUTH0 } = Meteor.settings.public
   export default {
     name:"Accounts",
     computed: {
       settedAuth0(){
         return !!AUTH0.CLIENT_ID && !!AUTH0.DOMAIN
+      },
+      authenticated(){
+        return this.$store.state.authenticated
       }
     },
     methods: {

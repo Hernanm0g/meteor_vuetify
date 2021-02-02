@@ -2,7 +2,7 @@
   "name": "meteor_vuetify",
   "private": true,
   "scripts": {
-    "start": "NO_HMR=1 meteor run",
+    "start": "NO_HMR=1 meteor run --settings settings.json ",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "test": "TEST_WATCH=1  meteor test --driver-package meteortesting:mocha",
     "test-coverage": "BABEL_ENV=COVERAGE TEST_BROWSER_DRIVER=puppeteer COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ TEST_WATCH=1  meteor test --driver-package meteortesting:mocha",
@@ -13,6 +13,7 @@
     "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/runtime": "^7.11.2",
     "lodash": "^4.17.20",
+    "luxon": "^1.25.0",
     "meteor-node-stubs": "^1.0.1",
     "simpl-schema": "^1.10.2",
     "vue": "^2.6.12",

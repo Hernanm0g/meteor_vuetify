@@ -23,9 +23,6 @@ const router = new Router({
  * Checks if there's a previous session in localStorage
  * @returns {boolean} Whether there's a previous session
  */
-const checkAuth = function(){
-  return !!localStorage.getItem("Meteor.loginToken") && !!localStorage.getItem("Meteor.userId")
-}
 
 router.beforeEach((to, from, next) => {
 
@@ -38,7 +35,7 @@ router.beforeEach((to, from, next) => {
   }
 
   // Do some logic to check if user is authenticated
-  const authenticated = router.app.authenticated && checkAuth()
+  const authenticated = Meteor.userId()
 
   // You're not logged in. You shall not pass. flame of Udun...
   if(!authenticated){

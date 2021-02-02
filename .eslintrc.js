@@ -26,5 +26,6 @@ module.exports = {
       "html"
   ],
   "rules": {
+    "vue/no-v-html":0, 
   }
 };
