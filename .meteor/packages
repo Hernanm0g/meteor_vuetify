@@ -26,7 +26,7 @@ akryum:vue-sass
 hwillson:stub-collections
 msavin:mongol
 jquery
-lmieulet:meteor-coverage
 accounts-base
 zer0th:meteor-vuetify-loader
 session
+lmieulet:meteor-coverage

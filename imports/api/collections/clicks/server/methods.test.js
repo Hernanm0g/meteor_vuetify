@@ -195,6 +195,34 @@ if(Meteor.isServer){
         assert(updated[0].times==2, `Updated document must have times 2. Received ${updated[0].times} instead`);
         assert(updated[0].test==true, `Updated document must have prop test true . Received ${updated[0].test} instead`);
       })
+
+      it('inc Error', async function(){
+
+        try {
+          const name = "templateMock"
+          const templateDoc = {
+            name,
+            times: 1,
+            test: true
+          };
+
+          /*--------  Insert  --------*/
+
+          const insertedId = Clicks.insert(templateDoc)
+
+          Meteor.call(
+            "clicks.inc",
+            {
+              _id: insertedId,
+              times: 0
+            }
+          )
+
+        } catch (error) {
+          assert(error.error=="400", `Error expected: 400, obtained ${error.code}`) 
+          assert(error.message=="ClientError: Times must be at least 1 [400]") 
+        }
+      })
     });
   })
 }
