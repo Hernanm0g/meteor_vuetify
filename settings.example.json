@@ -6,6 +6,6 @@
       "CALLBACK":"http://localhost:3000",
       "AUDIENCE": "https://totoom.eu.auth0.com/userinfo" 
     },
-    "storagePath": "/home/hernan/devel/uploads"
+    "storagePath": "PATH_FOR_UPLOADS"
   }
 }
