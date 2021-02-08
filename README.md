@@ -55,7 +55,7 @@ And you can import your collections from server:
 ```
 or from client:
 ```javascript
-  import {Books} from '/imports/api/collections/books/server
+  import {Books} from '/imports/api/collections/books/client
 ```
 ### File Collection
 If you want to create a File Collection just type:
