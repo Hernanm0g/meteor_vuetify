@@ -1,3 +1,12 @@
+# vscode
+*.code-workspace
+
+# meteor
+packages
+
+# coverage
+.coverage
+
 # Environment vars
 .env
 .env.local
@@ -113,3 +122,6 @@ dist
 /src-cordova/platforms
 /src-cordova/plugins
 /public/cordova.js
+
+# Settings
+settings.json

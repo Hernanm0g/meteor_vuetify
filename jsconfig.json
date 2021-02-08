@@ -1,0 +1,11 @@
+{
+  "include": [
+    "./imports/**/*"
+  ],
+  "compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [ "./*" ]
+		}
+	}
+}
