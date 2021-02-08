@@ -7,7 +7,7 @@ All you need to start your Real Time Web App
   ``` git clone https://github.com/Hernanm0g/meteor_vuetify.git ```
 3. Navigate to directory ``` cd meteor_vuetify ```
 4. Run ``` meteor npm install ```
-5. run Meteor ``` meteor ```
+5. run Meteor ``` npm start ```
 6. Open in browser (localhost:3000)
 7. Follow instructions to set Auth0 credentials.
 
