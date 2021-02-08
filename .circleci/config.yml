@@ -3,11 +3,141 @@ version: 2.1
 # Use a package of configuration called an orb.
 orbs:
   # Declare a dependency on the welcome-orb
-  welcome: circleci/welcome-orb@0.4.1
+  node: circleci/node@3.0.0
 # Orchestrate or schedule a set of jobs
+jobs:
+  prepare_cache:      
+    executor:
+      name: node/default
+      tag: '12.16.1'    
+    steps:
+      - checkout
+      - restore_cache:
+          key: v3-unit_test--
+#      - run: sudo npm i -g @vue/cli 
+      - run: curl https://install.meteor.com | /bin/sh
+      - run:
+          name: copy meteor bin to build cache
+          command: |
+            mkdir -p ~/build-temp
+            cp /usr/local/bin/meteor ~/build-temp/meteor-bin
+      - run: meteor --version
+      - run: npm i 
+#      - run: npm run test:unit
+      - save_cache:
+          key: v3-unit_test-{{ checksum "package.json" }} 
+          paths:
+            - ./node_modules/
+            - ~/.npm/
+            - ~/build-temp
+            - ~/.meteor  
+            - .meteor/
+  mocha_test:
+    executor:
+      name: node/default
+      tag: '12.16.1' 
+    steps:
+      - checkout
+      - restore_cache:
+          key: v3-unit_test-
+      - restore_cache:
+          key: build-temp-{{ checksum ".meteor/release" }}-{{ checksum ".circleci/config.yml" }}
+      - restore_cache:
+          key: meteor-release-{{ checksum ".meteor/release" }}-{{ checksum ".meteor/versions" }}-{{ checksum ".circleci/config.yml" }}
+      - restore_cache:
+          key: meteor-packages
+      - restore_cache:
+          key: npm-packages-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
+      - run: meteor npm run test
+  meteor:
+    executor:
+      name: node/default
+      tag: '12.16.1' 
+    steps:
+      - checkout
+      - restore_cache:
+          key: build-temp-
+      - restore_cache:
+          key: meteor-release-
+      - restore_cache:
+          key: meteor-packages
+      - restore_cache:
+          key: npm-packages-
+      - run: ls /usr/local/bin/
+#      - run: ls ~/build-temp/
+      - run:
+          name: restore cached meteor binary
+          command: |
+            if [ -e ~/build-temp/meteor-bin ]
+            then
+                echo "Cached Meteor bin found, restoring it."
+                sudo cp ~/build-temp/meteor-bin /usr/local/bin/meteor
+            else
+                echo "No cached Meteor bin found."
+            fi
+      - run:
+          name: install meteor
+          command: |
+            # only install meteor if bin isn't found
+            command -v meteor >/dev/null 2>&1 || curl https://install.meteor.com | /bin/sh
+      - run:
+          name: check versions
+          command: |
+            echo "Meteor version:"
+            # this forces Meteor to download whatever release your project is using
+            meteor --version
+            which meteor
+            echo "Meteor node version:"
+            meteor node -v
+            echo "Meteor npm version:"
+            meteor npm -v
+      - run:
+          name: copy meteor bin to build cache
+          command: |
+            mkdir -p ~/build-temp
+            cp /usr/local/bin/meteor ~/build-temp/meteor-bin
+      - run: ls /usr/local/bin/
+#      - run: ls ~/build-temp/
+#      - run: ls ~/build-temp/meteor-bin
+      - save_cache:
+          key: build-temp-{{ checksum ".meteor/release" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - ~/build-temp
+      - run:
+          name: install npm packages
+          command: meteor npm i
+      - save_cache:
+          key: npm-packages-{{ checksum "package.json" }}-{{ checksum "package-lock.json" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - ./node_modules/
+            - ~/.npm/
+      - run:
+          name: run tests
+          command: meteor npm run test
+      - save_cache:
+          key: meteor-release-{{ checksum ".meteor/release" }}-{{ checksum ".meteor/versions" }}-{{ checksum ".circleci/config.yml" }}
+          paths:
+            - ~/.meteor
+      - save_cache:
+          key: meteor-packages-{{ epoch }}
+          paths:
+            - .meteor/local
+      - run: echo "prueba"
+  locate:
+    executor:
+      name: node/default
+      tag: '12.16.1' 
+    steps:
+      - run:
+          name: install meteor
+          command: |
+            # only install meteor if bin isn't found
+            command -v meteor >/dev/null 2>&1 || curl https://install.meteor.com | /bin/sh
+      
+      - run: ls /usr/local/bin
 workflows:
-  # Name the workflow "welcome"
-  welcome:
-    # Run the welcome/run job in its own container
+  saludar:
     jobs:
-      - welcome/run
+      - meteor
+  
+
