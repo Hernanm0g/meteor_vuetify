@@ -113,7 +113,7 @@ jobs:
             - ~/.npm/
       - run:
           name: run tests
-          command: meteor npm run test
+          command: cp settings.example.json settings.json && meteor npm run circleci-test
       - save_cache:
           key: meteor-release-{{ checksum ".meteor/release" }}-{{ checksum ".meteor/versions" }}-{{ checksum ".circleci/config.yml" }}
           paths:

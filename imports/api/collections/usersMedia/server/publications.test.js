@@ -412,7 +412,6 @@ if(Meteor.isServer){
             "limitMocked"
           )
         } catch (error) {
-          console.log("msss", error.message);
           assert(error.error=="500", `Error expected: 500, obtained ${error.code}`) 
           assert(error.message=="AssertionError [ERR_ASSERTION]: Limit must be a number. Received (string) limitMocked  instead [500]") 
         }
