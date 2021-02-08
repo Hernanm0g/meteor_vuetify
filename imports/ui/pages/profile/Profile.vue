@@ -180,7 +180,7 @@
                 </v-radio-group>
               </v-col>
               <!-- Avatar -->
-              <!-- <v-col
+              <v-col
                 cols="8"
                 sm="4"
                 offset="2"
@@ -206,11 +206,11 @@
                     <v-spacer />
                     <upload-button
                       :multiple="false"
-                      @selected-callback="imageSelected"
+                      @selected-callback="avatarSelected"
                     />
                   </v-card-actions>
                 </v-card>
-              </v-col> -->
+              </v-col>
             </v-row>
           </v-form>
         </v-card-text>
@@ -234,24 +234,29 @@
 <script lang="js">
 
 
+/*--------  Collections  --------*/
+
+import {UsersMedia} from '../../../api/collections/usersMedia/client'
+
 /*--------  Mixins  --------*/
 import RulesMixin from '../../mixins/general/rules'
+import {GetAvatarMixin} from '../../mixins/users/avatars'
 
 /*--------  Components  --------*/
 
-// import UploadButton from '../../components/general/UploadButton.vue'
-import DatePicker from '../../components/general/DatePicker.vue'
+import UploadButton from '../../components/general/UploadButton.vue'
 import PhoneInput from '../../components/general/PhoneInput.vue'
-// import Avatars from '/imports/api/avatars/client'
+import DatePicker from '../../components/general/DatePicker.vue'
 export default {
   name:"Profile",
   components: {
-    // UploadButton,
+    UploadButton,
     DatePicker,
     PhoneInput
   },
   mixins:[
-    RulesMixin
+    RulesMixin,
+    GetAvatarMixin
   ],
   data: function(){
     return {
@@ -263,38 +268,15 @@ export default {
     }
   },
   meteor: {
-    // $subscribe: {
-    //   "avatars.get.byIds"(){
-    //     if (!this.authenticated) {
-    //       return [{_ids:[]}]
-    //     }
-    //     return [{_ids:[this.values.avatar]}]
-    //   }
-    // },
     // Get user logged
     user(){
       return Meteor.user();
     },
-    // Get avatar url
-    // avatar(){
-    //   if (!this.user || !this.user.profile) {
-    //     return "/img/logo.png"
-    //   }
-    //   if (!this.user.profile.avatar) {
-    //     return this.user.profile.picture
-    //   }
-    //   let avatar = Avatars.findOne({
-    //     _id:this.values.avatar
-    //   });
-    //   if (!avatar) {
-    //     return ""
-    //   }
-    //   avatar = avatar.link("thumbnail");
-    //   if (!avatar) {
-    //     return ""
-    //   }
-    //   return avatar
-    // }
+  },
+  computed: {
+    authenticated(){
+      return this.$store.state.authenticated
+    }
   },
   watch: {
     "user":{  
@@ -318,39 +300,45 @@ export default {
     })
   },
   methods: {
-    // imageSelected: function(i){
-    //   if(!!i && i.length){
-    //     _.each(i, (v)=>{
-    //       if(v.size > 10*1024*1024){
-    //         this.$root.snackbar = true;
-    //         this.$root.snacktext = "Image must not exceed 10MB!!";
-    //         this.$root.snackbarColor = "error";
-    //         return false;
-    //       }
-    //     });
-    //     this.loadingImage=true;
-    //     // Save images on server
-    //     // First lets save images on server (only new images)
-    //     let file = i[0];
-    //     if (file) {
-    //       var uploadInstance = Avatars.insert({
-    //         file: file,
-    //         streams: 'dynamic',
-    //         chunkSize: 'dynamic'
-    //       }, false);
-    //       uploadInstance.on('end', (error, fileObj) => {
-    //         if (error) {
-    //           console.log('Error during upload: ' + error.reason);
-    //         } else {
-    //           self.$set(this.values, "avatar" , fileObj._id)
-    //         }
-    //         this.loadingImage=false;
-    //         this.progress=false;
-    //       });
-    //       uploadInstance.start();
-    //     }
-    //   }
-    // },
+    avatarSelected: function(i){
+      if(!!i && i.length){
+        for (const v of i) {
+          if(v.size > 3*1024*1024){
+            this.$store.commit("snack", {
+              text:"Image must not exceed 3MB!!",
+              color:"error"
+            })
+            return false;
+          }
+        }
+        this.loadingImage=true;
+        // Save images on server
+        // First lets save images on server (only new images)
+        let file = i[0];
+        if (file) {
+          const uploadInstance = UsersMedia.insert({
+            file: file,
+            chunkSize: 'dynamic',
+            meta: {
+              user: this.user._id,
+              type:"avatar",
+              created: new Date(),
+              updated: new Date(),
+              createdBy: this.user._id,
+              lastUpdatedBy: this.user._id
+            }
+          }, false);
+          uploadInstance.on('end', (error) => {
+            if (error) {
+              console.log('Error during upload: ' + error.reason);
+            }
+            this.loadingImage=false;
+            this.progress=false;
+          });
+          uploadInstance.start();
+        }
+      }
+    },
     save: function(){
       if (!this.valid) {
         this.$store.commit("snack", {

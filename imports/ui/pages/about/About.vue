@@ -26,6 +26,11 @@
 <script lang="js">
 export default {
   name: "About",
+  data() {
+    return {
+      hey: "hy"
+    }
+  },
   mounted(){
     this.$store.commit("updateCrumbs", {
       position: 0,

@@ -1,7 +1,9 @@
 <template>
   <v-app-bar
     app
+    dense
     hide-on-scroll
+    scroll-threshold="200"
   >
     <v-app-bar-nav-icon
       v-if="showNavIcon"
@@ -22,7 +24,7 @@
           v-on="on"
         >
           <img
-            :src="profile.avatar || profile.picture"
+            :src="avatar || profile.picture"
             lazy-src="/img/logo.png"
             alt=""
           >
@@ -85,12 +87,23 @@
 </template>
 
 <script lang="js">
+
+
+/*--------  Mixins  --------*/
+
+import {GetAvatarMixin} from '../../mixins/users/avatars'
+/*--------  Components  --------*/
+
 import BreadCrumbs from './BreadCrumbs.vue'
+
 export default {
   name:"AppBar",
   components: {
     BreadCrumbs
   },
+  mixins: [
+    GetAvatarMixin
+  ],
   props: {
     showNavIcon: {
       type: Boolean,

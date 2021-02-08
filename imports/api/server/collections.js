@@ -5,3 +5,4 @@
  */
 
 import '../collections/clicks/server'
+import '../collections/usersMedia/server'

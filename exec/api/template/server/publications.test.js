@@ -1,4 +1,3 @@
-import { Meteor } from 'meteor/meteor';
 import assert from 'assert';
 import {Templates} from './index.js';
 import { PublicationCollector } from 'meteor/johanbrook:publication-collector';

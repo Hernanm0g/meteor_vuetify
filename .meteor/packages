@@ -30,3 +30,6 @@ accounts-base
 zer0th:meteor-vuetify-loader
 session
 lmieulet:meteor-coverage
+ostrio:files
+practicalmeteor:sinon
+dburles:factory
