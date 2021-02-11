@@ -26,6 +26,9 @@
 <script lang="js">
 export default {
   name: "About",
+  metaInfo: {
+    title: "About"
+  },
   data() {
     return {
       hey: "hy"

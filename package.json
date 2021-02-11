@@ -20,6 +20,7 @@
     "meteor-node-stubs": "^1.0.1",
     "simpl-schema": "^1.10.2",
     "vue": "^2.6.12",
+    "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.4.9",
     "vuetify": "^2.4.3",

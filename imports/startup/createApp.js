@@ -24,7 +24,6 @@ import {
 
 /*--------  Main App  --------*/
 
-
 import App from '../ui/App.vue'
 
 

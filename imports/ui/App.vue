@@ -35,6 +35,12 @@ import SnackBar from './components/general/SnackBar.vue'
 
 export default {
   name:"App",
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: 'Meteor Vuetify. Awesome!!',
+    // all titles will be injected into this template
+    titleTemplate: '%s | Meteor Vuetify'
+  },
   components: {
     BaseLayout,
     AppBarLayout,

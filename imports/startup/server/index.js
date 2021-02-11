@@ -38,7 +38,7 @@ import fs from 'fs'
 // =  SSR App Loader  =
 // ===============================================>>>>>*/
 
-// Only in production
+// Only in production ?
 // if(Meteor.isProduction){
   VueSSR.createApp = function (context) {
     return new Promise((resolve) => {
@@ -51,7 +51,9 @@ import fs from 'fs'
         router.push(context.url)
       }
 
-      // context.meta = app.$meta()
+
+      // Get vue-meta elements
+      context.meta = app.$meta()
 
       // Load vuetify styles
       const vuetifyStyles = fs.readFileSync( 
@@ -70,12 +72,20 @@ import fs from 'fs'
       );
 
       context.appendHtml = () => {
-        // const {
-        //   title, link, style, script, noscript, meta
-        // } = context.meta.inject()
+        const {
+          title, 
+          // link, 
+          // style, 
+          // script, 
+          // noscript, 
+          meta
+        } = context.meta.inject()
 
+        
         return {
           head: `
+          ${meta.text()}
+          ${title.text()}
           <style type="text/css"> ${vuetifyStyles}</style>
           <style type="text/css"> ${mdiStyles}</style>
           `
