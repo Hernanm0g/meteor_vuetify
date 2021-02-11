@@ -1,7 +1,7 @@
 {
   "name": "meteor_vuetify",
   "private": true,
-  "version": "2.0.1",
+  "version": "2.0.2",
   "scripts": {
     "start": "meteor run --settings settings.json ",
     "simulate": "meteor --production --settings settings.json ",
