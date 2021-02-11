@@ -5,7 +5,7 @@ describe("Global testing", function () {
     const { name } = await import("./package.json");
     assert.strictEqual(name, "meteor_vuetify");
   });
-
+  console.log("Adasd");
   if (Meteor.isClient) {
     it("client is not server", function () {
       assert.strictEqual(Meteor.isServer, false);

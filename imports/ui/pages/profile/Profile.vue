@@ -1,4 +1,4 @@
-<template>
+<template lang="html">
   <v-row>
     <v-col cols="12">
       <v-card>
@@ -236,7 +236,7 @@
 
 /*--------  Collections  --------*/
 
-import {UsersMedia} from '../../../api/collections/usersMedia/client'
+import {UsersMedia} from '../../../api/collections/usersMedia/_client'
 
 /*--------  Mixins  --------*/
 import RulesMixin from '../../mixins/general/rules'

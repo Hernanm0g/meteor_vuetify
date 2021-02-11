@@ -12,7 +12,7 @@
 
 /*--------  Startup  --------*/
 
-import '../imports/startup/client/index'
+import '../imports/startup/client'
 
 
 /*= End of Imports =*/

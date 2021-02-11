@@ -1,7 +1,6 @@
 /**
  *
  * Index Startup Scripts.
- * Loads Vue and plugins
  *
  */
 
@@ -11,22 +10,8 @@
 ===============================================>>>>>*/
 
 
-/*--------  Vue  --------*/
-
-import Vue from 'vue'
-
-/*--------  Plugins  --------*/
-
-import { 
-  router,
-  store,
-  vuetify, 
-} from './plugins'
-
-/*--------  Main App  --------*/
-
-
-import App from '../../ui/App.vue'
+/*--------  CreateApp  --------*/
+import CreateApp from '../createApp'
 
 
 /*= End of Imports =*/
@@ -39,21 +24,7 @@ import App from '../../ui/App.vue'
 ===============================================>>>>>*/
 
 Meteor.startup(() => {
-  new Vue({
-    router,
-    store,
-    vuetify,
-    computed : {
-      authenticated(){
-        return this.$store.state.authenticated;
-      }
-    },
-    created(){
-      // Initialize Auth0
-      this.$store.dispatch("initializeAuth0")
-    },
-    render: h => h(App),
-  }).$mount('#app')
+  CreateApp()
 })
 
 

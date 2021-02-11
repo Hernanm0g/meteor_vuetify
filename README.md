@@ -15,13 +15,14 @@ All you need to start your Real Time Web App
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 
 # Idea
-* Back-end: Meteor and it's DDP + Optimistic UI is wonderful for a rapid deployment and server-side js programming.
+* Back-end: Meteor and it's DDP + Optimistic U*I is wonderful for a rapid deployment and server-side js programming.
 * Front-end: Vuejs and Vuetify are great for full-stack developers that want to learn and deliver software fast and continuosly. Even more, vuetify components give the ui an amazing look.
 * Vuetify's A La Carte is an essential feature to reduce bundle size and give users a fast page load. We have developed a Meteor package: [meteor-vuetify-loader](https://atmospherejs.com/zer0th/meteor-vuetify-loader), that makes Meteor's default bundler load vuetify components on the fly. Check it out!, this boilerplate has this package already, you dont need to install it.
 * User Authentication: Auth0 is a reliable authorization platform that allows several types of authentication, including social media, without having to write a line of code, and with instant results. Auth0 interacts in this boilerplate with meteor-accounts so you might want to use Meteor.user() and Meteor.userId() in both, client and server side.
 * Vuex for state management.
 * VueRouter for route management.
 * EventBus for event listening across components.
+* SSR for fast page load and Vue-meta for easy SEO management.
 
 # What you will find here.
 ## METEOR@2.0 + vue@2.6.12 + vuetify@2.4.3
@@ -63,7 +64,10 @@ If you want to create a File Collection just type:
 
 And you can import them the same way you did for simple collections
 
-
+## SSR
+Now you can have faster page loading thanks to akryum:vue-ssr. Check the /imports/startup/server/index.js
+### vueMeta for SEO
+Thanks to vueMeta, and its integration with vue-ssr and vueRouter, you can declare meta tags, title, and more in your .vue files, and they will be loaded on server side, letting your differents pages to be scanned easily by search engines.
 ## Testing
 Now you can test your app, just by typing:
 

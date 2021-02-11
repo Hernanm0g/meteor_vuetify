@@ -9,7 +9,7 @@
 =  Imports  =
 ===============================================>>>>>*/
 
-import MeteorLogin from '../../utils/login'
+import MeteorLogin from '../utils/login'
 Meteor.login = MeteorLogin;
 import createAuth0Client from '@auth0/auth0-spa-js';
 import router from '../router'

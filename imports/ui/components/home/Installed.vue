@@ -38,7 +38,7 @@
 </template>
 
 <script lang="js">
-  import {Clicks} from '../../../api/collections/clicks/client'
+  import {Clicks} from '../../../api/collections/clicks/_client'
   export default {
     name:"Installed",
     meteor: {

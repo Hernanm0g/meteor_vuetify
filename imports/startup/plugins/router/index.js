@@ -29,6 +29,9 @@ const router = new Router({
 
 router.beforeEach((to, from, next) => {
 
+  if(from?.path == to?.path){
+    return next()
+  }
   // Check if any route in the route tree is private
   const isPrivate = to.matched.some(record => !record.meta.public)
 
@@ -43,6 +46,9 @@ router.beforeEach((to, from, next) => {
 
   // You're not logged in. You shall not pass. flame of Udun...
   if(!authenticated){
+    if(to.name=="home"){
+      return next()
+    }
     return next({
       name:'home',
       query: { 

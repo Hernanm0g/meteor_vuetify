@@ -3,7 +3,7 @@
  * Mixin for Avatar Management
  *
  */
-import {UsersMedia} from '../../../api/collections/usersMedia/client'
+import {UsersMedia} from '../../../api/collections/usersMedia/_client'
 export const GetAvatarMixin = {
   meteor: {
     $subscribe: {

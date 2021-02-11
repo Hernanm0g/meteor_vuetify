@@ -46,6 +46,10 @@
   import Snack from '../../components/home/Snack.vue'
   export default {
     name:"Home",
+    metaInfo: {
+      // if no subcomponents specify a metaInfo.title, this title will be used
+      title: 'Home'
+    },
     components: {
       Installed,
       Accounts,
