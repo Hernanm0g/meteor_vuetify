@@ -1,7 +1,5 @@
 
 if(Meteor.isClient){
-  Meteor.startup(() => {
-    describe('  Templates Client Methods API', function () {
-    });
-  })
+  describe('  Templates Client Methods API', function () {
+  });
 }

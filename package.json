@@ -6,7 +6,7 @@
     "start": "meteor run --settings settings.json ",
     "simulate": "meteor --production --settings settings.json ",
     "visualize": "meteor --production --extra-packages bundle-visualizer --settings settings.json",
-    "test": "rm -rf .coverage && BABEL_ENV=COVERAGE COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ meteor test --driver-package meteortesting:mocha --settings settings.json ",
+    "test": "rm -rf .coverage && BABEL_ENV=COVERAGE COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ meteor test --driver-package meteortesting:mocha",
     "circleci-test": "meteor test --driver-package meteortesting:mocha --settings settings.json --once",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha --settings settings.json ",
     "createApi": "node ./exec/api/createApi.js"
