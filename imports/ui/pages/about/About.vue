@@ -27,8 +27,13 @@
 export default {
   name: "About",
   metaInfo: {
-    title: "About"
-  },
+      // if no subcomponents specify a metaInfo.title, this title will be used
+      title: 'About',
+      meta: [
+        { name: 'description', content: 'Meteor Vuetify Integration. About Example description.' },
+        { name: 'keywords', content: 'Meteor vuetify integraiton. About Example keywords' },
+      ]
+    },
   data() {
     return {
       hey: "hy"

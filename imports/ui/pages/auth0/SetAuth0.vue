@@ -52,6 +52,14 @@
 <script lang="js">
 export default {
   name:"SetAuth0",
+  metaInfo: {
+      // if no subcomponents specify a metaInfo.title, this title will be used
+      title: 'Set Auth0',
+      meta: [
+        { name: 'description', content: 'Meteor Vuetify Integration. SetAth0 Example description.' },
+        { name: 'keywords', content: 'Meteor vuetify integraiton. SetAth0 Example keywords' },
+      ]
+    },
   mounted(){
     this.$store.commit("updateCrumbs", {
       position: 0,

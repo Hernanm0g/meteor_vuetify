@@ -48,7 +48,11 @@
     name:"Home",
     metaInfo: {
       // if no subcomponents specify a metaInfo.title, this title will be used
-      title: 'Home'
+      title: 'Home',
+      meta: [
+        { name: 'description', content: 'Meteor Vuetify Integration. Example description.' },
+        { name: 'keywords', content: 'Meteor vuetify integraiton. Example keywords' },
+      ]
     },
     components: {
       Installed,
