@@ -42,18 +42,26 @@ import fs from 'fs'
 // if(Meteor.isProduction){
   VueSSR.createApp = function (context) {
     return new Promise((resolve) => {
+
+      // get app, router, ...
       const { app, router } = CreateApp()
 
-      router.push(context.url)
+      // Avoid navigating to the same patch
+      if( router.history.current.path!== context.url.path){
+        router.push(context.url)
+      }
+
       // context.meta = app.$meta()
 
-      // ...
+      // Load vuetify styles
       const vuetifyStyles = fs.readFileSync( 
         Meteor.absolutePath+'/node_modules/vuetify/dist/vuetify.min.css', 
         {
           encoding:"utf-8"
         }
       );
+
+      // load mdi styles
       const mdiStyles = fs.readFileSync( 
         Meteor.absolutePath+'/node_modules/@mdi/font/css/materialdesignicons.css', 
         {

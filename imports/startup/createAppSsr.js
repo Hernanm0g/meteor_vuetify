@@ -41,11 +41,9 @@ import App from '../ui/App.vue'
 function createApp () {
 
   // Disable subscriptions
-  // Only For SSR on dev mode
-  if(Meteor.isDevelopment){
-    Vue.config.meteor.subscribe = function() {
-      return []
-    }
+  // Only For SSR
+  Vue.config.meteor.subscribe = function() {
+    return []
   }
   
 
