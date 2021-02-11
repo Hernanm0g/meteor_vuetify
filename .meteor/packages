@@ -33,3 +33,5 @@ lmieulet:meteor-coverage
 ostrio:files
 practicalmeteor:sinon
 dburles:factory
+akryum:vue-ssr
+ostrio:meteor-root

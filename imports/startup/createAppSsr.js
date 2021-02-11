@@ -10,7 +10,6 @@
 =  Imports  =
 ===============================================>>>>>*/
 
-
 /*--------  Vue  --------*/
 
 import Vue from 'vue'
@@ -21,12 +20,12 @@ import {
   router,
   store,
   vuetify, 
-} from './plugins'
+} from './plugins/ssr'
 
 /*--------  Main App  --------*/
 
 
-import App from '../../ui/App.vue'
+import App from '../ui/App.vue'
 
 
 /*= End of Imports =*/
@@ -38,23 +37,38 @@ import App from '../../ui/App.vue'
 =  Load App on Html  =
 ===============================================>>>>>*/
 
-Meteor.startup(() => {
-  new Vue({
+
+function createApp () {
+
+  // Disable subscriptions
+  // Only For SSR on dev mode
+  if(Meteor.isDevelopment){
+    Vue.config.meteor.subscribe = function() {
+      return []
+    }
+  }
+  
+
+  return {
+    app: new Vue({
+      router,
+      store,
+      vuetify,
+      computed : {
+        authenticated(){
+          return this.$store.state.authenticated;
+        }
+      },
+      created(){
+      },
+      render: h => h(App),
+    }).$mount('#app'),
     router,
-    store,
-    vuetify,
-    computed : {
-      authenticated(){
-        return this.$store.state.authenticated;
-      }
-    },
-    created(){
-      // Initialize Auth0
-      this.$store.dispatch("initializeAuth0")
-    },
-    render: h => h(App),
-  }).$mount('#app')
-})
+    store
+  }
+}
+
+export default createApp
 
 
 /*= End of Load App on Html =*/

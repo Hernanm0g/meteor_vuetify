@@ -3,7 +3,7 @@
   "private": true,
   "version": "2.0.1",
   "scripts": {
-    "start": "NO_HMR=1 meteor run --settings settings.json ",
+    "start": "meteor run --settings settings.json ",
     "visualize": "meteor --production --extra-packages bundle-visualizer",
     "test": "rm -rf .coverage && BABEL_ENV=COVERAGE COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ meteor test --driver-package meteortesting:mocha --settings settings.json ",
     "circleci-test": "meteor test --driver-package meteortesting:mocha --settings settings.json --once",
@@ -13,6 +13,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/runtime": "^7.11.2",
+    "ignore-styles": "^5.0.1",
     "lodash": "^4.17.20",
     "luxon": "^1.25.0",
     "meteor-node-stubs": "^1.0.1",

@@ -35,6 +35,7 @@ Meteor.publish("clicks.get.all", function(skip=0,limit=10){
       }
     )
   } catch (exception) {
+    console.error("ERRRR", exception);
     throw new Meteor.Error('500', exception);
   }
 });

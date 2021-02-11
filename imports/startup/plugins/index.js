@@ -1,7 +1,6 @@
 /**
  *
- * Index Client function.
- * Runs when accessed ROUTE_URL
+ * Plugins Loader
  *
  */
 
@@ -10,10 +9,16 @@
 =  Imports  =
 ===============================================>>>>>*/
 
-/*--------  Startup  --------*/
-
-import '../imports/startup/_client/index'
-
-
+import './vueMeteorTracker' // Vue Meteor Tracker. !Awesome
+import vuetify from './vuetify'
+import router from './router'
+import store from './store'
 /*= End of Imports =*/
 /*=============================================<<<<<*/
+
+export {
+  router,
+  store,
+  vuetify
+}
+

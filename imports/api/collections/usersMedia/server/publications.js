@@ -41,7 +41,9 @@ Meteor.publish("usersMedia.get.all", function(skip=0,limit=10){
 Meteor.publish("usersMedia.get.by.user.and.type", function({user, type}, skip=0, limit=10){
   try {
     const authUserId = Meteor.userId()
-    assert(authUserId, `Must be authenticated to subscribe.`)
+    if(!authUserId){
+      return []
+    }
     user = user || authUserId
     assert(!!type && typeof type ==="string", `Type must be a String. Received (${typeof type}) ${type}  instead`)
     assert(isNumber(skip), `Skip must be a number. Received (${typeof skip}) ${skip}  instead`)

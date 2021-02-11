@@ -7,8 +7,11 @@
       src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
     >
       <v-card-title>
-        Meteor and vuetify are now installed!!
+        Meteor and vuetify are now installed!!dfgdrbgdrb
       </v-card-title>
+      <v-alert type="success">
+        Tonces
+      </v-alert>
     </v-img>
     <v-card-text>
       <div>
@@ -38,7 +41,7 @@
 </template>
 
 <script lang="js">
-  import {Clicks} from '../../../api/collections/clicks/client'
+  import {Clicks} from '../../../api/collections/clicks/_client'
   export default {
     name:"Installed",
     meteor: {
