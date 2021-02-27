@@ -1,0 +1,5 @@
+{
+  "includePaths": [
+    "{}/imports/ui/styles/vuetify/"
+  ]
+}

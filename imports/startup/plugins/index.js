@@ -11,15 +11,9 @@
 
 import './vueMeteorTracker' // Vue Meteor Tracker. !Awesome
 import './vueMeta' // Vue Meta. !Awesome
-import vuetify from './vuetify'
-import router from './router'
-import store from './store'
 /*= End of Imports =*/
 /*=============================================<<<<<*/
 
-export {
-  router,
-  store,
-  vuetify
-}
-
+export {default as vuetify} from './vuetify'
+export {default as router} from './router'
+export {default as store} from './store'
