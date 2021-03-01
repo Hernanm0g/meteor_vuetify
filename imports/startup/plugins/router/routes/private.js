@@ -17,8 +17,8 @@
 // want to use the classic import style:
 // import SomePage from 'PagePath'
 
-// const Profile= ()=> import ('../../../../ui/pages/profile/Profile.vue') // Dynamic async import
-import Profile from '../../../../ui/pages/profile/Profile.vue' // Use this in order to enable minimongo
+const Profile= ()=> import ('../../../../ui/pages/profile/Profile.vue') // Dynamic async import
+// import Profile from '../../../../ui/pages/profile/Profile.vue' // Use this in order to enable mongol
 
 
 /*= End of Imports =*/
