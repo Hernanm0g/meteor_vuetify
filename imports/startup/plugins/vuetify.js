@@ -4,14 +4,16 @@ import '@mdi/font/css/materialdesignicons.min.css' // Ensure you are using css-l
 import minifyTheme from 'minify-css-string'
 
 /*--------  The magic goes here  --------*/
-
-// IMPORTANT: Use this imports in production to reduce bundle size
-// import Vuetify from 'vuetify/lib/framework'
-// import 'vuetify/lib/util/colors'
-// import 'vuetify/lib/directives'
-
-// Use this import while developing
-import Vuetify from 'vuetify/lib'
+let Vuetify
+// if(Meteor.isDevelopment){
+//   // Use this import while developing
+//   Vuetify = require("vuetify/lib").default
+// } else {
+  // IMPORTANT: Use this imports in production to reduce bundle size
+  Vuetify = require("vuetify/lib/framework").default
+  // require("vuetify/lib/util/colors")
+  require("vuetify/lib/directives")
+// }
 
 Vue.use(Vuetify)
 
