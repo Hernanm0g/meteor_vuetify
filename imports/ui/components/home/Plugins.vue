@@ -1,26 +1,9 @@
 <template>
   <!-- Vue router and Vuex -->
   <v-card>
-    <v-img
-      class="white--text"
-      height="200px"
-      src="https://apod.nasa.gov/apod/image/1906/NoctilucentNetherlands_Simmering_1080.jpg"
-    >
-      <v-container
-        fill-height
-        fluid
-      >
-        <v-layout fill-height>
-          <v-flex
-            xs12
-            align-end
-            flexbox
-          >
-            <span class="headline">Page Router and State Management</span>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-img>
+    <v-card-title>
+      Page Router and State Management
+    </v-card-title>
     <v-card-text>
       <div>
         <span class="grey--text">Vue Router and Vuex</span>
