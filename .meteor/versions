@@ -40,13 +40,13 @@ geojson-utils@1.0.10
 hot-code-push@1.0.4
 html-tools@1.0.11
 htmljs@1.0.11
-http@1.0.10
+http@1.4.3
 hwillson:stub-collections@1.0.9
 id-map@1.1.0
 inter-process-messaging@0.1.1
 johanbrook:publication-collector@1.1.0
 jquery@3.0.0
-lamhieu:meteorx@2.0.1
+lamhieu:meteorx@2.1.1
 launch-screen@1.2.0
 livedata@1.0.18
 lmieulet:meteor-coverage@1.1.4
@@ -57,7 +57,7 @@ meteor-base@1.4.0
 meteorhacks:picker@1.0.3
 meteortesting:browser-tests@1.3.4
 meteortesting:mocha@2.0.1
-meteortesting:mocha-core@8.0.1
+meteortesting:mocha-core@8.1.2
 meteortoys:toykit@10.0.0
 minifier-css@1.5.3
 minifier-js@2.6.0
@@ -76,7 +76,7 @@ npm-mongo@3.8.1
 observe-sequence@1.0.16
 ordered-dict@1.1.0
 ostrio:cookies@2.7.0
-ostrio:files@2.0.0
+ostrio:files@2.0.1
 ostrio:meteor-root@1.0.8
 practicalmeteor:chai@2.1.0_1
 practicalmeteor:sinon@1.14.1_2
@@ -98,7 +98,7 @@ spacebars@1.0.15
 spacebars-compiler@1.1.3
 standard-minifier-css@1.7.2
 standard-minifier-js@2.6.0
-staringatlights:fast-render@3.2.0
+staringatlights:fast-render@3.3.0
 staringatlights:inject-data@2.3.0
 static-html@1.2.2
 templating@1.3.2

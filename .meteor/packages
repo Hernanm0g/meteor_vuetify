@@ -26,9 +26,9 @@ akryum:vue-sass
 hwillson:stub-collections
 msavin:mongol
 jquery
-accounts-base
+accounts-base@1.8.0
 zer0th:meteor-vuetify-loader
-session
+session@1.2.0
 lmieulet:meteor-coverage
 ostrio:files
 practicalmeteor:sinon

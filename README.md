@@ -25,7 +25,7 @@ All you need to start your Real Time Web App
 * SSR for fast page load and Vue-meta for easy SEO management.
 
 # What you will find here.
-## METEOR@2.0 + vue@2.6.12 + vuetify@2.4.3
+## METEOR@2.1 + vue@2.6.12 + vuetify@2.4.7
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte and Treeshaking.
 [A la carte!](https://vuetifyjs.com/en/customization/a-la-carte/)
