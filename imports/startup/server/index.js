@@ -46,7 +46,7 @@ import fs from 'fs'
       // get app, router, ...
       const { app, router } = CreateApp()
 
-      // Avoid navigating to the same patch
+      // Avoid navigating to the same path
       if( router.history.current.path!== context.url.path){
         router.push(context.url)
       }
@@ -63,13 +63,13 @@ import fs from 'fs'
         }
       );
 
-      // load mdi styles
-      const mdiStyles = fs.readFileSync( 
-        Meteor.absolutePath+'/node_modules/@mdi/font/css/materialdesignicons.css', 
-        {
-          encoding:"utf-8"
-        }
-      );
+      // // load mdi styles
+      // const mdiStyles = fs.readFileSync( 
+      //   Meteor.absolutePath+'/node_modules/@mdi/font/css/materialdesignicons.css', 
+      //   {
+      //     encoding:"utf-8"
+      //   }
+      // );
 
       context.appendHtml = () => {
         const {
@@ -87,7 +87,6 @@ import fs from 'fs'
           ${meta.text()}
           ${title.text()}
           <style type="text/css"> ${vuetifyStyles}</style>
-          <style type="text/css"> ${mdiStyles}</style>
           `
         }
       }
