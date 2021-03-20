@@ -1,25 +1,8 @@
 <template>
   <v-card>
-    <v-img
-      class="white--text"
-      height="200px"
-      src="https://apod.nasa.gov/apod/image/1905/crs17spaceXboggs1024.jpg"
-    >
-      <v-container
-        fill-height
-        fluid
-      >
-        <v-layout fill-height>
-          <v-flex
-            xs12
-            align-end
-            flexbox
-          >
-            <span class="headline">Notifications with SnackBar</span>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-img>
+    <v-card-title>
+      Notifications with SnackBar
+    </v-card-title>
     <v-card-text>
       <div>
         <span class="grey--text">Vuetify Snackbars are great for users notifications!!</span>

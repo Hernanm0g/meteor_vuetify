@@ -1,15 +1,8 @@
 <template>
   <v-card>
-    <v-img
-      class="white--text align-end"
-      gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-      height="200px"
-      src="https://apod.nasa.gov/apod/image/1906/Fusco-BigSurKonaMWBioluminescenceMars-exif1024.jpg"
-    >
-      <v-card-title>
-        User Authentication with Auth0
-      </v-card-title>
-    </v-img>
+    <v-card-title>
+      User Authentication with Auth0
+    </v-card-title>
     <v-card-text>
       <div>
         <span class="grey--text">Auth0 Universal Login and meteor-accounts!!</span>

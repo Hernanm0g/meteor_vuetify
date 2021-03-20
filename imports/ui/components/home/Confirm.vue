@@ -1,26 +1,9 @@
 <template>
   <!-- Confirm -->
   <v-card>
-    <v-img
-      class="white--text"
-      height="200px"
-      src="https://apod.nasa.gov/apod/image/1904/M33Meteor_Chokshi_960.jpg"
-    >
-      <v-container
-        fill-height
-        fluid
-      >
-        <v-layout fill-height>
-          <v-flex
-            xs12
-            align-end
-            flexbox
-          >
-            <span class="headline">EventBus and Custom Confirm Dialogs</span>
-          </v-flex>
-        </v-layout>
-      </v-container>
-    </v-img>
+    <v-card-title>
+      EventBus and Custom Confirm Dialogs
+    </v-card-title>
     <v-card-text>
       <div>
         <span class="grey--text">Listen to events in the DOM with EventBus.</span>
