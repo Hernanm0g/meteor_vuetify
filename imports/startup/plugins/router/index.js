@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import store from '@/store/index.js' // Maybe you want to check vuex states
-import routes from './routes/index.js'
+import routes from '../../../ui/routes/index.js'
 
 Vue.use(Router)
 
