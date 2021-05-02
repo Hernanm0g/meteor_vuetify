@@ -11,9 +11,11 @@ Meteor.startup(async function () {
 
   /*--------  Create Templates Indexes  --------*/
 
-  // Templates.rawCollection().createIndexes([
-  //   { bar : 1 }
-  // ]);
+  // Templates.rawCollection().createIndex(
+  //   { 
+  //     bar : 1 
+  //   }
+  // );
 
   /*--------  Load Inital Templates  --------*/
   // if(Templates.find().count()===0){
