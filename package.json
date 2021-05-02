@@ -1,7 +1,7 @@
 {
   "name": "meteor_vuetify",
   "private": true,
-  "version": "2.0.31",
+  "version": "2.1.0",
   "scripts": {
     "start": "meteor run --settings settings.json ",
     "simulate": "meteor --production --settings settings.json ",
@@ -12,20 +12,20 @@
     "createApi": "node ./exec/api/createApi.js"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.13.6",
-    "@babel/runtime": "^7.11.2",
-    "browserslist": "^4.16.3",
+    "@auth0/auth0-spa-js": "^1.15.0",
+    "@babel/runtime": "^7.14.0",
+    "browserslist": "^4.16.6",
     "ignore-styles": "^5.0.1",
-    "lodash": "^4.17.20",
-    "luxon": "^1.25.0",
-    "meteor-node-stubs": "^1.0.1",
+    "lodash": "^4.17.21",
+    "luxon": "^1.26.0",
+    "meteor-node-stubs": "^1.0.3",
     "minify-css-string": "^1.0.0",
-    "simpl-schema": "^1.10.2",
+    "simpl-schema": "^1.12.0",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
-    "vue-router": "^3.4.9",
-    "vuetify": "^2.4.3",
+    "vue-router": "^3.5.1",
+    "vuetify": "^2.4.11",
     "vuex": "^3.6.2"
   },
   "meteor": {
@@ -38,10 +38,10 @@
     "@mdi/font": "^5.9.55",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
-    "eslint": "^7.18.0",
-    "eslint-plugin-html": "^6.1.1",
-    "eslint-plugin-vue": "^7.5.0",
-    "jquery": "^3.5.1",
+    "eslint": "^7.25.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-vue": "^7.9.0",
+    "jquery": "^3.6.0",
     "puppeteer": "^5.5.0"
   },
   "babel": {
