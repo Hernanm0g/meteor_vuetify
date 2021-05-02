@@ -17,7 +17,7 @@
     </span>
   </v-snackbar>
 </template>
-<script lang="js">
+<script  lang="js" cpl="vuetify">
 export default {
   name: "SnackBar",
   data() {

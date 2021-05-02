@@ -34,7 +34,7 @@
   </v-card>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
   export default {
     name:"Plugins",
   }

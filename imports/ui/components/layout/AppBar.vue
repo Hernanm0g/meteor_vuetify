@@ -86,7 +86,7 @@
   </v-app-bar>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
 
 
 /*--------  Mixins  --------*/

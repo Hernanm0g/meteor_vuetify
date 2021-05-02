@@ -55,7 +55,7 @@
   </v-card>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
   const { AUTH0 } = Meteor.settings.public
   export default {
     name:"Accounts",

@@ -9,7 +9,7 @@
   </v-main>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
 /*--------  Mixins  --------*/
 import fillHeightMixin from '../mixins/layout/fillHeight'
 import fluidMixin from '../mixins/layout/fluid'

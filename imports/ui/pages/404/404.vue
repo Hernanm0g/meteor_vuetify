@@ -26,7 +26,7 @@
     </v-row>
   </v-container>
 </template>
-<script lang="js">
+<script  lang="js" cpl="vuetify">
   export default {
     name:"PageNotFound"
   }

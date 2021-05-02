@@ -38,12 +38,13 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
   import Installed from '../../components/home/Installed.vue'
   import Accounts from '../../components/home/Accounts.vue'
   import Plugins from '../../components/home/Plugins.vue'
   import Confirm from '../../components/home/Confirm.vue'
   import Snack from '../../components/home/Snack.vue'
+  
   export default {
     name:"Home",
     metaInfo: {

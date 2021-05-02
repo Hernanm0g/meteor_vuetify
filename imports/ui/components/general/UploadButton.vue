@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script lang="js">
+<script  lang="js" cpl="vuetify">
 export default {
   name:"UploadButton",
   props: {
