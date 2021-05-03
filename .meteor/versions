@@ -48,7 +48,7 @@ jquery@3.0.0
 lamhieu:meteorx@2.1.1
 launch-screen@1.2.1
 livedata@1.0.18
-lmieulet:meteor-coverage@1.1.4
+lmieulet:meteor-coverage@3.2.0
 localstorage@1.2.0
 logging@1.2.0
 meteor@1.9.3

@@ -29,9 +29,9 @@ jquery
 accounts-base@1.9.0
 zer0th:meteor-vuetify-loader
 session@1.2.0
-lmieulet:meteor-coverage
 ostrio:files
 practicalmeteor:sinon
 dburles:factory
 akryum:vue-ssr
 ostrio:meteor-root
+lmieulet:meteor-coverage
