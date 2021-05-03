@@ -19,7 +19,7 @@ import Vue from 'vue'
 import { 
   router,
   store,
-  vuetify, 
+  vuetify as vuetifyPromise, 
 } from './plugins'
 
 /*--------  Main App  --------*/
@@ -37,7 +37,10 @@ import App from '../ui/App.vue'
 ===============================================>>>>>*/
 
 
-function createApp () {
+async function createApp () {
+
+  
+  const vuetify = await vuetifyPromise
   return {
     app: new Vue({
       router,

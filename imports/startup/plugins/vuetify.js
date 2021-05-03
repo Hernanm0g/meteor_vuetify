@@ -5,30 +5,39 @@ import minifyTheme from 'minify-css-string'
 
 /*--------  The magic goes here  --------*/
 
-// Use this import while developing
-import Vuetify from "vuetify/lib"
+const promise = new Promise((resolve) => {
 
-// IMPORTANT: Use this imports in production to reduce bundle size
-// import Vuetify from "vuetify/lib/framework"
-// import "vuetify/lib/util/colors"
-// import "vuetify/lib/directives"
+  // Language
+  // Translation provided by Vuetify (javascript)
+  // import es from 'vuetify/es5/locale/es'
 
-// TODO: find a proper way to import based on a conditional
-// if(Meteor.isDevelopment){ ... }
+  const opts = {
+    theme: {
+      options: { minifyTheme },
+    },
+    icons: {
+      iconfont: 'mdi', // default - only for display purposes
+    },
+  }
 
-Vue.use(Vuetify)
+  if(Meteor.isProduction){ 
+    import ("vuetify/lib/framework")
+      .then(Vuetify=>{
 
-// Language
-// Translation provided by Vuetify (javascript)
-// import es from 'vuetify/es5/locale/es'
+        // TODO: Is this necessary?
+        // import "vuetify/lib/util/colors"
+        // import "vuetify/lib/directives"
+        Vue.use(Vuetify.default)
+        resolve(new Vuetify.default(opts))
+      })
+  } else {
+    import ("vuetify/lib")
+      .then(Vuetify=>{
+        Vue.use(Vuetify.default)
+        resolve(new Vuetify.default(opts))
+      })
+  }
+});
 
 
-const opts = {
-  theme: {
-    options: { minifyTheme },
-  },
-  icons: {
-    iconfont: 'mdi', // default - only for display purposes
-  },
-}
-export default new Vuetify(opts)
+export default promise
