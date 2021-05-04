@@ -10,7 +10,7 @@
 7. Install [nginx](https://ubuntu.com/tutorials/install-and-configure-nginx#1-overview). `sudo apt-get update && sudo apt-get install nginx`
 8. Prepare the nginx proxy server configuration. This can be a little tricky, try this:
    1. `sudo nano /etc/nginx/sites-enabled/yourWebdomain`
-   2.  Copy in that file the content of nginx.config.example in this repo. Make sure to change yourWebDomain, and set your ssl keys paths.
+   2.  Copy in that file the content of [nginx.config.example](https://github.com/Hernanm0g/meteor_vuetify/blob/master/nginx.config.example) in this repo. Make sure to change yourWebDomain, and set your ssl keys paths.
    3.  Make nginx service to start whenever the server starts: `sudo systemctl enable nginx`
    4.  start nginx service `sudo systemctl restart nginx`
    5.  If everything works well, now yourWebDomain.com points to Meteor app, that now is down, but will serving through port 3001. (btw, you can change this port whenever you want)

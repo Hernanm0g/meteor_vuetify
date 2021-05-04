@@ -83,6 +83,8 @@ You'll see that all your collections' created with the Api Templates have alread
 ### Code coverage
 After running the test script, you can go to http://localhost:3000/coverage and check the code coverage results.
 
+## Deployment to production
+[Read this](https://github.com/Hernanm0g/meteor_vuetify/blob/master/DEPLOYMENT.md)
 # Contribute
 Commit, make PR's, dont hesitate to submit issues.
 Enjoy!!
