@@ -22,6 +22,7 @@
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/runtime": "^7.11.2",
+    "@mdi/font": "^5.9.55",
     "browserslist": "^4.16.3",
     "ignore-styles": "^5.0.1",
     "lodash": "^4.17.20",
@@ -43,7 +44,6 @@
     }
   },
   "devDependencies": {
-    "@mdi/font": "^5.9.55",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
     "eslint": "^7.18.0",

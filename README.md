@@ -30,7 +30,7 @@ All you need to start your Real Time Web App
 thanks to SSR, dynamic Async imports and meteor-vuetify-lodaer, we can now have >60 performance score in lighthouse
 
 # What you will find here.
-## METEOR@2.1 + vue@2.6.12 + vuetify@2.4.7
+## METEOR@2.2 + vue@2.6.12 + vuetify@2.4.7
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ## Vuetify A La Carte and Treeshaking.
 [A la carte!](https://vuetifyjs.com/en/customization/a-la-carte/)

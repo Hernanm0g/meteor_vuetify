@@ -2,7 +2,8 @@
 *.code-workspace
 
 # meteor
-packages
+packages/meteor-vuetify-loader
+packages/vue-component
 
 # coverage
 .coverage
