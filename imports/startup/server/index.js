@@ -45,11 +45,7 @@ import fs from 'fs'
       // get app, router, ...
       const { app, router } = CreateApp()
 
-      // Avoid navigating to the same path
-      if( router.history.current.path!== context.url.path){
-        router.push(context.url)
-      }
-
+      router.push(context.url).catch(()=>{});
 
       // Get vue-meta elements
       context.meta = app.$meta()
@@ -57,7 +53,7 @@ import fs from 'fs'
       // Load vuetify styles
       let nodeModulesPath = Meteor.absolutePath
 
-      if (Meteor.isProduction) {
+      if (Meteor.isProduction && !(process.env.npm_lifecycle_script?.includes("--production"))) {
         nodeModulesPath += "/npm"
       }
 
