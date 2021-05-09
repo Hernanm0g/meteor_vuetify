@@ -29,7 +29,6 @@ import CreateApp from '../createAppSsr'
 /*--------  utils  --------*/
 import fs from 'fs'
 
-
 // /*= End of Imports =*/
 // /*=============================================<<<<<*/
 
@@ -56,8 +55,14 @@ import fs from 'fs'
       context.meta = app.$meta()
 
       // Load vuetify styles
+      let nodeModulesPath = Meteor.absolutePath
+
+      if (Meteor.isProduction) {
+        nodeModulesPath += "/npm"
+      }
+
       const vuetifyStyles = fs.readFileSync( 
-        Meteor.absolutePath+'/node_modules/vuetify/dist/vuetify.min.css', 
+        nodeModulesPath+'/node_modules/vuetify/dist/vuetify.min.css', 
         {
           encoding:"utf-8"
         }
