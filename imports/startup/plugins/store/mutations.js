@@ -87,6 +87,13 @@ export const setAuth0 = (state, auth0) => {
   state.auth0 = auth0
 }
 
+/*-------- Set i18n ------------*/
+export const setLanguage = (state, lang) => {
+  state.language = lang
+  i18n.locale = lang
+}
+
+
 /*= End of Mutations =*/
 /*=============================================<<<<<*/
 

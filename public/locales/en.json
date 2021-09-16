@@ -1,0 +1,66 @@
+{
+  "about": {
+    "title": "This is an example, so you can see a little piece of what vue-router and vuex can do."
+  },
+  "hello": "Hello i18n in SFC!",
+  "welcome": "Welcome!",
+  "buttons": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "update": "Update",
+    "delete": "Delete",
+    "save": "Save"
+  },
+  "navigation": {
+    "home": "Home",
+    "profile": "Profile",
+    "about": "About",
+    "users": "Users and Permissions",
+    "setupAuth0": "Setup Auth0",
+    "logs": "Logs",
+    "items": "All Items"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "profile": "Profile",
+    "username": "Username",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "password": "Password",
+    "password2": "Confirm Password",
+    "email": "Email Address",
+    "userid": "User Id",
+    "errors" : {
+      "firstnameRequired": "First name is required",
+      "lastnameRequired": "Last name is required",
+      "emailRequired": "A proper email address is required",
+      "passwordRequired": "Password is required",
+      "passwordsDontMatch": "Your passwords do not match",
+      "lessthan10chars": "Must be less than 10 characters"
+    },
+    "users": "Users",
+    "roles": "Permissions/Roles",
+    "roleName": "Role Name",
+    "inheritedRoles": "Inherited Permissions/Roles",
+    "userRemoved": "User removed",
+    "removeUser": "Remove User",
+    "removeUserForSure": "Are you sure you want to remove this user?",
+    "editUser": "Edit User",
+    "userSaved": "User saved",
+    "roleSaved": "Role saved",
+    "useDisplayNameInstead": "Show another name instead of my first and last name to my contacts",
+    "displayName": "Nickname"
+  },
+  "locale": {
+    "language": "Language"
+  },
+  "tables": {
+    "actions": "Actions"
+  },
+  "profile": {
+    "identity": "Identity"
+  }
+}

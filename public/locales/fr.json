@@ -1,0 +1,66 @@
+{
+	"about": {
+		"title": "Ceci est un exemple, vous pouvez donc voir un petit morceau de ce que vue-router et vuex peuvent faire."
+	},
+	"hello": "Bonjour i18n dans SFC !",
+	"welcome": "Bienvenue!",
+	"buttons": {
+		"yes": "Oui",
+		"no": "Non",
+		"cancel": "Annuler",
+		"update": "Mettre à jour",
+		"delete": "Effacer",
+		"save": "sauvegarder"
+	},
+	"navigation": {
+		"home": "Accueil",
+		"profile": "Profil",
+		"about": "Sur",
+		"users": "Utilisateurs et autorisations",
+		"setupAuth0": "Configurer Auth0",
+		"logs": "Journaux",
+		"items": "Tous les articles"
+	},
+	"auth": {
+		"login": "Connexion",
+		"logout": "Se déconnecter",
+		"register": "S'inscrire",
+		"profile": "Profil",
+		"username": "Nom d'utilisateur",
+		"firstname": "Prénom",
+		"lastname": "Nom de famille",
+		"password": "Mot de passe",
+		"password2": "Confirmez le mot de passe",
+		"email": "Adresse e-mail",
+		"userid": "Identifiant d'utilisateur",
+		"errors": {
+			"firstnameRequired": "Le prénom est requis",
+			"lastnameRequired": "Le nom de famille est requis",
+			"emailRequired": "Une adresse e-mail appropriée est requise",
+			"passwordRequired": "Mot de passe requis",
+			"passwordsDontMatch": "Vos mots de passe ne correspondent pas",
+			"lessthan10chars": "Doit comporter moins de 10 caractères"
+		},
+		"users": "Utilisateurs",
+		"roles": "Autorisations/Rôles",
+		"roleName": "Nom de rôle",
+		"inheritedRoles": "Autorisations/rôles hérités",
+		"userRemoved": "Utilisateur supprimé",
+		"removeUser": "Supprimer l'utilisateur",
+		"removeUserForSure": "Voulez-vous vraiment supprimer cet utilisateur ?",
+		"editUser": "Modifier l'utilisateur",
+		"userSaved": "Utilisateur enregistré",
+		"roleSaved": "Rôle enregistré",
+		"useDisplayNameInstead": "Afficher un autre nom au lieu de mon prénom et de mon nom à mes contacts",
+		"displayName": "Surnom"
+	},
+	"locale": {
+		"language": "Langue"
+	},
+	"tables": {
+		"actions": "Actions"
+	},
+	"profile": {
+		"identity": "Identité"
+	}
+}

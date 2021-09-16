@@ -3,7 +3,7 @@
     <v-col cols="12">
       <v-card>
         <v-card-title primary-title>
-          This is an example, so you can see a little piece of what vue-router and vuex can do.
+          {{ $t("about.title")}}
         </v-card-title>
         <v-card-text>
           <ul>

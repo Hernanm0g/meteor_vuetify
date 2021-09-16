@@ -1,0 +1,66 @@
+{
+	"about": {
+		"title": "Este es un ejemplo, para que pueda ver una pequeña parte de lo que pueden hacer vue-router y vuex."
+	},
+	"hello": "¡Hola i18n en SFC!",
+	"welcome": "¡Bienvenido!",
+	"buttons": {
+		"yes": "sí",
+		"no": "No",
+		"cancel": "Cancelar",
+		"update": "Actualizar",
+		"delete": "Borrar",
+		"save": "Ahorrar"
+	},
+	"navigation": {
+		"home": "Hogar",
+		"profile": "Perfil",
+		"about": "Sobre",
+		"users": "Usuarios y permisos",
+		"setupAuth0": "Configurar Auth0",
+		"logs": "Registros",
+		"items": "Todos los artículos"
+	},
+	"auth": {
+		"login": "Acceso",
+		"logout": "Cerrar sesión",
+		"register": "Registrarse",
+		"profile": "Perfil",
+		"username": "Nombre de usuario",
+		"firstname": "Primer nombre",
+		"lastname": "Apellido",
+		"password": "Contraseña",
+		"password2": "confirmar Contraseña",
+		"email": "Dirección de correo electrónico",
+		"userid": "ID de usuario",
+		"errors": {
+			"firstnameRequired": "Se requiere el primer nombre",
+			"lastnameRequired": "Se requiere apellido",
+			"emailRequired": "Se requiere una dirección de correo electrónico adecuada",
+			"passwordRequired": "se requiere contraseña",
+			"passwordsDontMatch": "Tus contraseñas no coinciden",
+			"lessthan10chars": "Debe tener menos de 10 caracteres"
+		},
+		"users": "Usuarios",
+		"roles": "Permisos / Roles",
+		"roleName": "Nombre de rol",
+		"inheritedRoles": "Permisos / roles heredados",
+		"userRemoved": "Usuario eliminado",
+		"removeUser": "Eliminar usuario",
+		"removeUserForSure": "¿Está seguro de que desea eliminar a este usuario?",
+		"editUser": "editar usuario",
+		"userSaved": "Usuario guardado",
+		"roleSaved": "Rol guardado",
+		"useDisplayNameInstead": "Mostrar otro nombre en lugar de mi nombre y apellido a mis contactos",
+		"displayName": "Apodo"
+	},
+	"locale": {
+		"language": "Idioma"
+	},
+	"tables": {
+		"actions": "Comportamiento"
+	},
+	"profile": {
+		"identity": "Identidad"
+	}
+}

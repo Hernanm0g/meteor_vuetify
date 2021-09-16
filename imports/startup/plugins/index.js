@@ -17,3 +17,4 @@ import './vueMeta' // Vue Meta. !Awesome
 export {default as vuetify} from './vuetify'
 export {default as router} from './router'
 export {default as store} from './store'
+export {default as i18n} from './i18n'
