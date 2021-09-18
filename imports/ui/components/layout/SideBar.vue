@@ -46,7 +46,8 @@
           <v-icon>{{ link.icon }}</v-icon>
         </v-list-item-action>
         <v-list-item-content>
-          <v-list-item-title>{{ $t(link.title) }}</v-list-item-title>
+          <v-list-item-title v-if="link.title_i18n">{{ $t(link.title_i18n) }}</v-list-item-title>
+          <v-list-item-title v-if="!link.title_i18n">{{ link.title }} </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -97,19 +98,22 @@ export default {
       links = [
         ...links,
         {
-          title: 'menu.home',
+          title: 'Home',
+          title_i18n: 'menu.home',
           icon:"mdi-home",
           to: {name:'home'},
           exact:true
         },
         {
-          title: 'menu.about',
+          title: 'About',
+          title_i18n: 'menu.about',
           icon:"mdi-information",
           to: {name:'about'},
           exact:true
         },
         {
-          title: 'menu.set_auth0',
+          title: 'Set Auth0',
+          title_i18n: 'menu.set_auth0',
           icon:"mdi-account-question",
           to: {name:'setauth0'},
           exact:true

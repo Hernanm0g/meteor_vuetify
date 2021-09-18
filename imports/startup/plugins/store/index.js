@@ -26,7 +26,6 @@ var plugins = []
 if (Meteor.isClient) {
   plugins.push(createPersistedState())
 }
-console.log(plugins)
 
 export default new Vuex.Store({
   state,
