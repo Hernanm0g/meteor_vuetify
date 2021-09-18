@@ -25,7 +25,7 @@
   </v-card>
 </template>
 
-<script>
+<script lang="js">
 export default {
   name: "LanguagePicker",
   data() {
@@ -53,6 +53,7 @@ export default {
       Meteor.users.update(Meteor.userId(), {
         $set: { "profile.language": lang }
       });
+      this.$store.commit("setLanguage", lang);
     }
   }
 };

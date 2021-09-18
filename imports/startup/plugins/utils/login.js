@@ -18,7 +18,7 @@ const login = function(profile, callback) {
   Accounts.callLoginMethod({
     methodArguments: [profile],
     userCallback: callback
-  });
+  });    
 };
 
 export default login;

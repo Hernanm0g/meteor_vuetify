@@ -8,13 +8,13 @@
         <v-card-text>
           <ul>
             <li>
-              Click on back button in your browser. Thats Vue-router history mode.
+              {{ $t("about.li_1")}}
             </li>
             <li>
-              Open Left Navigation Drawer and go to home page.
+              {{ $t("about.li_2")}}
             </li>
             <li>
-              Use breadcrumbs above to navigate. We store breadcrumbs globally using vuex. You can use Vuex to store anything in a global scope.
+              {{ $t('about.li_3')}}
             </li>
           </ul>
         </v-card-text>
@@ -42,7 +42,7 @@ export default {
   mounted(){
     this.$store.commit("updateCrumbs", {
       position: 0,
-      name: "About",
+      name_i18n: "menu.about",
       icon:"mdi-information",
       link: {
         name:"about"

@@ -1,0 +1,117 @@
+{
+	"menu": {
+		"home": "Heim",
+		"about": "Über",
+		"set_auth0": "Auth0 einstellen",
+		"profile": "Profil"
+	},
+	"home": {
+		"accounts": {
+			"title": "Benutzerauthentifizierung mit Auth0",
+			"text_1": "Auth0 Universal Login und Meteor-Konten!!",
+			"text_2": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? Klicken Sie auf \"Auth0 setzen!!\" auf dieser Karte.",
+			"text_3": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? Klicken Sie auf \"Melden Sie sich an!!\" auf dieser Karte.",
+			"text_4": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? setze mongolisch \"Strg+m\" ein. Jetzt können Sie Meteor.user() und Meteor.userId() auf Client- und Serverseite verwenden.",
+			"text_5": "Schauen Sie sich die Profilseite an.",
+			"go_to_profile": "Gehe zum Profil"
+		},
+		"installed": {
+			"title": "Meteor and vuetify are now installed!!",
+			"text_1": "Dies ist ein Beispiel für die V-Karte von vuetify",
+			"text_2": "Möchten Sie das Echtzeit-Abonnement von Meteor in Aktion sehen? Öffnen Sie mich in einem anderen Tab und klicken Sie auf \"CLICK ME!!\" auf dieser Karte.",
+			"times_clicked": "Mal angeklickt:",
+			"click_me": "Klick mich!!"
+		},
+		"i18n": {
+			"title": "Internationalisierung (i18n)",
+			"text_1": "Sie möchten Internationalisierung in Aktion erleben? Wählen Sie unten Ihre Sprache aus."
+		},
+		"plugins": {
+			"title": "Seitenrouter und Statusverwaltung",
+			"see_in_action": "Möchten Sie VueRouter und Vuex in Aktion sehen? Klicken Sie auf \"Route ändern!!\" auf dieser Karte und sehen Sie sich die Breadcrumbs oben an.",
+			"change_route": "Route ändern!!"
+		},
+		"confirm": {
+			"title": "EventBus und benutzerdefinierte Bestätigungsdialoge",
+			"text_1": "Mit EventBus auf Ereignisse im DOM hören.",
+			"text_2": "Möchten Sie EventBus und Bestätigungsdialoge in Aktion sehen? klicken Sie auf \"Anzeigen!!\" auf dieser Karte.",
+			"show": "Zeigen!!"
+		},
+		"snack": {
+			"title": "Benachrichtigungen mit SnackBar",
+			"text_1": "Vuetify Snackbars eignen sich hervorragend für Benutzerbenachrichtigungen !!",
+			"text_2": "Möchten Sie SnackBars in Aktion sehen? Klicken Sie auf dieser Karte auf die Schaltflächen \"Anzeigen\"",
+			"show": "Zeigen!!",
+			"oh_yeah": "Oh Yeah!",
+			"oh_no": "Ach nein!"
+		}
+	},
+	"about": {
+		"title": "Dies ist ein Beispiel, damit Sie einen kleinen Einblick in die Möglichkeiten von vue-router und vuex erhalten.",
+		"li_1": "Klicken Sie in Ihrem Browser auf die Schaltfläche Zurück. Das ist der Vue-Router-History-Modus.",
+		"li_2": "Öffnen Sie die linke Navigationsleiste und gehen Sie zur Startseite.",
+		"li_3": "Verwenden Sie die Breadcrumbs oben, um zu navigieren. Wir speichern Breadcrumbs weltweit mit vuex. Sie können Vuex verwenden, um alles in einem globalen Bereich zu speichern."
+	},
+	"hello": "Hallo i18n in SFC!",
+	"welcome": "Willkommen!",
+	"buttons": {
+		"yes": "Jawohl",
+		"no": "No",
+		"cancel": "Abbrechen",
+		"update": "Aktualisieren",
+		"delete": "Löschen",
+		"save": "Speichern"
+	},
+	"navigation": {
+		"home": "Heim",
+		"profile": "Profil",
+		"about": "Über",
+		"users": "Benutzer und Berechtigungen",
+		"setupAuth0": "Auth0 einrichten",
+		"logs": "Protokolle",
+		"items": "Alle Elemente"
+	},
+	"auth": {
+		"login": "Anmeldung",
+		"logout": "Ausloggen",
+		"register": "Registrieren",
+		"profile": "Profil",
+		"username": "Nutzername",
+		"firstname": "Vorname",
+		"lastname": "Nachname",
+		"password": "Passwort",
+		"password2": "Kennwort bestätigen",
+		"email": "E-Mail-Addresse",
+		"userid": "Benutzeridentifikation",
+		"errors": {
+			"firstnameRequired": "Vorname ist erforderlich",
+			"lastnameRequired": "Nachname ist erforderlich",
+			"emailRequired": "Eine korrekte E-Mail-Adresse ist erforderlich",
+			"passwordRequired": "Password is required",
+			"passwordsDontMatch": "Ihre Passwörter stimmen nicht überein",
+			"lessthan10chars": "Muss weniger als 10 Zeichen lang sein"
+		},
+		"users": "Benutzer",
+		"roles": "Berechtigungen/Rollen",
+		"roleName": "Rollenname",
+		"inheritedRoles": "Geerbte Berechtigungen/Rollen",
+		"userRemoved": "Benutzer entfernt",
+		"removeUser": "Benutzer entfernen",
+		"removeUserForSure": "Möchten Sie diesen Nutzer wirklich entfernen?",
+		"editUser": "Benutzer bearbeiten",
+		"userSaved": "Benutzer gespeichert",
+		"roleSaved": "Rolle gespeichert"
+	},
+	"locale": {
+		"language": "Sprache"
+	},
+	"tables": {
+		"actions": "Aktionen"
+	},
+	"profile": {
+		"identity": "Identität",
+		"first_name": "Vorname",
+		"last_name": "Nachname",
+		"updated_profile": "Aktualisiertes Profil"
+	}
+}

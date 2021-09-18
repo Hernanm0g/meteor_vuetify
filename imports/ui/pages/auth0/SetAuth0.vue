@@ -63,7 +63,7 @@ export default {
   mounted(){
     this.$store.commit("updateCrumbs", {
       position: 0,
-      name: "Set Auth0",
+      name_i18n: "menu.set_auth0",
       icon:"mdi-account-question",
       link: {
         name:"setauth0"

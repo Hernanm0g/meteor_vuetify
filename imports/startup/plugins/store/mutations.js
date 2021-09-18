@@ -88,6 +88,7 @@ export const setAuth0 = (state, auth0) => {
 }
 
 /*-------- Set i18n ------------*/
+import i18n from "../i18n"
 export const setLanguage = (state, lang) => {
   state.language = lang
   i18n.locale = lang

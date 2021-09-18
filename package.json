@@ -38,8 +38,9 @@
     "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.4.9",
-    "vuetify": "^2.4.3",
-    "vuex": "^3.6.2"
+    "vuetify": "^2.5.8",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0"
   },
   "meteor": {
     "mainModule": {

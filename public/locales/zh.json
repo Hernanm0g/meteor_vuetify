@@ -1,0 +1,117 @@
+{
+	"menu": {
+		"home": "家",
+		"about": "关于",
+		"set_auth0": "设置 Auth0",
+		"profile": "轮廓"
+	},
+	"home": {
+		"accounts": {
+			"title": "使用 Auth0 进行用户身份验证",
+			"text_1": "Auth0 通用登录和流星帐户！！",
+			"text_2": "想看看 auth0 和meteor-accounts 的运行情况吗？点击“设置Auth0！！”在这张卡上。",
+			"text_3": "想看看 auth0 和meteor-accounts 的运行情况吗？点击“登录我！！”在这张卡上。",
+			"text_4": "想看看 auth0 和meteor-accounts 的运行情况吗？部署蒙古语“ctrl+m”。现在您可以在客户端和服务器端使用 Meteor.user() 和 Meteor.userId()。",
+			"text_5": "查看个人资料页面。",
+			"go_to_profile": "转到个人资料"
+		},
+		"installed": {
+			"title": "Meteor 和 vuetify 现已安装！！",
+			"text_1": "这是 vuetify 的 v-card 的一个例子",
+			"text_2": "想要查看 Meteor 的实时订阅操作吗？在另一个选项卡中打开我，然后单击“单击我！！”在这张卡上。",
+			"times_clicked": "点击次数：",
+			"click_me": "点我！！"
+		},
+		"i18n": {
+			"title": "国际化 (i18n)",
+			"text_1": "想看到国际化在行动吗？在下面选择您的语言。"
+		},
+		"plugins": {
+			"title": "页面路由器和状态管理",
+			"see_in_action": "想看看 VueRouter 和 Vuex 的实际应用吗？点击“更改路线！！”在这张卡片上并注意上面的面包屑。",
+			"change_route": "换路线！！"
+		},
+		"confirm": {
+			"title": "EventBus 和自定义确认对话框",
+			"text_1": "使用 EventBus 监听 DOM 中的事件。",
+			"text_2": "想要查看 EventBus 和 Confirm Dialogs 的实际效果吗？点击“显示！！”在这张卡上。",
+			"show": "展示！！"
+		},
+		"snack": {
+			"title": "SnackBar 通知",
+			"text_1": "Vuetify Snackbars 非常适合用户通知！！",
+			"text_2": "想看看 SnackBars 的实际效果吗？单击此卡上的“显示”按钮",
+			"show": "展示！！",
+			"oh_yeah": "哦耶！",
+			"oh_no": "不好了！"
+		}
+	},
+	"about": {
+		"title": "这是一个例子，所以你可以看到一些 vue-router 和 vuex 可以做什么。",
+		"li_1": "单击浏览器中的后退按钮。那就是 Vue-router 历史模式。",
+		"li_2": "打开左侧导航抽屉并转到主页。",
+		"li_3": "使用上面的面包屑导航。我们使用 vuex 在全球范围内存储面包屑。您可以使用 Vuex 在全局范围内存储任何内容。"
+	},
+	"hello": "你好 i18n 在证监会！",
+	"welcome": "欢迎！",
+	"buttons": {
+		"yes": "是的",
+		"no": "不",
+		"cancel": "取消",
+		"update": "更新",
+		"delete": "删除",
+		"save": "节省"
+	},
+	"navigation": {
+		"home": "家",
+		"profile": "轮廓",
+		"about": "关于",
+		"users": "用户和权限",
+		"setupAuth0": "设置 Auth0",
+		"logs": "日志",
+		"items": "所有项目"
+	},
+	"auth": {
+		"login": "登录",
+		"logout": "登出",
+		"register": "登记",
+		"profile": "轮廓",
+		"username": "用户名",
+		"firstname": "名",
+		"lastname": "姓",
+		"password": "Password",
+		"password2": "确认密码",
+		"email": "电子邮件地址",
+		"userid": "用户身份",
+		"errors": {
+			"firstnameRequired": "名字为必填项",
+			"lastnameRequired": "姓氏为必填项",
+			"emailRequired": "需要正确的电子邮件地址",
+			"passwordRequired": "密码是必需的",
+			"passwordsDontMatch": "您的密码不匹配",
+			"lessthan10chars": "必须少于 10 个字符"
+		},
+		"users": "用户",
+		"roles": "权限/角色",
+		"roleName": "角色名称",
+		"inheritedRoles": "继承的权限/角色",
+		"userRemoved": "用户已移除",
+		"removeUser": "删除用户",
+		"removeUserForSure": "您确定要删除此用户吗？",
+		"editUser": "编辑用户",
+		"userSaved": "用户已保存",
+		"roleSaved": "角色已保存"
+	},
+	"locale": {
+		"language": "语"
+	},
+	"tables": {
+		"actions": "行动"
+	},
+	"profile": {
+		"identity": "身份",
+		"first_name": "名",
+		"last_name": "Last Name",
+		"updated_profile": "更新资料"
+	}
+}

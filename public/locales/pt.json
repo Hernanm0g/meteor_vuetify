@@ -1,0 +1,117 @@
+{
+	"menu": {
+		"home": "Casa",
+		"about": "Cerca de",
+		"set_auth0": "Definir Auth0",
+		"profile": "Perfil"
+	},
+	"home": {
+		"accounts": {
+			"title": "User Authentication with Auth0",
+			"text_1": "Auth0 Login universal e contas de meteoros !!",
+			"text_2": "Quer ver auth0 e contas de meteoros em ação? clique em \"Definir Auth0 !!\" neste cartão.",
+			"text_3": "Want to see auth0 and meteor-accounts in action? click on \"Log me in!!\" on this card.",
+			"text_4": "Quer ver auth0 e contas de meteoros em ação? implantar mongol \"ctrl + m\". Agora você pode usar Meteor.user () e Meteor.userId () no cliente e no servidor.",
+			"text_5": "Check out the Profile page.",
+			"go_to_profile": "Vá para o perfil"
+		},
+		"installed": {
+			"title": "Meteor e vuetify agora estão instalados !!",
+			"text_1": "Este é um exemplo de v-card da vuetify",
+			"text_2": "Quer ver a assinatura em tempo real do Meteor em ação? Abra-me em outra aba e clique em \"CLIQUE EM MIM !!\" neste cartão.",
+			"times_clicked": "Times clicked:",
+			"click_me": "Clique em mim !!"
+		},
+		"i18n": {
+			"title": "Internacionalização (i18n)",
+			"text_1": "Quer ver a internacionalização em ação? Selecione seu idioma abaixo."
+		},
+		"plugins": {
+			"title": "Roteador de página e gerenciamento de estado",
+			"see_in_action": "Quer ver o VueRouter e o Vuex em ação? Clique em \"Alterar rota !!\" neste cartão e observe as migalhas de pão acima.",
+			"change_route": "Mude a rota !!"
+		},
+		"confirm": {
+			"title": "EventBus e caixas de diálogo de confirmação personalizadas",
+			"text_1": "Ouça eventos no DOM com EventBus.",
+			"text_2": "Quer ver EventBus e Confirm Dialogs em ação? clique em \"Mostrar !!\" neste cartão.",
+			"show": "Mostrar!!"
+		},
+		"snack": {
+			"title": "Notificações com SnackBar",
+			"text_1": "Snackbars Vuetify são ótimos para notificações de usuários !!",
+			"text_2": "Quer ver os SnackBars em ação? Clique nos botões \"Mostrar\" neste cartão",
+			"show": "Mostrar!!",
+			"oh_yeah": "Oh sim!",
+			"oh_no": "Oh No!"
+		}
+	},
+	"about": {
+		"title": "Este é um exemplo, para que você possa ver um pouco do que vue-roteador e vuex podem fazer.",
+		"li_1": "Clique no botão Voltar do seu navegador. Esse é o modo de histórico do roteador Vue.",
+		"li_2": "Abra a gaveta de navegação esquerda e vá para a página inicial.",
+		"li_3": "Use a localização atual acima para navegar. Armazenamos migalhas de pão globalmente usando o vuex. Você pode usar o Vuex para armazenar qualquer coisa em um escopo global."
+	},
+	"hello": "Olá i18n no SFC!",
+	"welcome": "Receber!",
+	"buttons": {
+		"yes": "sim",
+		"no": "Não",
+		"cancel": "Cancelar",
+		"update": "Atualizar",
+		"delete": "Excluir",
+		"save": "Salve "
+	},
+	"navigation": {
+		"home": "Casa",
+		"profile": "Perfil",
+		"about": "Cerca de",
+		"users": "Usuários e permissões",
+		"setupAuth0": "Configurar Auth0",
+		"logs": "Histórico",
+		"items": "Todos os itens"
+	},
+	"auth": {
+		"login": "Conecte-se",
+		"logout": "Sair",
+		"register": "Registro",
+		"profile": "Perfil",
+		"username": "Nome do usuário",
+		"firstname": "Primeiro nome",
+		"lastname": "Último nome",
+		"password": "Senha",
+		"password2": "Confirme a Senha",
+		"email": "Endereço de e-mail",
+		"userid": "ID do usuário",
+		"errors": {
+			"firstnameRequired": "O primeiro nome é necessário",
+			"lastnameRequired": "O sobrenome é obrigatório",
+			"emailRequired": "A proper email address is required",
+			"passwordRequired": "Senha requerida",
+			"passwordsDontMatch": "Suas senhas não coincidem",
+			"lessthan10chars": "Deve ter menos de 10 caracteres"
+		},
+		"users": "Comercial",
+		"roles": "Permissões / funções",
+		"roleName": "Nome do papel",
+		"inheritedRoles": "Permissões / funções herdadas",
+		"userRemoved": "Usuário removido",
+		"removeUser": "Remover usuário",
+		"removeUserForSure": "Tem certeza que deseja remover este usuário?",
+		"editUser": "Editar usuário",
+		"userSaved": "Usuário salvo",
+		"roleSaved": "Função salva"
+	},
+	"locale": {
+		"language": "Língua"
+	},
+	"tables": {
+		"actions": "Ações"
+	},
+	"profile": {
+		"identity": "Identidade",
+		"first_name": "Primeiro nome",
+		"last_name": "Último nome",
+		"updated_profile": "Perfil atualizado"
+	}
+}

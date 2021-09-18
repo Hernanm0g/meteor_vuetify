@@ -35,6 +35,13 @@
     >
       <snack />
     </v-col>
+     <v-col
+      cols="12"
+      sm="6"
+      md="4"
+    >
+      <i18n />
+    </v-col>
   </v-row>
 </template>
 
@@ -44,6 +51,7 @@
   import Plugins from '../../components/home/Plugins.vue'
   import Confirm from '../../components/home/Confirm.vue'
   import Snack from '../../components/home/Snack.vue'
+  import i18n from '../../components/home/i18n.vue'
   export default {
     name:"Home",
     metaInfo: {
@@ -59,7 +67,8 @@
       Accounts,
       Plugins,
       Confirm,
-      Snack
+      Snack,
+      i18n
     }
   }
 </script>

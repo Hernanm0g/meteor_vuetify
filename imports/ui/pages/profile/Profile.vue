@@ -19,7 +19,7 @@
                 <v-text-field
                   v-model="values.given_name"
                   :counter="50"
-                  label="Given Name"
+                  :label="$t('profile.first_name')"
                   required
                   :rules="[notEmpty]"
                   hint="p.e: Natalia"
@@ -35,7 +35,7 @@
                 <v-text-field
                   v-model="values.family_name"
                   :counter="50"
-                  label="Family Name"
+                  :label="$t('profile.last_name')"
                   required
                   :rules="[notEmpty]"
                   hint="p.e: Díaz Santos"
@@ -179,6 +179,13 @@
                   />
                 </v-radio-group>
               </v-col>
+              <v-col
+                cols="12"
+                sm="6"
+                v-if="i18nShow"
+                >
+                <LanguagePicker/>
+              </v-col>
               <!-- Avatar -->
               <v-col
                 cols="8"
@@ -247,12 +254,15 @@ import {GetAvatarMixin} from '../../mixins/users/avatars'
 import UploadButton from '../../components/general/UploadButton.vue'
 import PhoneInput from '../../components/general/PhoneInput.vue'
 import DatePicker from '../../components/general/DatePicker.vue'
+import LanguagePicker from '../../components/general/LanguagePicker.vue'
+
 export default {
   name:"Profile",
   components: {
     UploadButton,
     DatePicker,
-    PhoneInput
+    PhoneInput,
+    LanguagePicker
   },
   mixins:[
     RulesMixin,
@@ -276,6 +286,9 @@ export default {
   computed: {
     authenticated(){
       return this.$store.state.authenticated
+    },
+    i18nShow() {
+      return Object.keys(Meteor.settings.public.i18n.languages).length > 1
     }
   },
   watch: {
@@ -292,7 +305,7 @@ export default {
   mounted : function(){
     this.$store.commit("updateCrumbs", {
       position: 0,
-      name: "Profile",
+      name_i18n: "menu.profile",
       icon:"mdi-face",
       link: {
         name:"profile"
@@ -360,7 +373,7 @@ export default {
         } 
       );
       this.$store.commit("snack", {
-        text:"Updated profile",
+        text: this.$t('updated_profile'),
         color:"success"
       })
     }

@@ -60,6 +60,11 @@ export default {
       }
       return this.$route.meta.layout || this.defaultLayout
     }
+  },
+  created() {
+    this.$i18n.locale = Meteor.user()
+        ? Meteor.user().profile.language
+        : this.$store.state.language;
   }
 }
 </script>

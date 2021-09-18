@@ -24,7 +24,6 @@ import {
   i18n
 } from './plugins'
 
-console.log(i18n)
 /*--------  Main App  --------*/
 
 import App from '../ui/App.vue'
