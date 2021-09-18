@@ -66,7 +66,7 @@ That will convert your original (defaultLocale file) into all of the languages d
 
 ## Notes
 
-* if you only have one language defined in your settings.json file, the options to change language are unavailable.
+* if you only have one language defined in your settings.json file, the options to change language are unavailable in your web app.
 
 
 ## API creation based on templates
