@@ -64,6 +64,10 @@ To translate from your defaultLocale file, you'll run
 
 That will convert your original (defaultLocale file) into all of the languages defined in your settings.json
 
+## Notes
+
+* if you only have one language defined in your settings.json file, the options to change language are unavailable.
+
 
 ## API creation based on templates
 Now you can create your collections via Script. 
