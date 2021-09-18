@@ -54,6 +54,12 @@
     "li_2": "Open Left Navigation Drawer and go to home page.",
     "li_3": "Use breadcrumbs above to navigate. We store breadcrumbs globally using vuex. You can use Vuex to store anything in a global scope."
   },
+  "rules": {
+    "not_empty": "Cannot be empty",
+    "incorrect_amount": "Incorrect amount",
+    "must_be_a_number": "Field must be a number",
+    "required": "Required field"
+  },
   "hello": "Hello i18n in SFC!",
   "welcome": "Welcome!",
   "buttons": {

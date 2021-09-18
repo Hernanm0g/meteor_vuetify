@@ -33,7 +33,7 @@
 		},
 		"confirm": {
 			"title": "EventBus y cuadros de diálogo de confirmación personalizados",
-			"text_1": "Escuche eventos en el DOM con EventBus.",
+			"text_1": "Listen to events in the DOM with EventBus.",
 			"text_2": "¿Quiere ver EventBus y Confirm Dialogs en acción? haga clic en \"Mostrar !!\" en esta tarjeta.",
 			"show": "¡¡Show!!"
 		},
@@ -41,23 +41,29 @@
 			"title": "Notificaciones con SnackBar",
 			"text_1": "Vuetify Snackbars son excelentes para las notificaciones de los usuarios.",
 			"text_2": "¿Quieres ver SnackBars en acción? Haga clic en los botones \"Mostrar\" de esta tarjeta.",
-			"show": "¡¡Show!!",
+			"show": "Show!!",
 			"oh_yeah": "¡Oh sí!",
-			"oh_no": "¡Oh, no!"
+			"oh_no": "Oh No!"
 		}
 	},
 	"about": {
 		"title": "Este es un ejemplo, para que pueda ver una pequeña parte de lo que pueden hacer vue-router y vuex.",
-		"li_1": "Click on back button in your browser. Thats Vue-router history mode.",
+		"li_1": "Haga clic en el botón Atrás en su navegador. Ese es el modo de historial del enrutador Vue.",
 		"li_2": "Abra el cajón de navegación izquierdo y vaya a la página de inicio.",
 		"li_3": "Utilice las migas de pan de arriba para navegar. Almacenamos migas de pan a nivel mundial usando vuex. Puede usar Vuex para almacenar cualquier cosa en un ámbito global."
+	},
+	"rules": {
+		"not_empty": "No puede estar vacío",
+		"incorrect_amount": "Cantidad incorrecta",
+		"must_be_a_number": "El campo debe ser un número",
+		"required": "Required field"
 	},
 	"hello": "¡Hola i18n en SFC!",
 	"welcome": "¡Bienvenido!",
 	"buttons": {
-		"yes": "Yes",
+		"yes": "sí",
 		"no": "No",
-		"cancel": "Cancel",
+		"cancel": "Cancelar",
 		"update": "Actualizar",
 		"delete": "Borrar",
 		"save": "Ahorrar"
@@ -65,22 +71,22 @@
 	"navigation": {
 		"home": "Hogar",
 		"profile": "Perfil",
-		"about": "Sobre",
+		"about": "About",
 		"users": "Usuarios y permisos",
 		"setupAuth0": "Configurar Auth0",
-		"logs": "Registros",
+		"logs": "Logs",
 		"items": "Todos los artículos"
 	},
 	"auth": {
-		"login": "Acceso",
-		"logout": "Cerrar sesión",
+		"login": "Login",
+		"logout": "Logout",
 		"register": "Registrarse",
-		"profile": "Perfil",
+		"profile": "Profile",
 		"username": "Nombre de usuario",
-		"firstname": "Primer nombre",
-		"lastname": "Last Name",
+		"firstname": "First Name",
+		"lastname": "Apellido",
 		"password": "Contraseña",
-		"password2": "Confirm Password",
+		"password2": "confirmar Contraseña",
 		"email": "Dirección de correo electrónico",
 		"userid": "ID de usuario",
 		"errors": {
@@ -88,10 +94,10 @@
 			"lastnameRequired": "Se requiere apellido",
 			"emailRequired": "Se requiere una dirección de correo electrónico adecuada",
 			"passwordRequired": "se requiere contraseña",
-			"passwordsDontMatch": "Tus contraseñas no coinciden",
+			"passwordsDontMatch": "Your passwords do not match",
 			"lessthan10chars": "Debe tener menos de 10 caracteres"
 		},
-		"users": "Usuarios",
+		"users": "Users",
 		"roles": "Permisos / Roles",
 		"roleName": "Nombre de rol",
 		"inheritedRoles": "Permisos / roles heredados",
@@ -99,11 +105,11 @@
 		"removeUser": "Eliminar usuario",
 		"removeUserForSure": "¿Está seguro de que desea eliminar a este usuario?",
 		"editUser": "editar usuario",
-		"userSaved": "Usuario guardado",
+		"userSaved": "User saved",
 		"roleSaved": "Rol guardado"
 	},
 	"locale": {
-		"language": "Idioma"
+		"language": "Language"
 	},
 	"tables": {
 		"actions": "Comportamiento"

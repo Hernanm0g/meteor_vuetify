@@ -13,10 +13,10 @@
 			"text_3": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? Klicken Sie auf \"Melden Sie sich an!!\" auf dieser Karte.",
 			"text_4": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? setze mongolisch \"Strg+m\" ein. Jetzt können Sie Meteor.user() und Meteor.userId() auf Client- und Serverseite verwenden.",
 			"text_5": "Schauen Sie sich die Profilseite an.",
-			"go_to_profile": "Gehe zum Profil"
+			"go_to_profile": "Go to profile"
 		},
 		"installed": {
-			"title": "Meteor and vuetify are now installed!!",
+			"title": "Meteor und vuetify sind jetzt installiert!!",
 			"text_1": "Dies ist ein Beispiel für die V-Karte von vuetify",
 			"text_2": "Möchten Sie das Echtzeit-Abonnement von Meteor in Aktion sehen? Öffnen Sie mich in einem anderen Tab und klicken Sie auf \"CLICK ME!!\" auf dieser Karte.",
 			"times_clicked": "Mal angeklickt:",
@@ -41,8 +41,8 @@
 			"title": "Benachrichtigungen mit SnackBar",
 			"text_1": "Vuetify Snackbars eignen sich hervorragend für Benutzerbenachrichtigungen !!",
 			"text_2": "Möchten Sie SnackBars in Aktion sehen? Klicken Sie auf dieser Karte auf die Schaltflächen \"Anzeigen\"",
-			"show": "Zeigen!!",
-			"oh_yeah": "Oh Yeah!",
+			"show": "Show!!",
+			"oh_yeah": "Oh ja!",
 			"oh_no": "Ach nein!"
 		}
 	},
@@ -52,6 +52,12 @@
 		"li_2": "Öffnen Sie die linke Navigationsleiste und gehen Sie zur Startseite.",
 		"li_3": "Verwenden Sie die Breadcrumbs oben, um zu navigieren. Wir speichern Breadcrumbs weltweit mit vuex. Sie können Vuex verwenden, um alles in einem globalen Bereich zu speichern."
 	},
+	"rules": {
+		"not_empty": "Cannot be empty",
+		"incorrect_amount": "Falsche Menge",
+		"must_be_a_number": "Feld muss eine Zahl sein",
+		"required": "Pflichtfeld"
+	},
 	"hello": "Hallo i18n in SFC!",
 	"welcome": "Willkommen!",
 	"buttons": {
@@ -59,7 +65,7 @@
 		"no": "No",
 		"cancel": "Abbrechen",
 		"update": "Aktualisieren",
-		"delete": "Löschen",
+		"delete": "Delete",
 		"save": "Speichern"
 	},
 	"navigation": {
@@ -68,8 +74,8 @@
 		"about": "Über",
 		"users": "Benutzer und Berechtigungen",
 		"setupAuth0": "Auth0 einrichten",
-		"logs": "Protokolle",
-		"items": "Alle Elemente"
+		"logs": "Logs",
+		"items": "All Items"
 	},
 	"auth": {
 		"login": "Anmeldung",
@@ -80,24 +86,24 @@
 		"firstname": "Vorname",
 		"lastname": "Nachname",
 		"password": "Passwort",
-		"password2": "Kennwort bestätigen",
+		"password2": "Confirm Password",
 		"email": "E-Mail-Addresse",
 		"userid": "Benutzeridentifikation",
 		"errors": {
 			"firstnameRequired": "Vorname ist erforderlich",
 			"lastnameRequired": "Nachname ist erforderlich",
 			"emailRequired": "Eine korrekte E-Mail-Adresse ist erforderlich",
-			"passwordRequired": "Password is required",
+			"passwordRequired": "Passwort wird benötigt",
 			"passwordsDontMatch": "Ihre Passwörter stimmen nicht überein",
 			"lessthan10chars": "Muss weniger als 10 Zeichen lang sein"
 		},
 		"users": "Benutzer",
 		"roles": "Berechtigungen/Rollen",
-		"roleName": "Rollenname",
+		"roleName": "Role Name",
 		"inheritedRoles": "Geerbte Berechtigungen/Rollen",
 		"userRemoved": "Benutzer entfernt",
 		"removeUser": "Benutzer entfernen",
-		"removeUserForSure": "Möchten Sie diesen Nutzer wirklich entfernen?",
+		"removeUserForSure": "Are you sure you want to remove this user?",
 		"editUser": "Benutzer bearbeiten",
 		"userSaved": "Benutzer gespeichert",
 		"roleSaved": "Rolle gespeichert"
@@ -109,7 +115,7 @@
 		"actions": "Aktionen"
 	},
 	"profile": {
-		"identity": "Identität",
+		"identity": "Identity",
 		"first_name": "Vorname",
 		"last_name": "Nachname",
 		"updated_profile": "Aktualisiertes Profil"
