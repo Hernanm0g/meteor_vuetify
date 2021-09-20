@@ -64,7 +64,6 @@ jobs:
       - restore_cache:
           key: npm-packages-
       - run: ls /usr/local/bin/
-#      - run: ls ~/build-temp/
       - run:
           name: restore cached meteor binary
           command: |
@@ -97,8 +96,6 @@ jobs:
             mkdir -p ~/build-temp
             cp /usr/local/bin/meteor ~/build-temp/meteor-bin
       - run: ls /usr/local/bin/
-#      - run: ls ~/build-temp/
-#      - run: ls ~/build-temp/meteor-bin
       - save_cache:
           key: build-temp-{{ checksum ".meteor/release" }}-{{ checksum ".circleci/config.yml" }}
           paths:
@@ -111,6 +108,7 @@ jobs:
           paths:
             - ./node_modules/
             - ~/.npm/
+      - run: ls ./
       - run:
           name: run tests
           command: cp settings.example.json settings.json && meteor npm run circleci-test
