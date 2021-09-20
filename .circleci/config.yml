@@ -122,7 +122,7 @@ jobs:
           key: meteor-packages-{{ epoch }}
           paths:
             - .meteor/local
-      - run: echo "prueba"
+      - run: echo "App Tested"
   locate:
     executor:
       name: node/default
@@ -136,7 +136,7 @@ jobs:
       
       - run: ls /usr/local/bin
 workflows:
-  saludar:
+  testApp:
     jobs:
       - meteor
   
