@@ -11,7 +11,7 @@
       >
         mdi-home
       </v-icon>
-      <span class="hidden-xs-only">Home</span>
+      <span class="hidden-xs-only">{{$t('menu.home')}}</span>
     </v-btn>
     <template v-for="(crumb, index) in crumbs">
       <v-icon
@@ -31,7 +31,7 @@
         >
           {{ crumb.icon }}
         </v-icon>
-        <span class="hidden-xs-only">{{ crumb.name }}</span>
+        <span class="hidden-xs-only">{{ $t(crumb.name_i18n) }}</span>
       </v-btn>
     </template>
   </div>

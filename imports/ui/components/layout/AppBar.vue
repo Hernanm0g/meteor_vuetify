@@ -12,6 +12,12 @@
 
     <v-toolbar-title>Meteor Vuetify</v-toolbar-title>
     <v-spacer />
+    <v-menu offset-y v-if="i18nShow">
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on"><v-icon>mdi-translate</v-icon></v-btn>
+        </template>
+        <LanguagePicker/>
+      </v-menu>
     <v-menu
       v-if="!!authenticated && !!user"
       offset-y
@@ -64,6 +70,7 @@
         </template>
       </v-list>
     </v-menu>
+    
     <v-tooltip
       v-else
       bottom
@@ -80,6 +87,7 @@
       </template>
       <span>Log in</span>
     </v-tooltip>
+    
     <template #extension>
       <bread-crumbs />
     </template>
@@ -95,11 +103,14 @@ import {GetAvatarMixin} from '../../mixins/users/avatars'
 /*--------  Components  --------*/
 
 import BreadCrumbs from './BreadCrumbs.vue'
+import LanguagePicker from "../general/LanguagePicker.vue"
+
 
 export default {
   name:"AppBar",
   components: {
-    BreadCrumbs
+    BreadCrumbs,
+    LanguagePicker
   },
   mixins: [
     GetAvatarMixin
@@ -137,11 +148,15 @@ export default {
   computed: {
     authenticated(){
       return this.$store.state.authenticated
+    },
+    i18nShow() {
+      return Object.keys(Meteor.settings.public.i18n.languages).length > 1
     }
   },
   methods: {
-    login(){
-      this.$store.dispatch("login")
+    async login(){
+      await this.$store.dispatch("login")
+      this.$store.commit("setLanguage", Meteor.user()?.profile.language);
     },
     logout(){
       this.$store.dispatch("logout")

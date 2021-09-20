@@ -46,6 +46,29 @@ thanks to SSR, dynamic Async imports and meteor-vuetify-lodaer, we can now have 
 ![profile](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/profile.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 ![avatar](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/avatar.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 We are using the awesome [OstrioFiles](https://atmospherejs.com/ostrio/files) package to manage uploads. Go to settings.json and set the path you want to store the uploaded files. Enjoy!!
+
+# Internationalization (i18n)
+Translating your site to different languages is optional.  Or you can easily translate your site to multiple langagues.
+
+In the settings.json file, there are several settings for language translation (i18n).  There's a public portion that lists the languages your site supports and a setting for defaultLocale (the default language of the site plus the source file if other translations are going to be automated)
+
+The language files are located under the public/locales folder in this project.  A default language file needs to be created (see public/locales/en.json).  If desired, it can be translated into other languages.
+
+## Automting translation from your defaultLocale to other Languages defined in your settings.json
+
+You'll need to get a Google Cloud Translate API key.  Add that key to the settings.json file.
+
+To translate from your defaultLocale file, you'll run
+
+    npm run translate
+
+That will convert your original (defaultLocale file) into all of the languages defined in your settings.json
+
+## Notes
+
+* if you only have one language defined in your settings.json file, the options to change language are unavailable in your web app.
+
+
 ## API creation based on templates
 Now you can create your collections via Script. 
 ### Simple Collection

@@ -1,0 +1,123 @@
+{
+	"menu": {
+		"home": "Accueil",
+		"about": "Sur",
+		"set_auth0": "Définir Auth0",
+		"profile": "Profil"
+	},
+	"home": {
+		"accounts": {
+			"title": "Authentification de l'utilisateur avec Auth0",
+			"text_1": "Auth0 Universal Login et Meteor-comptes !!",
+			"text_2": "Vous voulez voir auth0 et les comptes météo en action ? cliquez sur \"Définir Auth0 !!\" sur cette carte.",
+			"text_3": "Vous voulez voir auth0 et les comptes météo en action ? cliquez sur \"Connectez-moi !!\" sur cette carte.",
+			"text_4": "Vous voulez voir auth0 et les comptes météo en action ? déployer le mongol \"ctrl+m\". Vous pouvez maintenant utiliser Meteor.user() et Meteor.userId() côté client et côté serveur.",
+			"text_5": "Consultez la page Profil.",
+			"go_to_profile": "Go to profile"
+		},
+		"installed": {
+			"title": "Meteor et vuetify sont maintenant installés !!",
+			"text_1": "Ceci est un exemple de la v-card de vuetify",
+			"text_2": "Vous voulez voir l'abonnement en temps réel de Meteor en action ? Ouvrez-moi dans un autre onglet et cliquez sur \"CLIQUEZ-MOI !!\" sur cette carte.",
+			"times_clicked": "Nombre de clics :",
+			"click_me": "Click Me!!"
+		},
+		"i18n": {
+			"title": "Internationalization (i18n)",
+			"text_1": "Vous voulez voir l'internationalisation en action ? Sélectionnez votre langue ci-dessous."
+		},
+		"plugins": {
+			"title": "Routeur de page et gestion de l'état",
+			"see_in_action": "Want to see VueRouter and Vuex in action? Click on \"Change route!!\" on this card and watch the breadcrumbs above.",
+			"change_route": "Changer d'itinéraire !!"
+		},
+		"confirm": {
+			"title": "EventBus et boîtes de dialogue de confirmation personnalisées",
+			"text_1": "Écoutez les événements dans le DOM avec EventBus.",
+			"text_2": "Vous voulez voir EventBus et Confirm Dialogs en action ? cliquez sur \"Afficher !!\" sur cette carte.",
+			"show": "Show!!"
+		},
+		"snack": {
+			"title": "Notifications avec SnackBar",
+			"text_1": "Vuetify Snackbars are great for users notifications!!",
+			"text_2": "Vous voulez voir les SnackBars en action ? Cliquez sur les boutons \"Afficher\" sur cette carte",
+			"show": "Spectacle!!",
+			"oh_yeah": "Oh oui!",
+			"oh_no": "Oh non!"
+		}
+	},
+	"about": {
+		"title": "This is an example, so you can see a little piece of what vue-router and vuex can do.",
+		"li_1": "Click on back button in your browser. Thats Vue-router history mode.",
+		"li_2": "Ouvrez le tiroir de navigation gauche et accédez à la page d'accueil.",
+		"li_3": "Utilisez le fil d'Ariane ci-dessus pour naviguer. Nous stockons le fil d'Ariane dans le monde entier en utilisant vuex. Vous pouvez utiliser Vuex pour stocker n'importe quoi dans une portée globale."
+	},
+	"rules": {
+		"not_empty": "Ne peux pas être vide",
+		"incorrect_amount": "Montant incorrect",
+		"must_be_a_number": "Le champ doit être un nombre",
+		"required": "Required field"
+	},
+	"hello": "Bonjour i18n dans SFC !",
+	"welcome": "Welcome!",
+	"buttons": {
+		"yes": "Oui",
+		"no": "No",
+		"cancel": "Annuler",
+		"update": "Mettre à jour",
+		"delete": "Effacer",
+		"save": "sauvegarder"
+	},
+	"navigation": {
+		"home": "Accueil",
+		"profile": "Profil",
+		"about": "Sur",
+		"users": "Utilisateurs et autorisations",
+		"setupAuth0": "Setup Auth0",
+		"logs": "Journaux",
+		"items": "Tous les articles"
+	},
+	"auth": {
+		"login": "Connexion",
+		"logout": "Se déconnecter",
+		"register": "S'inscrire",
+		"profile": "Profile",
+		"username": "Nom d'utilisateur",
+		"firstname": "Prénom",
+		"lastname": "Last Name",
+		"password": "Mot de passe",
+		"password2": "Confirmez le mot de passe",
+		"email": "Adresse e-mail",
+		"userid": "Identifiant d'utilisateur",
+		"errors": {
+			"firstnameRequired": "Le prénom est requis",
+			"lastnameRequired": "Le nom de famille est requis",
+			"emailRequired": "Une adresse e-mail appropriée est requise",
+			"passwordRequired": "Mot de passe requis",
+			"passwordsDontMatch": "Vos mots de passe ne correspondent pas",
+			"lessthan10chars": "Doit comporter moins de 10 caractères"
+		},
+		"users": "Users",
+		"roles": "Autorisations/Rôles",
+		"roleName": "Nom de rôle",
+		"inheritedRoles": "Autorisations/rôles hérités",
+		"userRemoved": "Utilisateur supprimé",
+		"removeUser": "Supprimer l'utilisateur",
+		"removeUserForSure": "Voulez-vous vraiment supprimer cet utilisateur ?",
+		"editUser": "Edit User",
+		"userSaved": "Utilisateur enregistré",
+		"roleSaved": "Role saved"
+	},
+	"locale": {
+		"language": "Langue"
+	},
+	"tables": {
+		"actions": "Actions"
+	},
+	"profile": {
+		"identity": "Identité",
+		"first_name": "Prénom",
+		"last_name": "Nom de famille",
+		"updated_profile": "Profil mis à jour"
+	}
+}

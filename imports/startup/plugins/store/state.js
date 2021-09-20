@@ -19,7 +19,8 @@ const state = {
   },
   crumbs : [],
   authenticated:false,
-  auth0:undefined
+  auth0:undefined,
+  language: Meteor.settings.public.defaultLocale
 }
 
 export default state

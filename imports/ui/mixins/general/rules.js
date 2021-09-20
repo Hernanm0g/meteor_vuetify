@@ -1,11 +1,13 @@
+import { i18n } from "../../../startup/plugins";
+
 const Rules = {
   data(){
     return {
-      notEmpty: v => !!v || 'Campo requerido',
-      notEmptyArray: v => !!v && Array.isArray(v) && v.length || "Monto incorrecto",
-      mustBeNumber: v => (!v || !!Number(v)) || "Campo debe ser un número",
-      currency: v => !!v && !!Number(v.split("$").join("").split(",").join("").split(".").join("")) || "Campo debe ser un número",
-      mustBeBoolean: v => (v===true || v===false) || "Campo requerido"
+      notEmpty: v => !!v || i18n.t('rules.not_empty'),
+      notEmptyArray: v => !!v && Array.isArray(v) && v.length || i18n.t('rules.incorrect_ammount'),
+      mustBeNumber: v => (!v || !!Number(v)) || i18n.t('rules.must_be_a_number'),
+      currency: v => !!v && !!Number(v.split("$").join("").split(",").join("").split(".").join("")) || i18n.t('rules.must_be_a_number'),
+      mustBeBoolean: v => (v===true || v===false) || i18n.t('rules.required')
     }
   }
 }

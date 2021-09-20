@@ -14,18 +14,19 @@
 
 import Vue from 'vue'
 
+
 /*--------  Plugins  --------*/
 
 import { 
   router,
   store,
-  vuetify, 
+  vuetify,
+  i18n
 } from './plugins'
 
 /*--------  Main App  --------*/
 
 import App from '../ui/App.vue'
-
 
 /*= End of Imports =*/
 /*=============================================<<<<<*/
@@ -43,6 +44,7 @@ function createApp () {
       router,
       store,
       vuetify,
+      i18n,
       computed : {
         authenticated(){
           return this.$store.state.authenticated;

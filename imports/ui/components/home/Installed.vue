@@ -1,18 +1,18 @@
 <template>
   <v-card>
     <v-card-title>
-      Meteor and vuetify are now installed!!
+      {{$t("home.installed.title")}}
     </v-card-title>
     <v-card-text>
       <div>
-        <span class="grey--text">This is an example of vuetify's v-card</span>
+        <span class="grey--text">{{$t('home.installed.text_1')}}</span>
         <br>
         <v-icon>mdi-home</v-icon> <a href="https://material.io/tools/icons/?style=baseline">Material Icons</a> installed
         <br>
-        <span>Want to see Meteor's Real Time Subscription in action? Open me in another tab and click on "CLICK ME!!" on this card.</span>
+        <span>{{$t('home.installed.text_2')}}</span>
         <br>
         <br>
-        <span>Times clicked: {{ times }}</span>
+        <span>{{$t('home.installed.times_clicked')}} {{ times }}</span>
       </div>
     </v-card-text>
     <v-card-actions>
@@ -21,7 +21,7 @@
         color="orange"
         @click="clicked(clickId)"
       >
-        Click Me!!
+        {{$t('home.installed.click_me')}}
       </v-btn>
     </v-card-actions>
   </v-card>

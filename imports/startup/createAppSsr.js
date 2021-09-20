@@ -20,6 +20,7 @@ import {
   router,
   store,
   vuetify, 
+  i18n
 } from './plugins/ssr'
 
 /*--------  Main App  --------*/
@@ -52,6 +53,7 @@ function createApp () {
       router,
       store,
       vuetify,
+      i18n,
       computed : {
         authenticated(){
           return this.$store.state.authenticated;

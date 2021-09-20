@@ -1,0 +1,123 @@
+{
+	"menu": {
+		"home": "Casa",
+		"about": "Cerca de",
+		"set_auth0": "Definir Auth0",
+		"profile": "Perfil"
+	},
+	"home": {
+		"accounts": {
+			"title": "Autenticação de usuário com Auth0",
+			"text_1": "Auth0 Login universal e contas de meteoros !!",
+			"text_2": "Quer ver auth0 e contas de meteoros em ação? clique em \"Definir Auth0 !!\" neste cartão.",
+			"text_3": "Quer ver auth0 e contas de meteoros em ação? clique em \"Login !!\" neste cartão.",
+			"text_4": "Quer ver auth0 e contas de meteoros em ação? implantar mongol \"ctrl + m\". Agora você pode usar Meteor.user () e Meteor.userId () no cliente e no servidor.",
+			"text_5": "Confira a página de perfil.",
+			"go_to_profile": "Go to profile"
+		},
+		"installed": {
+			"title": "Meteor e vuetify agora estão instalados !!",
+			"text_1": "Este é um exemplo de v-card da vuetify",
+			"text_2": "Quer ver a assinatura em tempo real do Meteor em ação? Abra-me em outra aba e clique em \"CLIQUE EM MIM !!\" neste cartão.",
+			"times_clicked": "Vezes clicadas:",
+			"click_me": "Clique em mim !!"
+		},
+		"i18n": {
+			"title": "Internationalization (i18n)",
+			"text_1": "Want to see Internationalization in action? Select your language below."
+		},
+		"plugins": {
+			"title": "Page Router and State Management",
+			"see_in_action": "Want to see VueRouter and Vuex in action? Click on \"Change route!!\" on this card and watch the breadcrumbs above.",
+			"change_route": "Mude a rota !!"
+		},
+		"confirm": {
+			"title": "EventBus e caixas de diálogo de confirmação personalizadas",
+			"text_1": "Ouça eventos no DOM com EventBus.",
+			"text_2": "Quer ver EventBus e Confirm Dialogs em ação? clique em \"Mostrar !!\" neste cartão.",
+			"show": "Mostrar!!"
+		},
+		"snack": {
+			"title": "Notificações com SnackBar",
+			"text_1": "Snackbars Vuetify são ótimos para notificações de usuários !!",
+			"text_2": "Quer ver os SnackBars em ação? Clique nos botões \"Mostrar\" neste cartão",
+			"show": "Mostrar!!",
+			"oh_yeah": "Oh sim!",
+			"oh_no": "Oh não!"
+		}
+	},
+	"about": {
+		"title": "Este é um exemplo, para que você possa ver um pouco do que vue-roteador e vuex podem fazer.",
+		"li_1": "Clique no botão Voltar do seu navegador. Esse é o modo de histórico do roteador Vue.",
+		"li_2": "Open Left Navigation Drawer and go to home page.",
+		"li_3": "Use a localização atual acima para navegar. Armazenamos migalhas de pão globalmente usando o vuex. Você pode usar o Vuex para armazenar qualquer coisa em um escopo global."
+	},
+	"rules": {
+		"not_empty": "Não pode estar vazio",
+		"incorrect_amount": "Montante incorreto",
+		"must_be_a_number": "Field must be a number",
+		"required": "Campo obrigatório"
+	},
+	"hello": "Olá i18n no SFC!",
+	"welcome": "Receber!",
+	"buttons": {
+		"yes": "sim",
+		"no": "Não",
+		"cancel": "Cancel",
+		"update": "Atualizar",
+		"delete": "Excluir",
+		"save": "Salve "
+	},
+	"navigation": {
+		"home": "Casa",
+		"profile": "Perfil",
+		"about": "Cerca de",
+		"users": "Usuários e permissões",
+		"setupAuth0": "Configurar Auth0",
+		"logs": "Logs",
+		"items": "All Items"
+	},
+	"auth": {
+		"login": "Conecte-se",
+		"logout": "Sair",
+		"register": "Registro",
+		"profile": "Perfil",
+		"username": "Username",
+		"firstname": "Primeiro nome",
+		"lastname": "Último nome",
+		"password": "Password",
+		"password2": "Confirme a Senha",
+		"email": "Email Address",
+		"userid": "ID do usuário",
+		"errors": {
+			"firstnameRequired": "O primeiro nome é necessário",
+			"lastnameRequired": "O sobrenome é obrigatório",
+			"emailRequired": "É necessário um endereço de e-mail adequado",
+			"passwordRequired": "Senha requerida",
+			"passwordsDontMatch": "Your passwords do not match",
+			"lessthan10chars": "Deve ter menos de 10 caracteres"
+		},
+		"users": "Comercial",
+		"roles": "Permissões / funções",
+		"roleName": "Nome do papel",
+		"inheritedRoles": "Permissões / funções herdadas",
+		"userRemoved": "Usuário removido",
+		"removeUser": "Remover usuário",
+		"removeUserForSure": "Tem certeza que deseja remover este usuário?",
+		"editUser": "Edit User",
+		"userSaved": "Usuário salvo",
+		"roleSaved": "Função salva"
+	},
+	"locale": {
+		"language": "Língua"
+	},
+	"tables": {
+		"actions": "Ações"
+	},
+	"profile": {
+		"identity": "Identidade",
+		"first_name": "Primeiro nome",
+		"last_name": "Último nome",
+		"updated_profile": "Perfil atualizado"
+	}
+}

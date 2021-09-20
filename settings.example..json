@@ -1,0 +1,51 @@
+{
+  "public": {
+    "AUTH0": {
+      "CLIENT_ID": "EcVtt1PoK8fUDCf6paFeh3H6eFfQOtBa",
+      "DOMAIN": "totoom.eu.auth0.com",
+      "CALLBACK": "http://localhost:3000",
+      "AUDIENCE": "https://totoom.eu.auth0.com/userinfo"
+    },
+    "storagePath": "PATH_FOR_UPLOADS",
+    "i18n": {
+      "languages": [{
+        "text": "English",
+        "value": "en",
+        "isoflag": "us",
+        "file": "en.json"
+      }, {
+        "text": "Español",
+        "value": "es",
+        "isoflag": "es",
+        "file": "es.json"
+      }, {
+        "text": "Français",
+        "value": "fr",
+        "isoflag": "fr",
+        "file": "fr.json"
+      }, {
+        "text": "Deutsch",
+        "value": "de",
+        "isoflag": "de",
+        "file": "de.json"
+      }, {
+        "text": "Português",
+        "value": "pt",
+        "isoflag": "pt",
+        "file": "pt.json"
+      }, {
+        "text": "中文",
+        "value": "zh",
+        "isoflag": "zh",
+        "file": "zh.json"
+      }
+    ],
+      "defaultLocale": "en"
+    }
+  },
+  "private": {
+    "i18n": {
+      "googleTranslateApiKey": ""
+    }
+  }
+}

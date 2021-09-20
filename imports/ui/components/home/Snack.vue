@@ -1,11 +1,11 @@
 <template>
   <v-card>
     <v-card-title>
-      Notifications with SnackBar
+      {{$t('home.snack.title')}}
     </v-card-title>
     <v-card-text>
       <div>
-        <span class="grey--text">Vuetify Snackbars are great for users notifications!!</span>
+        <span class="grey--text">{{$t('home.snack.text_1')}}</span>
         <br>
         <v-icon>mdi-cloud</v-icon> <a
           href="https://vuex.vuejs.org/"
@@ -18,24 +18,24 @@
         >Vuetify Snackbars</a>
         <br>
         <br>
-        <span>Want to see SnackBars in action? Click on "Show" buttons on this card.</span>
+        <span>{{$t('home.snack.text_2')}}.</span>
       </div>
     </v-card-text>
     <v-card-actions>
       <v-btn
         text
         color="success"
-        @click="showSnack('success', 'Oh Yeah!')"
+        @click="showSnack('success', $t('home.snack.oh_yeah'))"
       >
-        Show!!
+        {{ $t('home.snack.show')}}
       </v-btn>
       <v-spacer />
       <v-btn
         text
         color="error"
-        @click="showSnack('error', 'Oh No!')"
+        @click="showSnack('error', $t('home.snack.oh_no'))"
       >
-        Show!!
+        {{ $t('home.snack.show')}}
       </v-btn>
     </v-card-actions>
   </v-card>

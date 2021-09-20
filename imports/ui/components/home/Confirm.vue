@@ -2,11 +2,11 @@
   <!-- Confirm -->
   <v-card>
     <v-card-title>
-      EventBus and Custom Confirm Dialogs
+      {{$t('home.confirm.title')}}
     </v-card-title>
     <v-card-text>
       <div>
-        <span class="grey--text">Listen to events in the DOM with EventBus.</span>
+        <span class="grey--text">{{$t('home.confirm.text_1')}}</span>
         <br>
         <v-icon>mdi-lightbulb-group</v-icon> <a
           href="https://alligator.io/vuejs/global-event-bus/"
@@ -19,7 +19,7 @@
         >Vuetify Dialogs</a>
         <br>
         <br>
-        <span>Want to see EventBus and Confirm Dialogs in action? click on "Show!!" on this card.</span>
+        <span>{{$t('home.confirm.text_2')}}</span>
       </div>
     </v-card-text>
     <v-card-actions>
@@ -28,7 +28,7 @@
         color="orange"
         @click="showConfirm('Are you sure?', 'Really, really sure?')"
       >
-        Show!!
+        {{$t('home.confirm.show')}}
       </v-btn>
     </v-card-actions>
   </v-card>

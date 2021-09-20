@@ -2,7 +2,7 @@
   <!-- Vue router and Vuex -->
   <v-card>
     <v-card-title>
-      Page Router and State Management
+      {{$t('home.plugins.title')}}
     </v-card-title>
     <v-card-text>
       <div>
@@ -19,7 +19,7 @@
         >Vuex</a> installed.
         <br>
         <br>
-        <span>Want to see VueRouter and Vuex in action? Click on "Change route!!" on this card and watch the breadcrumbs above.</span>
+        <span>{{$t('home.plugins.see_in_action')}}</span>
       </div>
     </v-card-text>
     <v-card-actions>
@@ -28,7 +28,7 @@
         color="orange"
         :to="{name:'about'}"
       >
-        Change route!!
+        {{$t('home.plugins.change_route')}}
       </v-btn>
     </v-card-actions>
   </v-card>

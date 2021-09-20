@@ -1,0 +1,125 @@
+{
+ 
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "set_auth0": "Set Auth0",
+    "profile": "Profile"
+  },
+
+  "home": {
+    "accounts": {
+      "title": "User Authentication with Auth0",
+      "text_1": "Auth0 Universal Login and meteor-accounts!!",
+      "text_2": "Want to see auth0 and meteor-accounts in action? click on \"Set Auth0!!\" on this card.",
+      "text_3": "Want to see auth0 and meteor-accounts in action? click on \"Log me in!!\" on this card.",
+      "text_4": "Want to see auth0 and meteor-accounts in action? deploy mongol \"ctrl+m\". Now you can use Meteor.user() and Meteor.userId() on Client and server side.",
+      "text_5": "Check out the Profile page.",
+      "go_to_profile": "Go to profile"
+    },
+    "installed": {
+      "title": "Meteor and vuetify are now installed!!",
+      "text_1": "This is an example of vuetify's v-card",
+      "text_2": "Want to see Meteor's Real Time Subscription in action? Open me in another tab and click on \"CLICK ME!!\" on this card.",
+      "times_clicked": "Times clicked:",
+      "click_me": "Click Me!!"
+    },
+    "i18n": {
+      "title": "Internationalization (i18n)",
+      "text_1": "Want to see Internationalization in action? Select your language below."
+    },
+    "plugins": {
+      "title": "Page Router and State Management",
+      "see_in_action": "Want to see VueRouter and Vuex in action? Click on \"Change route!!\" on this card and watch the breadcrumbs above.",
+      "change_route": "Change route!!"
+    },
+    "confirm": {
+      "title": "EventBus and Custom Confirm Dialogs",
+      "text_1": "Listen to events in the DOM with EventBus.",
+      "text_2": "Want to see EventBus and Confirm Dialogs in action? click on \"Show!!\" on this card.",
+      "show": "Show!!"
+    },
+    "snack": {
+      "title": "Notifications with SnackBar",
+      "text_1": "Vuetify Snackbars are great for users notifications!!",
+      "text_2": "Want to see SnackBars in action? Click on \"Show\" buttons on this card",
+      "show": "Show!!",
+      "oh_yeah": "Oh Yeah!",
+      "oh_no": "Oh No!"
+    }
+  },
+  "about": {
+    "title": "This is an example, so you can see a little piece of what vue-router and vuex can do.",
+    "li_1": "Click on back button in your browser. Thats Vue-router history mode.",
+    "li_2": "Open Left Navigation Drawer and go to home page.",
+    "li_3": "Use breadcrumbs above to navigate. We store breadcrumbs globally using vuex. You can use Vuex to store anything in a global scope."
+  },
+  "rules": {
+    "not_empty": "Cannot be empty",
+    "incorrect_amount": "Incorrect amount",
+    "must_be_a_number": "Field must be a number",
+    "required": "Required field"
+  },
+  "hello": "Hello i18n in SFC!",
+  "welcome": "Welcome!",
+  "buttons": {
+    "yes": "Yes",
+    "no": "No",
+    "cancel": "Cancel",
+    "update": "Update",
+    "delete": "Delete",
+    "save": "Save"
+  },
+  "navigation": {
+    "home": "Home",
+    "profile": "Profile",
+    "about": "About",
+    "users": "Users and Permissions",
+    "setupAuth0": "Setup Auth0",
+    "logs": "Logs",
+    "items": "All Items"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "profile": "Profile",
+    "username": "Username",
+    "firstname": "First Name",
+    "lastname": "Last Name",
+    "password": "Password",
+    "password2": "Confirm Password",
+    "email": "Email Address",
+    "userid": "User Id",
+    "errors" : {
+      "firstnameRequired": "First name is required",
+      "lastnameRequired": "Last name is required",
+      "emailRequired": "A proper email address is required",
+      "passwordRequired": "Password is required",
+      "passwordsDontMatch": "Your passwords do not match",
+      "lessthan10chars": "Must be less than 10 characters"
+    },
+    "users": "Users",
+    "roles": "Permissions/Roles",
+    "roleName": "Role Name",
+    "inheritedRoles": "Inherited Permissions/Roles",
+    "userRemoved": "User removed",
+    "removeUser": "Remove User",
+    "removeUserForSure": "Are you sure you want to remove this user?",
+    "editUser": "Edit User",
+    "userSaved": "User saved",
+    "roleSaved": "Role saved"
+  },
+  "locale": {
+    "language": "Language"
+  },
+  "tables": {
+    "actions": "Actions"
+  },
+  "profile": {
+    "identity": "Identity",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "updated_profile": "Updated profile"
+  }
+}

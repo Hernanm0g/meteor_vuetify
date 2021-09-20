@@ -17,13 +17,16 @@
     "stop--prod": "pm2 stop yourAppName",
     "backup-db-dev": "mongodump --out=../backups/ --port 3001 --db meteor -v",
     "backup-db-prod": "mongodump --out=~/backups/ --port 27017 --db your_db_name -v",
-    "restore-db-prod": "mongorestore --port 27017 -d your_db_name ~/backups/last"
+    "restore-db-prod": "mongorestore --port 27017 -d your_db_name ~/backups/last",
+    "translate": "node ./exec/api/translate.js"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.13.6",
     "@babel/runtime": "^7.11.2",
+    "@google-cloud/translate": "^6.2.7",
     "@mdi/font": "^5.9.55",
     "browserslist": "^4.16.3",
+    "i18n-translate-json": "^1.1.0",
     "ignore-styles": "^5.0.1",
     "lodash": "^4.17.20",
     "luxon": "^1.25.0",
@@ -31,11 +34,13 @@
     "minify-css-string": "^1.0.0",
     "simpl-schema": "^1.10.2",
     "vue": "^2.6.12",
+    "vue-i18n": "^8.25.0",
     "vue-meta": "^2.4.0",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-router": "^3.4.9",
-    "vuetify": "^2.4.3",
-    "vuex": "^3.6.2"
+    "vuetify": "^2.5.8",
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.0.0"
   },
   "meteor": {
     "mainModule": {
@@ -44,6 +49,7 @@
     }
   },
   "devDependencies": {
+    "@intlify/vue-i18n-loader": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.0.0",
     "eslint": "^7.18.0",
