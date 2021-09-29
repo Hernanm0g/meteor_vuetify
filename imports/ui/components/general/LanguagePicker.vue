@@ -2,13 +2,12 @@
   <v-card>
     <v-card-text>
       {{ $t('locale.language' )}}
-      <v-radio-group v-if="!!user" v-model="user.profile.language">
+      <v-radio-group v-if="!!user" v-model="language">
         <template v-for="item in languages">
           <v-radio
             :key="item.value"
             :label="item.text"
             :value="item.value"
-            @click="updateUserLanguage(item.value)"
           ></v-radio>
         </template>
       </v-radio-group>
@@ -39,7 +38,7 @@ export default {
         return this.$store.state.language;
       },
       set: function(lang) {
-        this.$store.commit("setLanguage", lang);
+        this.$store.commit("setLanguage", lang, this.user);
       }
     }
   },
@@ -47,14 +46,6 @@ export default {
     user() {
       return Meteor.user();
     }
-  },
-  methods: {
-    updateUserLanguage(lang) {
-      Meteor.users.update(Meteor.userId(), {
-        $set: { "profile.language": lang }
-      });
-      this.$store.commit("setLanguage", lang);
-    }
-  }
+  }  
 };
 </script>

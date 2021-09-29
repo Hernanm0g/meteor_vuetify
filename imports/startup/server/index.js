@@ -19,6 +19,10 @@ import '../../api/server/collections'
 
 import './login/registerLoginHandler'
 
+/*-------- Meteor Accounts Email Internationalization -------*/
+
+import './auth/meteor-accounts'
+
 
 /*--------  SSR  --------*/
 

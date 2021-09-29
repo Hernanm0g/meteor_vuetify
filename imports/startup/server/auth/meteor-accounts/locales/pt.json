@@ -1,0 +1,8 @@
+{
+	"resetPassword": {
+		"subject": "Solicitação de redefinição de senha para $ {user}!"
+	},
+	"verifyEmail": {
+		"subject": "Ative sua conta agora, $ {user}!"
+	}
+}

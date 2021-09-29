@@ -20,7 +20,14 @@ const state = {
   crumbs : [],
   authenticated:false,
   auth0:undefined,
-  language: Meteor.settings.public.defaultLocale
+  language: Meteor.settings.public.defaultLocale,
+  authentication: {
+    provider: Meteor.settings.public.authentication.defaultProvider,
+    meteor: {
+      showAuthDialog: false,
+      showResetDialog: false,
+    }
+  }
 }
 
 export default state

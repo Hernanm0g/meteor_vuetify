@@ -92,7 +92,7 @@ export default {
         links.push({
           avatar: this.avatar || this.profile.picture,
           to: {name:"profile"},
-          title: this.profile.name || this.profile.email
+          title: this.profile.name || this.profile.firstName + " " + this.profile.lastName || this.profile.email || this.profile.emails[0].address
         })
       }
       links = [

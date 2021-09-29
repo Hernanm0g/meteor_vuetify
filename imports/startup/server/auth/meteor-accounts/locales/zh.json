@@ -1,0 +1,8 @@
+{
+	"resetPassword": {
+		"subject": "${user} 的密码重置请求！"
+	},
+	"verifyEmail": {
+		"subject": "立即激活您的帐户，${user}！"
+	}
+}

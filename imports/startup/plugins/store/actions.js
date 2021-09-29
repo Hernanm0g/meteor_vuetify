@@ -46,72 +46,86 @@ export const initializeAuth0= async ({commit})=> {
 }
 
 export const login = async({state, commit}, signup=false) => {
-  if (!state.auth0){
-    commit("snack", {text:"error"})
-    return
-  }
-  
-  try {
-    // commit("loading", true)
-    const screen_hint = signup ? "signup" : "signin"
-    await state.auth0.loginWithPopup(
-      { 
-        screen_hint
-      }
-    );
+  if (Meteor.settings.public.authentication.allowAuth0 && Meteor.settings.public.authentication.defaultProvider.toLowerCase() == "auth0") {    
+    if (!state.auth0){
+      commit("snack", {text:"error"})
+      return
+    }
     
-  } catch (e) {
-    console.error("Error displaying popup", e);
-  } finally {
-    // commit("loading", false)
-  }
-  const user = await state.auth0.getUser();
-  if (user){
-    Meteor.login(
-      user,
-      error =>{
-        if(error){
-          console.error("Error login with auth0", error);
-          commit("snack", {text:"error"})
-          commit("authenticated", false)
-          return
+    try {
+      // commit("loading", true)
+      const screen_hint = signup ? "signup" : "signin"
+      await state.auth0.loginWithPopup(
+        { 
+          screen_hint
         }
-        commit("authenticated", true)
-        // If there's a redirect in the route's query
-        if(router?.currentRoute?.query?.redirect){
-          console.log("HEY");
-          router.push(router.currentRoute.query.redirect)
-        }
+      );
+      
+    } catch (e) {
+      console.error("Error displaying popup", e);
+    } finally {
+      // commit("loading", false)
+    }
+    const user = await state.auth0.getUser();
+    if (user){
+      Meteor.login(
+        user,
+        error =>{
+          if(error){
+            console.error("Error login with auth0", error);
+            commit("snack", {text:"error"})
+            commit("authenticated", false)
+            return
+          }
+          commit("authenticated", true)
+          commit("setLanguage", user.profile.language)
+          // If there's a redirect in the route's query
+          if(router?.currentRoute?.query?.redirect){
+            console.log("HEY");
+            router.push(router.currentRoute.query.redirect)
+          }
 
-      }
-    );
-  } else {
-    commit("snack", {text:'error'})
+        }
+      );
+    } else {
+      commit("snack", {text:'error'})
+    }
+    
+    return user
   }
-  
-  return user
+  if (Meteor.settings.public.authentication.allowMeteor && Meteor.settings.public.authentication.defaultProvider.toLowerCase() == "meteor") {
+    state.authentication.meteor.showAuthDialog = true;
+  }
 }
 
 export const logout = async({state, commit}) => {
-  if (!state.auth0){
-    commit("snack", {text:"error"})
-    return
-  }
-  const {AUTH0} = Meteor.settings.public
-  Meteor.logout();
-  commit("loading", true)
-  try {
-    if(!AUTH0){
+  if (Meteor.settings.public.authentication.allowAuth0 && Meteor.settings.public.authentication.defaultProvider.toLowerCase() == "auth0") {
+    if (!state.auth0){
+      commit("snack", {text:"error"})
       return
     }
-    await state.auth0.logout({
-      returnTo: AUTH0.CALLBACK,
-      client_id: AUTH0.CLIENT_ID
-    });
-  } catch (e) {
-    console.error("Error logging Out", e);
-  } finally {
-    commit("loading", false)
+    const {AUTH0} = Meteor.settings.public
+    Meteor.logout();
+    commit("loading", true)
+    try {
+      if(!AUTH0){
+        return
+      }
+      await state.auth0.logout({
+        returnTo: AUTH0.CALLBACK,
+        client_id: AUTH0.CLIENT_ID
+      });
+    } catch (e) {
+      console.error("Error logging Out", e);
+    } finally {
+      router.push("/")
+      commit("loading", false)
+    }
+    return
   }
-  return
+  if (Meteor.settings.public.authentication.allowMeteor && Meteor.settings.public.authentication.defaultProvider.toLowerCase() == "meteor") {    
+    Meteor.logout()
+    router.push("/")
+    
+  }
 }

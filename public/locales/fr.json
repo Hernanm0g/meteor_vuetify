@@ -8,47 +8,47 @@
 	"home": {
 		"accounts": {
 			"title": "Authentification de l'utilisateur avec Auth0",
-			"text_1": "Auth0 Universal Login et Meteor-comptes !!",
+			"text_1": "Auth0 Universal Login and meteor-accounts!!",
 			"text_2": "Vous voulez voir auth0 et les comptes météo en action ? cliquez sur \"Définir Auth0 !!\" sur cette carte.",
 			"text_3": "Vous voulez voir auth0 et les comptes météo en action ? cliquez sur \"Connectez-moi !!\" sur cette carte.",
 			"text_4": "Vous voulez voir auth0 et les comptes météo en action ? déployer le mongol \"ctrl+m\". Vous pouvez maintenant utiliser Meteor.user() et Meteor.userId() côté client et côté serveur.",
 			"text_5": "Consultez la page Profil.",
-			"go_to_profile": "Go to profile"
+			"go_to_profile": "Aller au profil"
 		},
 		"installed": {
 			"title": "Meteor et vuetify sont maintenant installés !!",
 			"text_1": "Ceci est un exemple de la v-card de vuetify",
 			"text_2": "Vous voulez voir l'abonnement en temps réel de Meteor en action ? Ouvrez-moi dans un autre onglet et cliquez sur \"CLIQUEZ-MOI !!\" sur cette carte.",
 			"times_clicked": "Nombre de clics :",
-			"click_me": "Click Me!!"
+			"click_me": "Cliquez moi !!"
 		},
 		"i18n": {
-			"title": "Internationalization (i18n)",
+			"title": "Internationalisation (i18n)",
 			"text_1": "Vous voulez voir l'internationalisation en action ? Sélectionnez votre langue ci-dessous."
 		},
 		"plugins": {
 			"title": "Routeur de page et gestion de l'état",
-			"see_in_action": "Want to see VueRouter and Vuex in action? Click on \"Change route!!\" on this card and watch the breadcrumbs above.",
+			"see_in_action": "Vous voulez voir VueRouter et Vuex en action ? Cliquez sur \"Changer d'itinéraire !!\" sur cette carte et regardez le fil d'Ariane ci-dessus.",
 			"change_route": "Changer d'itinéraire !!"
 		},
 		"confirm": {
 			"title": "EventBus et boîtes de dialogue de confirmation personnalisées",
 			"text_1": "Écoutez les événements dans le DOM avec EventBus.",
 			"text_2": "Vous voulez voir EventBus et Confirm Dialogs en action ? cliquez sur \"Afficher !!\" sur cette carte.",
-			"show": "Show!!"
+			"show": "Spectacle!!"
 		},
 		"snack": {
 			"title": "Notifications avec SnackBar",
 			"text_1": "Vuetify Snackbars are great for users notifications!!",
-			"text_2": "Vous voulez voir les SnackBars en action ? Cliquez sur les boutons \"Afficher\" sur cette carte",
+			"text_2": "Want to see SnackBars in action? Click on \"Show\" buttons on this card",
 			"show": "Spectacle!!",
 			"oh_yeah": "Oh oui!",
 			"oh_no": "Oh non!"
 		}
 	},
 	"about": {
-		"title": "This is an example, so you can see a little piece of what vue-router and vuex can do.",
-		"li_1": "Click on back button in your browser. Thats Vue-router history mode.",
+		"title": "Ceci est un exemple, vous pouvez donc voir un petit morceau de ce que vue-router et vuex peuvent faire.",
+		"li_1": "Cliquez sur le bouton retour dans votre navigateur. C'est le mode historique de Vue-router.",
 		"li_2": "Ouvrez le tiroir de navigation gauche et accédez à la page d'accueil.",
 		"li_3": "Utilisez le fil d'Ariane ci-dessus pour naviguer. Nous stockons le fil d'Ariane dans le monde entier en utilisant vuex. Vous pouvez utiliser Vuex pour stocker n'importe quoi dans une portée globale."
 	},
@@ -56,35 +56,36 @@
 		"not_empty": "Ne peux pas être vide",
 		"incorrect_amount": "Montant incorrect",
 		"must_be_a_number": "Le champ doit être un nombre",
-		"required": "Required field"
+		"required": "champs requis"
 	},
 	"hello": "Bonjour i18n dans SFC !",
-	"welcome": "Welcome!",
+	"welcome": "Bienvenue!",
 	"buttons": {
-		"yes": "Oui",
-		"no": "No",
+		"yes": "Yes",
+		"no": "Non",
 		"cancel": "Annuler",
-		"update": "Mettre à jour",
-		"delete": "Effacer",
-		"save": "sauvegarder"
+		"update": "Update",
+		"delete": "Delete",
+		"save": "sauvegarder",
+		"continue": "Continue"
 	},
 	"navigation": {
 		"home": "Accueil",
 		"profile": "Profil",
 		"about": "Sur",
 		"users": "Utilisateurs et autorisations",
-		"setupAuth0": "Setup Auth0",
+		"setupAuth0": "Configurer Auth0",
 		"logs": "Journaux",
 		"items": "Tous les articles"
 	},
 	"auth": {
 		"login": "Connexion",
-		"logout": "Se déconnecter",
-		"register": "S'inscrire",
+		"logout": "Logout",
+		"register": "Register",
 		"profile": "Profile",
 		"username": "Nom d'utilisateur",
 		"firstname": "Prénom",
-		"lastname": "Last Name",
+		"lastname": "Nom de famille",
 		"password": "Mot de passe",
 		"password2": "Confirmez le mot de passe",
 		"email": "Adresse e-mail",
@@ -92,10 +93,20 @@
 		"errors": {
 			"firstnameRequired": "Le prénom est requis",
 			"lastnameRequired": "Le nom de famille est requis",
-			"emailRequired": "Une adresse e-mail appropriée est requise",
+			"emailRequired": "A proper email address is required",
 			"passwordRequired": "Mot de passe requis",
 			"passwordsDontMatch": "Vos mots de passe ne correspondent pas",
-			"lessthan10chars": "Doit comporter moins de 10 caractères"
+			"lessthan10chars": "Must be less than 10 characters",
+			"invalidForm": "Veuillez remplir le formulaire de manière appropriée",
+			"login": {
+				"403": "Mot de passe incorrect"
+			},
+			"registration": {
+				"403": "Cet identifiant existe déjà"
+			},
+			"verification": {
+				"403": "This verification link has expired"
+			}
 		},
 		"users": "Users",
 		"roles": "Autorisations/Rôles",
@@ -104,9 +115,15 @@
 		"userRemoved": "Utilisateur supprimé",
 		"removeUser": "Supprimer l'utilisateur",
 		"removeUserForSure": "Voulez-vous vraiment supprimer cet utilisateur ?",
-		"editUser": "Edit User",
+		"editUser": "Modifier l'utilisateur",
 		"userSaved": "Utilisateur enregistré",
-		"roleSaved": "Role saved"
+		"roleSaved": "Rôle enregistré",
+		"resetPassword": "Reset password",
+		"resetPasswordMsg": "Un email vous sera envoyé. Cliquez sur le lien dans l'e-mail pour modifier votre mot de passe.",
+		"emailFinishValidation": "Terminer la validation",
+		"emailVerified": "Vérifié !",
+		"emailVerifiedMessage": "Vous avez vérifié avec succès votre adresse e-mail",
+		"emailClickToVerify": "Cliquez pour terminer la vérification"
 	},
 	"locale": {
 		"language": "Langue"

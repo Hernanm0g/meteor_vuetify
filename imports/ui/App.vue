@@ -14,6 +14,7 @@
     </keep-alive>
     <confirm-dialog />
     <snack-bar />
+    <meteor-auth />
   </v-app>
 </template>
 
@@ -31,13 +32,13 @@ const SideBarLayout = ()=>import("./layouts/SideBar.vue")
 
 import ConfirmDialog from './components/general/ConfirmDialog.vue'
 import SnackBar from './components/general/SnackBar.vue'
-
+import MeteorAuth from './components/auth/meteor/Auth.vue'
 
 export default {
   name:"App",
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: 'Meteor Vuetify. Awesome!!',
+    title: "Meteor Vuetify",
     // all titles will be injected into this template
     titleTemplate: '%s | Meteor Vuetify'
   },
@@ -46,7 +47,8 @@ export default {
     AppBarLayout,
     SideBarLayout,
     ConfirmDialog,
-    SnackBar
+    SnackBar,
+    MeteorAuth
   },
   data() {
     return {

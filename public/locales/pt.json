@@ -13,60 +13,61 @@
 			"text_3": "Quer ver auth0 e contas de meteoros em ação? clique em \"Login !!\" neste cartão.",
 			"text_4": "Quer ver auth0 e contas de meteoros em ação? implantar mongol \"ctrl + m\". Agora você pode usar Meteor.user () e Meteor.userId () no cliente e no servidor.",
 			"text_5": "Confira a página de perfil.",
-			"go_to_profile": "Go to profile"
+			"go_to_profile": "Vá para o perfil"
 		},
 		"installed": {
 			"title": "Meteor e vuetify agora estão instalados !!",
 			"text_1": "Este é um exemplo de v-card da vuetify",
 			"text_2": "Quer ver a assinatura em tempo real do Meteor em ação? Abra-me em outra aba e clique em \"CLIQUE EM MIM !!\" neste cartão.",
 			"times_clicked": "Vezes clicadas:",
-			"click_me": "Clique em mim !!"
+			"click_me": "Click Me!!"
 		},
 		"i18n": {
-			"title": "Internationalization (i18n)",
-			"text_1": "Want to see Internationalization in action? Select your language below."
+			"title": "Internacionalização (i18n)",
+			"text_1": "Quer ver a internacionalização em ação? Selecione seu idioma abaixo."
 		},
 		"plugins": {
 			"title": "Page Router and State Management",
-			"see_in_action": "Want to see VueRouter and Vuex in action? Click on \"Change route!!\" on this card and watch the breadcrumbs above.",
+			"see_in_action": "Quer ver o VueRouter e o Vuex em ação? Clique em \"Alterar rota !!\" neste cartão e observe as migalhas de pão acima.",
 			"change_route": "Mude a rota !!"
 		},
 		"confirm": {
 			"title": "EventBus e caixas de diálogo de confirmação personalizadas",
 			"text_1": "Ouça eventos no DOM com EventBus.",
-			"text_2": "Quer ver EventBus e Confirm Dialogs em ação? clique em \"Mostrar !!\" neste cartão.",
+			"text_2": "Want to see EventBus and Confirm Dialogs in action? click on \"Show!!\" on this card.",
 			"show": "Mostrar!!"
 		},
 		"snack": {
-			"title": "Notificações com SnackBar",
+			"title": "Notifications with SnackBar",
 			"text_1": "Snackbars Vuetify são ótimos para notificações de usuários !!",
 			"text_2": "Quer ver os SnackBars em ação? Clique nos botões \"Mostrar\" neste cartão",
 			"show": "Mostrar!!",
 			"oh_yeah": "Oh sim!",
-			"oh_no": "Oh não!"
+			"oh_no": "Oh No!"
 		}
 	},
 	"about": {
-		"title": "Este é um exemplo, para que você possa ver um pouco do que vue-roteador e vuex podem fazer.",
-		"li_1": "Clique no botão Voltar do seu navegador. Esse é o modo de histórico do roteador Vue.",
+		"title": "This is an example, so you can see a little piece of what vue-router and vuex can do.",
+		"li_1": "Click on back button in your browser. Thats Vue-router history mode.",
 		"li_2": "Open Left Navigation Drawer and go to home page.",
 		"li_3": "Use a localização atual acima para navegar. Armazenamos migalhas de pão globalmente usando o vuex. Você pode usar o Vuex para armazenar qualquer coisa em um escopo global."
 	},
 	"rules": {
-		"not_empty": "Não pode estar vazio",
+		"not_empty": "Cannot be empty",
 		"incorrect_amount": "Montante incorreto",
-		"must_be_a_number": "Field must be a number",
+		"must_be_a_number": "O campo deve ser um número",
 		"required": "Campo obrigatório"
 	},
-	"hello": "Olá i18n no SFC!",
+	"hello": "Hello i18n in SFC!",
 	"welcome": "Receber!",
 	"buttons": {
 		"yes": "sim",
 		"no": "Não",
-		"cancel": "Cancel",
+		"cancel": "Cancelar",
 		"update": "Atualizar",
 		"delete": "Excluir",
-		"save": "Salve "
+		"save": "Salve ",
+		"continue": "Continue"
 	},
 	"navigation": {
 		"home": "Casa",
@@ -74,28 +75,38 @@
 		"about": "Cerca de",
 		"users": "Usuários e permissões",
 		"setupAuth0": "Configurar Auth0",
-		"logs": "Logs",
-		"items": "All Items"
+		"logs": "Histórico",
+		"items": "Todos os itens"
 	},
 	"auth": {
-		"login": "Conecte-se",
+		"login": "Login",
 		"logout": "Sair",
 		"register": "Registro",
 		"profile": "Perfil",
-		"username": "Username",
+		"username": "Nome do usuário",
 		"firstname": "Primeiro nome",
-		"lastname": "Último nome",
-		"password": "Password",
+		"lastname": "Last Name",
+		"password": "Senha",
 		"password2": "Confirme a Senha",
-		"email": "Email Address",
-		"userid": "ID do usuário",
+		"email": "Endereço de e-mail",
+		"userid": "User Id",
 		"errors": {
 			"firstnameRequired": "O primeiro nome é necessário",
-			"lastnameRequired": "O sobrenome é obrigatório",
+			"lastnameRequired": "Last name is required",
 			"emailRequired": "É necessário um endereço de e-mail adequado",
 			"passwordRequired": "Senha requerida",
 			"passwordsDontMatch": "Your passwords do not match",
-			"lessthan10chars": "Deve ter menos de 10 caracteres"
+			"lessthan10chars": "Deve ter menos de 10 caracteres",
+			"invalidForm": "Por favor, preencha o formulário apropriadamente",
+			"login": {
+				"403": "Senha incorreta"
+			},
+			"registration": {
+				"403": "Esse nome de usuário já existe"
+			},
+			"verification": {
+				"403": "Este link de verificação expirou"
+			}
 		},
 		"users": "Comercial",
 		"roles": "Permissões / funções",
@@ -106,7 +117,13 @@
 		"removeUserForSure": "Tem certeza que deseja remover este usuário?",
 		"editUser": "Edit User",
 		"userSaved": "Usuário salvo",
-		"roleSaved": "Função salva"
+		"roleSaved": "Função salva",
+		"resetPassword": "Redefinir senha",
+		"resetPasswordMsg": "Um email será enviado para você. Clique no link do e-mail para alterar sua senha.",
+		"emailFinishValidation": "Concluir validação",
+		"emailVerified": "Verified!",
+		"emailVerifiedMessage": "Você verificou com sucesso o seu endereço de e-mail",
+		"emailClickToVerify": "Clique para concluir a verificação"
 	},
 	"locale": {
 		"language": "Língua"
@@ -115,9 +132,9 @@
 		"actions": "Ações"
 	},
 	"profile": {
-		"identity": "Identidade",
-		"first_name": "Primeiro nome",
-		"last_name": "Último nome",
+		"identity": "Identity",
+		"first_name": "First Name",
+		"last_name": "Last Name",
 		"updated_profile": "Perfil atualizado"
 	}
 }
