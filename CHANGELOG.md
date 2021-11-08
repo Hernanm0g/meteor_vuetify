@@ -1,5 +1,7 @@
 # Changelog
 
+## @2.0.32 - 2021-11-07
+- silent i18n Error Messages on Server side
 ## @2.0.30 - 2021-02-27
 - Updated to meteor@2.1 and Vuetify@2.4.7
 - Improved Performance on Home Page

@@ -45,12 +45,12 @@ export const updateCrumbs = (state, crumbs) => {
 export const snack = (state, {text,color}) => {
   state.snack.active = true
   if (text == "error") {
-    state.snack.text = "Ha habido un error, vuelve a intentarlo."
+    state.snack.text = "Oops!!, try again."
     state.snack.color = "error"
     return
   }
   if (text == "confirm") {
-    state.snack.text = "Por favor, confirma los campos en rojo."
+    state.snack.text = "Please, check fields in red."
     state.snack.color = "error"
     return
   }
