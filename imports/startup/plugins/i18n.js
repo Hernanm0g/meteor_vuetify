@@ -38,7 +38,8 @@ function getBrowserLanguage() {
 const i18n = new VueI18n({
   locale: getBrowserLanguage() || Meteor.settings.public.i18n.defaultLocale || 'en',  
   fallbackLocale: Meteor.settings.public.i18n.defaultLocale || 'en',
-  messages: loadLocaleMessages()
+  messages: loadLocaleMessages(),
+  silentTranslationWarn: Meteor.isServer
 })
 
 export default i18n 
