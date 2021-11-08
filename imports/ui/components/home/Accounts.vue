@@ -1,11 +1,11 @@
 <template>
   <v-card>
     <v-card-title>
-      {{$t("home.accounts.title")}}
+      {{ $t("home.accounts.title") }}
     </v-card-title>
     <v-card-text>
       <div>
-        <span class="grey--text">{{$t('home.accounts.text_1')}}</span>
+        <span class="grey--text">{{ $t('home.accounts.text_1') }}</span>
         <br>
         <v-icon>mdi-login</v-icon> <a
           href="https://auth0.com/docs/universal-login"
@@ -18,9 +18,9 @@
         >Meteor-accounts</a> installed.
         <br>
         <br>
-        <span v-if="!settedAuth0">{{$t("home.accounts.text_2")}}</span>
-        <span v-else-if="!authenticated">{{$t('home.accounts.text_3')}}</span>
-        <span v-else>{{$t('home.accounts.text_4')}}<strong>{{$t('home.accounts.text_5')}}</strong></span>
+        <span v-if="!settedAuth0">{{ $t("home.accounts.text_2") }}</span>
+        <span v-else-if="!authenticated">{{ $t('home.accounts.text_3') }}</span>
+        <span v-else>{{ $t('home.accounts.text_4') }}<strong>{{ $t('home.accounts.text_5') }}</strong></span>
         <br>
         <br>
         <span>Authenticated: <strong>{{ authenticated ? "true" : "false" }}</strong></span>
@@ -49,13 +49,13 @@
         color="orange"
         :to="{name:'profile'}"
       >
-        {{$t('home.accounts.go_to_profile')}}
+        {{ $t('home.accounts.go_to_profile') }}
       </v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   const { AUTH0 } = Meteor.settings.public
   export default {
     name:"Accounts",

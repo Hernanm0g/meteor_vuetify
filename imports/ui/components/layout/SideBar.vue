@@ -54,7 +54,7 @@
   </v-navigation-drawer>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   
 /*--------  Mixins  --------*/
 import {GetAvatarMixin} from '../../mixins/users/avatars'

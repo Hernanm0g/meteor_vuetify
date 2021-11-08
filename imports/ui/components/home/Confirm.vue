@@ -34,7 +34,7 @@
   </v-card>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   import ConfirmMixin from '../../mixins/general/confirm'
   export default {
     name:"Confirm",

@@ -41,7 +41,7 @@
   </v-card>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   export default {
     name:"Snack",
     methods: {

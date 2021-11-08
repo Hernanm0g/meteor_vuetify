@@ -18,7 +18,7 @@
 </template>
 
 
-<script lang="js">
+<script cpl="vuetify">
 
 /*--------  Dynamic Async Components  --------*/
 

@@ -23,7 +23,7 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 export default {
   name: "About",
   metaInfo: {

@@ -30,7 +30,7 @@
   </v-dialog>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 import { EventBus } from '../../mixins/general/event-bus';
 export default {
   name:"ConfirmDialog",

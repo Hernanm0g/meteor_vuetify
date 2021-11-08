@@ -45,7 +45,7 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   import Installed from '../../components/home/Installed.vue'
   import Accounts from '../../components/home/Accounts.vue'
   import Plugins from '../../components/home/Plugins.vue'
