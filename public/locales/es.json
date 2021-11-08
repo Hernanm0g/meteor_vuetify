@@ -16,14 +16,14 @@
 			"go_to_profile": "Ir al perfil"
 		},
 		"installed": {
-			"title": "¡¡Meteor y vuetify ya están instalados !!",
+			"title": "Meteor and vuetify are now installed!!",
 			"text_1": "Este es un ejemplo de v-card de vuetify",
 			"text_2": "¿Quiere ver la suscripción en tiempo real de Meteor en acción? Ábrame en otra pestaña y haga clic en \"¡¡HAGA CLIC EN MÍ !!\" en esta tarjeta.",
 			"times_clicked": "Tiempos en los que se hizo clic:",
 			"click_me": "¡¡Haz click en mi!!"
 		},
 		"i18n": {
-			"title": "Internationalization (i18n)",
+			"title": "Internacionalización (i18n)",
 			"text_1": "¿Quiere ver la internacionalización en acción? Seleccione su idioma a continuación."
 		},
 		"plugins": {
@@ -33,90 +33,107 @@
 		},
 		"confirm": {
 			"title": "EventBus y cuadros de diálogo de confirmación personalizados",
-			"text_1": "Listen to events in the DOM with EventBus.",
-			"text_2": "¿Quiere ver EventBus y Confirm Dialogs en acción? haga clic en \"Mostrar !!\" en esta tarjeta.",
+			"text_1": "Escuche eventos en el DOM con EventBus.",
+			"text_2": "Want to see EventBus and Confirm Dialogs in action? click on \"Show!!\" on this card.",
 			"show": "¡¡Show!!"
 		},
 		"snack": {
 			"title": "Notificaciones con SnackBar",
 			"text_1": "Vuetify Snackbars son excelentes para las notificaciones de los usuarios.",
 			"text_2": "¿Quieres ver SnackBars en acción? Haga clic en los botones \"Mostrar\" de esta tarjeta.",
-			"show": "Show!!",
+			"show": "¡¡Show!!",
 			"oh_yeah": "¡Oh sí!",
-			"oh_no": "Oh No!"
+			"oh_no": "¡Oh, no!"
 		}
 	},
 	"about": {
 		"title": "Este es un ejemplo, para que pueda ver una pequeña parte de lo que pueden hacer vue-router y vuex.",
 		"li_1": "Haga clic en el botón Atrás en su navegador. Ese es el modo de historial del enrutador Vue.",
-		"li_2": "Abra el cajón de navegación izquierdo y vaya a la página de inicio.",
+		"li_2": "Open Left Navigation Drawer and go to home page.",
 		"li_3": "Utilice las migas de pan de arriba para navegar. Almacenamos migas de pan a nivel mundial usando vuex. Puede usar Vuex para almacenar cualquier cosa en un ámbito global."
 	},
 	"rules": {
 		"not_empty": "No puede estar vacío",
 		"incorrect_amount": "Cantidad incorrecta",
 		"must_be_a_number": "El campo debe ser un número",
-		"required": "Required field"
+		"required": "Campo requerido"
 	},
 	"hello": "¡Hola i18n en SFC!",
-	"welcome": "¡Bienvenido!",
+	"welcome": "Welcome!",
 	"buttons": {
 		"yes": "sí",
 		"no": "No",
 		"cancel": "Cancelar",
 		"update": "Actualizar",
-		"delete": "Borrar",
-		"save": "Ahorrar"
+		"delete": "Delete",
+		"save": "Ahorrar",
+		"continue": "Continuar"
 	},
 	"navigation": {
 		"home": "Hogar",
 		"profile": "Perfil",
-		"about": "About",
+		"about": "Sobre",
 		"users": "Usuarios y permisos",
-		"setupAuth0": "Configurar Auth0",
-		"logs": "Logs",
+		"setupAuth0": "Setup Auth0",
+		"logs": "Registros",
 		"items": "Todos los artículos"
 	},
 	"auth": {
-		"login": "Login",
-		"logout": "Logout",
+		"login": "Acceso",
+		"logout": "Cerrar sesión",
 		"register": "Registrarse",
-		"profile": "Profile",
+		"profile": "Perfil",
 		"username": "Nombre de usuario",
-		"firstname": "First Name",
-		"lastname": "Apellido",
+		"firstname": "Primer nombre",
+		"lastname": "Last Name",
 		"password": "Contraseña",
-		"password2": "confirmar Contraseña",
+		"password2": "Confirm Password",
 		"email": "Dirección de correo electrónico",
-		"userid": "ID de usuario",
+		"userid": "User Id",
 		"errors": {
 			"firstnameRequired": "Se requiere el primer nombre",
-			"lastnameRequired": "Se requiere apellido",
+			"lastnameRequired": "Last name is required",
 			"emailRequired": "Se requiere una dirección de correo electrónico adecuada",
 			"passwordRequired": "se requiere contraseña",
 			"passwordsDontMatch": "Your passwords do not match",
-			"lessthan10chars": "Debe tener menos de 10 caracteres"
+			"lessthan10chars": "Debe tener menos de 10 caracteres",
+			"invalidForm": "Please fill out the form appropriately",
+			"login": {
+				"403": "Contraseña incorrecta"
+			},
+			"registration": {
+				"403": "Este nombre de usuario ya existe"
+			},
+			"verification": {
+				"403": "Este enlace de verificación ha caducado"
+			}
 		},
 		"users": "Users",
 		"roles": "Permisos / Roles",
 		"roleName": "Nombre de rol",
 		"inheritedRoles": "Permisos / roles heredados",
 		"userRemoved": "Usuario eliminado",
-		"removeUser": "Eliminar usuario",
+		"removeUser": "Remove User",
 		"removeUserForSure": "¿Está seguro de que desea eliminar a este usuario?",
-		"editUser": "editar usuario",
-		"userSaved": "User saved",
-		"roleSaved": "Rol guardado"
+		"editUser": "Edit User",
+		"userSaved": "Usuario guardado",
+		"roleSaved": "Rol guardado",
+		"resetPassword": "Reset your password",
+		"resetPasswordMsg": "Se le enviará un correo electrónico. Haga clic en el enlace del correo electrónico para cambiar su contraseña.",
+		"emailFinishValidation": "Finish email validation",
+		"emailVerified": "Verificado!",
+		"emailVerifiedMessage": "You have successfully verified your email address",
+		"emailClickToVerify": "Haga clic para completar la verificación"
 	},
 	"locale": {
-		"language": "Language"
+		"language": "Idioma"
 	},
 	"tables": {
-		"actions": "Comportamiento"
+		"actions": "Actions"
 	},
 	"profile": {
 		"identity": "Identidad",
-		"first_name": "Primer nombre",
+		"first_name": "First Name",
 		"last_name": "Apellido",
 		"updated_profile": "Perfil actualizado"
 	}

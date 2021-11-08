@@ -1,0 +1,15 @@
+{
+  "configurations": [{
+    "name": "Meteor",
+    "port": 9229,
+    "request": "attach",
+    "skipFiles": [
+      "<node_internals>/**/*.js",
+      "${workspaceFolder}/node_modules/**/*.js",
+      "${workspaceFolder}/.meteor/**/*.js",
+      ".meteor/packages/*/.*/**/*.js"
+    ],
+    "type": "node",
+    "restart": true
+  }]
+}

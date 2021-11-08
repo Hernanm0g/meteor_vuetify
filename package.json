@@ -4,6 +4,7 @@
   "version": "2.0.33",
   "scripts": {
     "start": "meteor run --settings settings.json ",
+    "debug": "meteor --inspect-brk --settings settings.json ",
     "simulate": "meteor --production --settings settings.json ",
     "visualize": "meteor --production --extra-packages bundle-visualizer --settings settings.json",
     "test": "rm -rf .coverage && BABEL_ENV=COVERAGE COVERAGE=1 COVERAGE_OUT_HTML=1 COVERAGE_APP_FOLDER=$PWD/ meteor test --driver-package meteortesting:mocha",

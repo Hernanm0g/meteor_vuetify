@@ -10,7 +10,7 @@
 			"title": "使用 Auth0 进行用户身份验证",
 			"text_1": "Auth0 通用登录和流星帐户！！",
 			"text_2": "想看看 auth0 和meteor-accounts 的运行情况吗？点击“设置Auth0！！”在这张卡上。",
-			"text_3": "Want to see auth0 and meteor-accounts in action? click on \"Log me in!!\" on this card.",
+			"text_3": "想看看 auth0 和meteor-accounts 的运行情况吗？点击“登录我！！”在这张卡上。",
 			"text_4": "想看看 auth0 和meteor-accounts 的运行情况吗？部署蒙古语“ctrl+m”。现在您可以在客户端和服务器端使用 Meteor.user() 和 Meteor.userId()。",
 			"text_5": "查看个人资料页面。",
 			"go_to_profile": "转到个人资料"
@@ -35,12 +35,12 @@
 			"title": "EventBus 和自定义确认对话框",
 			"text_1": "使用 EventBus 监听 DOM 中的事件。",
 			"text_2": "想要查看 EventBus 和 Confirm Dialogs 的实际效果吗？点击“显示！！”在这张卡上。",
-			"show": "展示！！"
+			"show": "Show!!"
 		},
 		"snack": {
 			"title": "SnackBar 通知",
-			"text_1": "Vuetify Snackbars are great for users notifications!!",
-			"text_2": "Want to see SnackBars in action? Click on \"Show\" buttons on this card",
+			"text_1": "Vuetify Snackbars 非常适合用户通知！！",
+			"text_2": "想看看 SnackBars 的实际效果吗？单击此卡上的“显示”按钮",
 			"show": "展示！！",
 			"oh_yeah": "哦耶！",
 			"oh_no": "不好了！"
@@ -66,28 +66,29 @@
 		"cancel": "取消",
 		"update": "更新",
 		"delete": "删除",
-		"save": "节省"
+		"save": "节省",
+		"continue": "继续"
 	},
 	"navigation": {
 		"home": "Home",
 		"profile": "轮廓",
-		"about": "关于",
+		"about": "About",
 		"users": "Users and Permissions",
 		"setupAuth0": "设置 Auth0",
-		"logs": "Logs",
-		"items": "所有项目"
+		"logs": "日志",
+		"items": "All Items"
 	},
 	"auth": {
 		"login": "登录",
 		"logout": "登出",
 		"register": "登记",
-		"profile": "轮廓",
+		"profile": "Profile",
 		"username": "用户名",
 		"firstname": "名",
 		"lastname": "Last Name",
-		"password": "Password",
-		"password2": "Confirm Password",
-		"email": "Email Address",
+		"password": "密码",
+		"password2": "确认密码",
+		"email": "电子邮件地址",
 		"userid": "用户身份",
 		"errors": {
 			"firstnameRequired": "名字为必填项",
@@ -95,7 +96,17 @@
 			"emailRequired": "需要正确的电子邮件地址",
 			"passwordRequired": "密码是必需的",
 			"passwordsDontMatch": "您的密码不匹配",
-			"lessthan10chars": "必须少于 10 个字符"
+			"lessthan10chars": "必须少于 10 个字符",
+			"invalidForm": "请正确填写表格",
+			"login": {
+				"403": "密码错误"
+			},
+			"registration": {
+				"403": "此用户名已存在"
+			},
+			"verification": {
+				"403": "此验证链接已过期"
+			}
 		},
 		"users": "用户",
 		"roles": "权限/角色",
@@ -104,9 +115,15 @@
 		"userRemoved": "用户已移除",
 		"removeUser": "删除用户",
 		"removeUserForSure": "您确定要删除此用户吗？",
-		"editUser": "编辑用户",
-		"userSaved": "User saved",
-		"roleSaved": "角色已保存"
+		"editUser": "Edit User",
+		"userSaved": "用户已保存",
+		"roleSaved": "Role saved",
+		"resetPassword": "重设密码",
+		"resetPasswordMsg": "将向您发送一封电子邮件。单击电子邮件中的链接以更改密码。",
+		"emailFinishValidation": "Finish validation",
+		"emailVerified": "已验证！",
+		"emailVerifiedMessage": "您已成功验证您的电子邮件地址",
+		"emailClickToVerify": "点击完成验证"
 	},
 	"locale": {
 		"language": "语"
@@ -115,7 +132,7 @@
 		"actions": "行动"
 	},
 	"profile": {
-		"identity": "Identity",
+		"identity": "身份",
 		"first_name": "名",
 		"last_name": "姓",
 		"updated_profile": "更新资料"

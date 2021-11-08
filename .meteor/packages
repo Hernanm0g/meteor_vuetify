@@ -17,7 +17,7 @@ typescript@4.2.2              # Enable TypeScript syntax in .ts and .tsx modules
 shell-server@0.5.0            # Server-side component of the `meteor shell` command
 
 tracker@1.2.0                 # Dependency tracker to allow reactive callbacks
-static-html             # Define static page content in .html files
+static-html                   # Define static page content in .html files
 akryum:vue-component
 
 meteortesting:mocha               # A package for writing and running your meteor app and package tests with mocha
@@ -35,3 +35,4 @@ practicalmeteor:sinon
 dburles:factory
 akryum:vue-ssr
 ostrio:meteor-root
+accounts-password

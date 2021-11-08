@@ -10,14 +10,14 @@
 			"title": "Benutzerauthentifizierung mit Auth0",
 			"text_1": "Auth0 Universal Login und Meteor-Konten!!",
 			"text_2": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? Klicken Sie auf \"Auth0 setzen!!\" auf dieser Karte.",
-			"text_3": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? Klicken Sie auf \"Melden Sie sich an!!\" auf dieser Karte.",
+			"text_3": "Want to see auth0 and meteor-accounts in action? click on \"Log me in!!\" on this card.",
 			"text_4": "Möchten Sie auth0 und meteor-accounts in Aktion sehen? setze mongolisch \"Strg+m\" ein. Jetzt können Sie Meteor.user() und Meteor.userId() auf Client- und Serverseite verwenden.",
 			"text_5": "Schauen Sie sich die Profilseite an.",
-			"go_to_profile": "Go to profile"
+			"go_to_profile": "Gehe zum Profil"
 		},
 		"installed": {
 			"title": "Meteor und vuetify sind jetzt installiert!!",
-			"text_1": "Dies ist ein Beispiel für die V-Karte von vuetify",
+			"text_1": "This is an example of vuetify's v-card",
 			"text_2": "Möchten Sie das Echtzeit-Abonnement von Meteor in Aktion sehen? Öffnen Sie mich in einem anderen Tab und klicken Sie auf \"CLICK ME!!\" auf dieser Karte.",
 			"times_clicked": "Mal angeklickt:",
 			"click_me": "Klick mich!!"
@@ -33,7 +33,7 @@
 		},
 		"confirm": {
 			"title": "EventBus und benutzerdefinierte Bestätigungsdialoge",
-			"text_1": "Mit EventBus auf Ereignisse im DOM hören.",
+			"text_1": "Hören Sie Ereignisse im DOM mit EventBus ab.",
 			"text_2": "Möchten Sie EventBus und Bestätigungsdialoge in Aktion sehen? klicken Sie auf \"Anzeigen!!\" auf dieser Karte.",
 			"show": "Zeigen!!"
 		},
@@ -41,7 +41,7 @@
 			"title": "Benachrichtigungen mit SnackBar",
 			"text_1": "Vuetify Snackbars eignen sich hervorragend für Benutzerbenachrichtigungen !!",
 			"text_2": "Möchten Sie SnackBars in Aktion sehen? Klicken Sie auf dieser Karte auf die Schaltflächen \"Anzeigen\"",
-			"show": "Show!!",
+			"show": "Zeigen!!",
 			"oh_yeah": "Oh ja!",
 			"oh_no": "Ach nein!"
 		}
@@ -53,7 +53,7 @@
 		"li_3": "Verwenden Sie die Breadcrumbs oben, um zu navigieren. Wir speichern Breadcrumbs weltweit mit vuex. Sie können Vuex verwenden, um alles in einem globalen Bereich zu speichern."
 	},
 	"rules": {
-		"not_empty": "Cannot be empty",
+		"not_empty": "Kann nicht leer sein",
 		"incorrect_amount": "Falsche Menge",
 		"must_be_a_number": "Feld muss eine Zahl sein",
 		"required": "Pflichtfeld"
@@ -62,11 +62,12 @@
 	"welcome": "Willkommen!",
 	"buttons": {
 		"yes": "Jawohl",
-		"no": "No",
+		"no": "Nein",
 		"cancel": "Abbrechen",
-		"update": "Aktualisieren",
-		"delete": "Delete",
-		"save": "Speichern"
+		"update": "Update",
+		"delete": "Löschen",
+		"save": "Save",
+		"continue": "Weitermachen"
 	},
 	"navigation": {
 		"home": "Heim",
@@ -74,8 +75,8 @@
 		"about": "Über",
 		"users": "Benutzer und Berechtigungen",
 		"setupAuth0": "Auth0 einrichten",
-		"logs": "Logs",
-		"items": "All Items"
+		"logs": "Protokolle",
+		"items": "Alle Elemente"
 	},
 	"auth": {
 		"login": "Anmeldung",
@@ -86,7 +87,7 @@
 		"firstname": "Vorname",
 		"lastname": "Nachname",
 		"password": "Passwort",
-		"password2": "Confirm Password",
+		"password2": "Kennwort bestätigen",
 		"email": "E-Mail-Addresse",
 		"userid": "Benutzeridentifikation",
 		"errors": {
@@ -95,27 +96,43 @@
 			"emailRequired": "Eine korrekte E-Mail-Adresse ist erforderlich",
 			"passwordRequired": "Passwort wird benötigt",
 			"passwordsDontMatch": "Ihre Passwörter stimmen nicht überein",
-			"lessthan10chars": "Muss weniger als 10 Zeichen lang sein"
+			"lessthan10chars": "Muss weniger als 10 Zeichen lang sein",
+			"invalidForm": "Bitte füllen Sie das Formular entsprechend aus",
+			"login": {
+				"403": "Falsches Passwort"
+			},
+			"registration": {
+				"403": "Dieser Benutzername ist schon vergeben"
+			},
+			"verification": {
+				"403": "This verification link has expired"
+			}
 		},
 		"users": "Benutzer",
 		"roles": "Berechtigungen/Rollen",
-		"roleName": "Role Name",
+		"roleName": "Rollenname",
 		"inheritedRoles": "Geerbte Berechtigungen/Rollen",
-		"userRemoved": "Benutzer entfernt",
-		"removeUser": "Benutzer entfernen",
-		"removeUserForSure": "Are you sure you want to remove this user?",
+		"userRemoved": "User removed",
+		"removeUser": "Remove User",
+		"removeUserForSure": "Möchten Sie diesen Nutzer wirklich entfernen?",
 		"editUser": "Benutzer bearbeiten",
 		"userSaved": "Benutzer gespeichert",
-		"roleSaved": "Rolle gespeichert"
+		"roleSaved": "Rolle gespeichert",
+		"resetPassword": "Passwort zurücksetzen",
+		"resetPasswordMsg": "Eine E-Mail wird Ihnen zugesandt. Klicken Sie auf den Link in der E-Mail, um Ihr Passwort zu ändern.",
+		"emailFinishValidation": "Validierung abschließen",
+		"emailVerified": "Verifiziert!",
+		"emailVerifiedMessage": "Sie haben Ihre E-Mail-Adresse erfolgreich verifiziert",
+		"emailClickToVerify": "Klicken Sie hier, um die Überprüfung abzuschließen"
 	},
 	"locale": {
-		"language": "Sprache"
+		"language": "Language"
 	},
 	"tables": {
 		"actions": "Aktionen"
 	},
 	"profile": {
-		"identity": "Identity",
+		"identity": "Identität",
 		"first_name": "Vorname",
 		"last_name": "Nachname",
 		"updated_profile": "Aktualisiertes Profil"

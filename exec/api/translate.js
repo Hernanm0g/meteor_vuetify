@@ -12,10 +12,11 @@ settings.public.i18n.languages.forEach(lang => {
   }
 })
 
-const command = `i18n-translate-json ${apiKey} public/locales/ ${from} ${to}`
+var command = `i18n-translate-json ${apiKey} public/locales/ ${from} ${to}`
+if (settings.public.authentication.allowMeteor) {
+  command += ` ; i18n-translate-json ${apiKey} imports/startup/server/auth/meteor-accounts/locales/ ${from} ${to}`
+}
 console.log(`Running  ${command}`)
-
-
 
 var ex = exec(command, (error, stdout, stderr) => {
   if (error) {

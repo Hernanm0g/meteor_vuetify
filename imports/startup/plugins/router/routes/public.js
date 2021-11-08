@@ -26,6 +26,9 @@ const E404 = ()=> import ('../../../../ui/pages/404/404.vue') // Dynamic async i
 // impoSetAuth0 from '../../../../ui/pages/auth0/SetAuth0.vue' // Use this in order to enable mongol
 const SetAuth0 = ()=> import ('../../../../ui/pages/auth0/SetAuth0.vue') // Dynamic async import
 
+const Reset = ()=> import('../../../../ui/components/auth/meteor/Reset.vue')
+const VerifyEmail = ()=> import('../../../../ui/components/auth/meteor/Verify.vue')
+
 /*= End of Imports =*/
 /*=============================================<<<<<*/
 
@@ -63,6 +66,22 @@ const routes = [
     },
     component:E404
   },
+  {
+    path: "/reset-password/:token",
+    name: "reset",
+    meta: {
+      layout: "SideBarLayout"
+    },
+    component: Reset
+  },
+  {
+    path: "/verify-email/:token",
+    name: "verify-email",
+    meta: {
+      layout: "SideBarLayout"
+    },
+    component: VerifyEmail
+  }
 ]
 
 export default routes.map(

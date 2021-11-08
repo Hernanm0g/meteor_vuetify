@@ -28,12 +28,20 @@
           ripple
           class="pointer"
           v-on="on"
+          color="teal"
         >
           <img
             :src="avatar || profile.picture"
             lazy-src="/img/logo.png"
             alt=""
+            v-if="avatar || profile.picture"
           >
+          <span 
+            v-if="!(avatar || profile.picture)"
+            class="white--text text-h6"
+            style="cursor: pointer;">            
+            {{initials}}
+          </span>
         </v-avatar>
       </template>
       <v-list>
@@ -143,6 +151,9 @@ export default {
     },
     profile(){
       return this.user?.profile
+    },
+    initials() {
+      return this.user?.profile.firstName.charAt(0) + this.user?.profile.lastName.charAt(0) 
     }
   },
   computed: {
@@ -155,8 +166,7 @@ export default {
   },
   methods: {
     async login(){
-      await this.$store.dispatch("login")
-      this.$store.commit("setLanguage", Meteor.user()?.profile.language);
+      await this.$store.dispatch("login")      
     },
     logout(){
       this.$store.dispatch("logout")

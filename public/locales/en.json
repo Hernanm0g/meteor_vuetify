@@ -68,7 +68,8 @@
     "cancel": "Cancel",
     "update": "Update",
     "delete": "Delete",
-    "save": "Save"
+    "save": "Save",
+    "continue": "Continue"
   },
   "navigation": {
     "home": "Home",
@@ -97,7 +98,20 @@
       "emailRequired": "A proper email address is required",
       "passwordRequired": "Password is required",
       "passwordsDontMatch": "Your passwords do not match",
-      "lessthan10chars": "Must be less than 10 characters"
+      "lessthan10chars": "Must be less than 10 characters",
+      "invalidForm": "Please fill out the form appropriately",
+      "login": {
+        "403": "Incorrect password"
+      },
+      "registration": {
+        "403": "This username already exists"
+      },
+      "verification": {
+        "403": "This verification link has expired",
+        "errorTitle": "An error occurred with email validation",
+        "errorText": "Please verify the link or submit a new validation request below.",
+        "requestValidationEmail": "To resend your validation email, enter your email address below and click the send button."
+      }
     },
     "users": "Users",
     "roles": "Permissions/Roles",
@@ -108,7 +122,13 @@
     "removeUserForSure": "Are you sure you want to remove this user?",
     "editUser": "Edit User",
     "userSaved": "User saved",
-    "roleSaved": "Role saved"
+    "roleSaved": "Role saved",
+    "resetPassword": "Reset your password",
+    "resetPasswordMsg": "An email will be sent to you.  Click the link in the email to change your password.",
+    "emailFinishValidation":  "Finish validation",
+    "emailVerified": "Verified",
+    "emailVerifiedMessage":  "You have successfully verified your email address",
+    "emailClickToVerify": "Click to complete verification"
   },
   "locale": {
     "language": "Language"
