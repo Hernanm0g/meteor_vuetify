@@ -238,7 +238,7 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 
 
 /*--------  Collections  --------*/

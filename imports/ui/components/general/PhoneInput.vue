@@ -37,7 +37,7 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 import CountryCodesMixin from '../../mixins/general/countrycodes'
 import {map} from 'lodash'
 export default {

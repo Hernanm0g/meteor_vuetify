@@ -49,7 +49,7 @@
   </v-row>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 export default {
   name:"SetAuth0",
   metaInfo: {

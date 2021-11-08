@@ -15,9 +15,24 @@ All you need to start your Real Time Web App
 ![Working](https://raw.githubusercontent.com/Hernanm0g/meteor_vuetify/master/public/working.png?token=AI2CGORDIZCSEMOEWODVD2242L7AG)
 
 # Idea
-* Back-end: Meteor and it's DDP + Optimistic U*I is wonderful for a rapid deployment and server-side js programming.
+* Back-end: Meteor and it's DDP + Optimistic UI is wonderful for a rapid deployment and server-side js programming.
 * Front-end: Vuejs and Vuetify are great for full-stack developers that want to learn and deliver software fast and continuosly. Even more, vuetify components give the ui an amazing look.
-* Vuetify's A La Carte is an essential feature to reduce bundle size and give users a fast page load. We have developed a Meteor package: [meteor-vuetify-loader](https://atmospherejs.com/zer0th/meteor-vuetify-loader), that makes Meteor's default bundler load vuetify components on the fly. Check it out!, this boilerplate has this package already, you dont need to install it.
+* Vuetify's A La Carte is an essential feature to reduce the first bundle size and give users a fast page load. We have developed a Meteor package: [meteor-vuetify-loader](https://atmospherejs.com/zer0th/meteor-vuetify-loader), that makes Meteor's default bundler load vuetify components on the fly. Check it out!, this boilerplate has this package already, so you dont need to install it. Just add `cpl="vuetify"` to your script tag in the .vue file.
+```html
+ <template>
+    <v-button> <!-- The VButton component will be loaded on the fly-->   
+      Anything
+    </v-button>    
+  <template>    
+  <script cpl="vuetify"> //  <--- the magic goes here.
+    export default {
+      name:"ComponentName",
+      data: ()=>({
+        someData: ""
+      })
+    }
+  </script>
+```
 * User Authentication: Auth0 is a reliable authorization platform that allows several types of authentication, including social media, without having to write a line of code, and with instant results. Auth0 interacts in this boilerplate with meteor-accounts so you might want to use Meteor.user() and Meteor.userId() in both, client and server side.
 * Vuex for state management.
 * VueRouter for route management.

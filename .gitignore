@@ -3,7 +3,7 @@
 
 # meteor
 packages/meteor-vuetify-loader
-packages/vue-component
+# packages/vue-component
 
 # coverage
 .coverage

@@ -42,7 +42,7 @@
   </v-menu>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
 import datetimeMixin from '../../mixins/general/datetime'
 export default {
   name:"DatePicker",

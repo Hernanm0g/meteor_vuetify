@@ -16,7 +16,7 @@
   </v-card>
 </template>
 
-<script lang="js">
+<script cpl="vuetify">
   import LanguagePicker from "../general/LanguagePicker.vue"
   export default {
     name:"Plugins",
