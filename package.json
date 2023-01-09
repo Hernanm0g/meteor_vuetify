@@ -29,7 +29,7 @@
     "i18n-translate-json": "^1.1.0",
     "ignore-styles": "^5.0.1",
     "lodash": "^4.17.20",
-    "luxon": "^1.25.0",
+    "luxon": "^1.28.1",
     "meteor-node-stubs": "^1.0.1",
     "minify-css-string": "^1.0.0",
     "simpl-schema": "^1.10.2",
