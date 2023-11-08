@@ -123,6 +123,30 @@ After running the test script, you can go to http://localhost:3000/coverage and 
 
 ## Deployment to production
 [Read this](https://github.com/Hernanm0g/meteor_vuetify/blob/master/DEPLOYMENT.md)
+
+## Dockerized Setup
+
+For those who prefer containerized applications or need to ensure a consistent development environment across multiple machines, you can now run this project using [Docker](https://www.docker.com/). This approach abstracts away the need to manage dependencies and potential conflicts with Node versions installed on your host PC.
+
+Follow these steps to build a Docker image and run the project inside a container:
+
+1. Build the Docker image:
+
+```shell
+docker build -t meteor-vuetify .
+```
+
+2. Run the Docker container:
+```shell
+docker run --rm -it -p 3000:3000 meteor-vuetify
+```
+
+Now you can access the application at http://localhost:3000, just like you would with a local development setup.
+
+`Note:` Before building the Docker image, make sure you have a Dockerfile in the root of the project that properly sets up the Meteor environment, installs the required dependencies, and defines the necessary runtime commands.
+
+For more details on how to set up the Docker environment for this project, refer to the Dockerfile provided in the repository.
+
 # Contribute
 Commit, make PR's, dont hesitate to submit issues.
 Enjoy!!
